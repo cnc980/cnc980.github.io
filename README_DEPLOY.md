@@ -13,7 +13,7 @@ Static multilingual official website for App Store submission pages.
 
 - English brand: `Clearnova Apps`
 - Chinese brand: `澄序应用`
-- Support email: `support.github.io`
+- Support email: `balamanigill@gmail.com`
 
 ## Before Publishing
 
