@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple Ledger 支持</title>
+  <meta name="description" content="Apple Ledger 支持">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" href="../../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://your-domain.example/en/support/appleledger.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://your-domain.example/zh-Hans/support/appleledger.html">
+  <link rel="alternate" hreflang="ru" href="https://your-domain.example/ru/support/appleledger.html">
+  <link rel="alternate" hreflang="x-default" href="https://your-domain.example/en/support/appleledger.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">澄</span>
+        <span>澄序应用</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">应用</a>
+          <a href="../index.html#privacy">隐私</a>
+          <a href="../index.html#support">支持</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="" lang="en" href="../../en/support/appleledger.html">EN</a><a class="active" lang="zh-Hans" href="./appleledger.html">中</a><a class="" lang="ru" href="../../ru/support/appleledger.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <p class="eyebrow accent-violet">支持</p>
+      <h1>Apple Ledger 支持</h1>
+      <p class="lead">如需帮助，请联系 <a href="mailto:support@your-domain.example">support@your-domain.example</a>.</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/appleledger.html">Apple Ledger</a>
+        <a class="button secondary" href="../privacy/appleledger.html">隐私政策</a>
+      </div>
+    </section>
+
+    <article class="legal-layout">
+
+      <h2>常见问题</h2>
+
+      <h3>我的财务数据存在哪里？</h3>
+      <p>财务数据存储在你的设备本地。如果启用 iCloud 同步，会通过你的私有 iCloud 账号同步。</p>
+
+      <h3>Apple Ledger 会把数据上传到开发者服务器吗？</h3>
+      <p>不会。当前版本没有开发者运营的财务数据服务器，也没有第三方分析 SDK。</p>
+
+      <h3>如何保护应用？</h3>
+      <p>在设置中启用隐私锁。认证由 Apple 系统服务处理，例如 Face ID、Touch ID 或设备密码。</p>
+
+      <h3>如何迁移数据？</h3>
+      <p>使用 JSON 备份和恢复迁移完整应用数据，或使用 CSV 导入导出处理流水工作流。</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>版权所有 2026 澄序应用。保留所有权利。</span>
+      <span><a href="../index.html#privacy">隐私</a> · <a href="../index.html#support">支持</a></span>
+    </div>
+  </footer>
+</body>
+</html>

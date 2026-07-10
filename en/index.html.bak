@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clearnova Apps | Official Apps, Support, and Privacy</title>
+  <meta name="description" content="Official product, support, and privacy pages for SpellVPN, VPN XX, ArtCut, and Apple Ledger.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://your-domain.example/en/index.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://your-domain.example/zh-Hans/index.html">
+  <link rel="alternate" hreflang="ru" href="https://your-domain.example/ru/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://your-domain.example/en/index.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">CA</span>
+        <span>Clearnova Apps</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="./index.html#apps">Apps</a>
+          <a href="./index.html#privacy">Privacy</a>
+          <a href="./index.html#support">Support</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="active" lang="en" href="./index.html">EN</a><a class="" lang="zh-Hans" href="../zh-Hans/index.html">中</a><a class="" lang="ru" href="../ru/index.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Official app website</p>
+        <h1>Apple apps with clear support and privacy pages.</h1>
+        <p class="lead">This site collects product pages, support routes, and privacy policies for the apps currently being prepared for App Store submission.</p>
+        <div class="hero-actions">
+          <a class="button" href="#apps">View Apps</a>
+          <a class="button secondary" href="../SUBMISSION_LINKS.md">Submission Links</a>
+        </div>
+      </div>
+      <div class="hero-mosaic" aria-label="App screenshots">
+        <img src="../assets/spellvpn-dashboard.png" alt="SpellVPN dashboard screenshot">
+        <img src="../assets/artcut-timeline.png" alt="ArtCut timeline screenshot">
+      </div>
+    </section>
+
+    <section class="section" id="apps">
+      <div class="section-header">
+        <h2>Apps</h2>
+        <p>Each app has its own product page, support page, and privacy policy so App Store Connect can point to the exact URL needed for review.</p>
+      </div>
+      <div class="app-grid">
+
+        <a class="app-card" href="./apps/spellvpn.html">
+          <img class="icon" src="../assets/spellvpn-icon.png" alt="SpellVPN icon">
+          <h3>SpellVPN</h3>
+          <p>A paid VPN client for advanced users who import their own sing-box configuration, subscription, proxy link, QR code, or file.</p>
+          <div class="tag-row">
+            <span class="tag">Utilities</span>
+            <span class="tag">No ads</span>
+            <span class="tag">BYO config</span>
+          </div>
+        </a>
+
+        <a class="app-card" href="./apps/vpnxx.html">
+          <img class="icon" src="../assets/vpnxx-icon.png" alt="VPN XX icon">
+          <h3>VPN XX</h3>
+          <p>A subscription and node manager for proxy links, QR imports, iCloud sync, favorites, and endpoint speed testing.</p>
+          <div class="tag-row">
+            <span class="tag">Utilities</span>
+            <span class="tag">iCloud</span>
+            <span class="tag">Free / Pro</span>
+          </div>
+        </a>
+
+        <a class="app-card" href="./apps/artcut.html">
+          <img class="icon" src="../assets/artcut-icon.png" alt="ArtCut icon">
+          <h3>ArtCut</h3>
+          <p>A local-first video editor for timeline stitching, trimming, captions, reverse clips, transitions, overlays, audio, and export.</p>
+          <div class="tag-row">
+            <span class="tag">Photo &amp; Video</span>
+            <span class="tag">Local drafts</span>
+            <span class="tag">AVFoundation</span>
+          </div>
+        </a>
+
+        <a class="app-card" href="./apps/appleledger.html">
+          <span class="icon generated" aria-hidden="true">AL</span>
+          <h3>Apple Ledger</h3>
+          <p>A local-first finance app for ledgers, accounts, budgets, reports, recurring records, subscriptions, and private iCloud sync.</p>
+          <div class="tag-row">
+            <span class="tag">Finance</span>
+            <span class="tag">SwiftData</span>
+            <span class="tag">iCloud</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="band" id="privacy">
+      <div class="section">
+        <div class="section-header">
+          <h2>Privacy URLs</h2>
+          <p>Use the app-specific privacy URL for each App Store listing. The pages are written to match the current project behavior.</p>
+        </div>
+        <div class="link-list">
+
+          <div class="link-row">
+            <div><strong>SpellVPN</strong><span>Paid download. No ads, no analytics, user-provided VPN configurations.</span></div>
+            <a href="./privacy/spellvpn.html">Privacy</a>
+            <a href="./support/spellvpn.html">Support</a>
+          </div>
+
+          <div class="link-row">
+            <div><strong>VPN XX</strong><span>Free version includes Yandex Mobile Ads and Google AdMob ads; Pro is a paid download with no ads. iCloud sync for subscriptions and nodes.</span></div>
+            <a href="./privacy/vpnxx.html">Privacy</a>
+            <a href="./support/vpnxx.html">Support</a>
+          </div>
+
+          <div class="link-row">
+            <div><strong>ArtCut</strong><span>Local media editing with Photos, optional camera, microphone, and speech recognition permissions.</span></div>
+            <a href="./privacy/artcut.html">Privacy</a>
+            <a href="./support/artcut.html">Support</a>
+          </div>
+
+          <div class="link-row">
+            <div><strong>Apple Ledger</strong><span>Local financial records, optional private iCloud sync, local notifications, and biometric app lock.</span></div>
+            <a href="./privacy/appleledger.html">Privacy</a>
+            <a href="./support/appleledger.html">Support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="support">
+      <div class="section-header">
+        <h2>Support</h2>
+        <p>For App Review and users, every support page includes contact information, troubleshooting notes, and product boundaries.</p>
+      </div>
+      <div class="support-grid">
+
+        <div class="support-card">
+          <h3>Review-ready structure</h3>
+          <p>The site is plain static HTML and can be hosted on GitHub Pages, Cloudflare Pages, Netlify, Vercel, S3, or any HTTPS host.</p>
+        </div>
+
+        <div class="support-card">
+          <h3>App-specific policies</h3>
+          <p>VPN, ads, iCloud, video media, speech recognition, and finance data are separated by app to keep review notes consistent.</p>
+        </div>
+
+        <div class="support-card">
+          <h3>Support email</h3>
+          <p>Support is available at support@your-domain.example for product questions, privacy requests, and App Review follow-up.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 Clearnova Apps. All rights reserved.</span>
+      <span><a href="./index.html#privacy">Privacy</a> · <a href="./index.html#support">Support</a></span>
+    </div>
+  </footer>
+</body>
+</html>

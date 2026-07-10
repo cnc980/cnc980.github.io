@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple Ledger 隐私政策</title>
+  <meta name="description" content="Apple Ledger 隐私政策">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" href="../../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://your-domain.example/en/privacy/appleledger.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://your-domain.example/zh-Hans/privacy/appleledger.html">
+  <link rel="alternate" hreflang="ru" href="https://your-domain.example/ru/privacy/appleledger.html">
+  <link rel="alternate" hreflang="x-default" href="https://your-domain.example/en/privacy/appleledger.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">澄</span>
+        <span>澄序应用</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">应用</a>
+          <a href="../index.html#privacy">隐私</a>
+          <a href="../index.html#support">支持</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="" lang="en" href="../../en/privacy/appleledger.html">EN</a><a class="active" lang="zh-Hans" href="./appleledger.html">中</a><a class="" lang="ru" href="../../ru/privacy/appleledger.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <p class="eyebrow accent-violet">生效日期：2026 年 7 月 9 日</p>
+      <h1>Apple Ledger 隐私政策</h1>
+      <p class="lead">本地优先的财务记账 App，支持账本、账户、预算、报表、周期记录、订阅和私有 iCloud 同步。</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/appleledger.html">Apple Ledger</a>
+        <a class="button secondary" href="../support/appleledger.html">支持</a>
+      </div>
+    </section>
+
+    <article class="legal-layout">
+
+      <h2>我们收集的数据</h2>
+      <p>当前版本的 Apple Ledger 不包含广告 SDK，不包含第三方分析 SDK，不出售用户数据，也不要求使用开发者运营的账号。</p>
+
+      <h2>你输入的财务数据</h2>
+      <p>Apple Ledger 会存储你在应用中创建的账本、账户、分类、标签、商家、项目、成员、流水、预算、周期模板、订阅、信用卡详情、分期记录、汇率、备注和相关设置。</p>
+
+      <h2>本地存储和 iCloud</h2>
+      <p>你的财务数据会本地存储在设备上。如果你启用 iCloud 同步，应用会通过你的私有 iCloud 账号使用 CloudKit 同步数据。</p>
+
+      <h2>导入和导出</h2>
+      <p>当你选择相应操作时，应用可以导入或导出 JSON 和 CSV 文件。</p>
+
+      <h2>生物识别锁</h2>
+      <p>Apple Ledger 可以使用 Face ID、Touch ID 或设备认证来锁定应用。生物识别认证由 iOS、iPadOS 或 macOS 处理；应用不会接收你的生物识别数据。</p>
+
+      <h2>通知</h2>
+      <p>在你授予通知权限后，应用可能使用本地通知发送订阅提醒、周期记录提醒和预算提醒。</p>
+      <h2>儿童隐私</h2>
+      <p>Apple Ledger 并非面向儿童，也不会明知收集儿童个人信息。</p>
+      <h2>变更</h2>
+      <p>如果未来版本加入账号、开发者运营的云同步、分析、崩溃报告、支付、广告或其他数据收集，本政策和 App Store 隐私标签会同步更新。</p>
+      <h2>联系</h2>
+      <p>如有隐私问题，请联系 <a href="mailto:support@your-domain.example">support@your-domain.example</a>.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>版权所有 2026 澄序应用。保留所有权利。</span>
+      <span><a href="../index.html#privacy">隐私</a> · <a href="../index.html#support">支持</a></span>
+    </div>
+  </footer>
+</body>
+</html>

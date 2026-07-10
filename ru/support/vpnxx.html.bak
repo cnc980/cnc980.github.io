@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VPN XX Поддержка</title>
+  <meta name="description" content="VPN XX Поддержка">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" href="../../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://your-domain.example/en/support/vpnxx.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://your-domain.example/zh-Hans/support/vpnxx.html">
+  <link rel="alternate" hreflang="ru" href="https://your-domain.example/ru/support/vpnxx.html">
+  <link rel="alternate" hreflang="x-default" href="https://your-domain.example/en/support/vpnxx.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">CA</span>
+        <span>Clearnova Apps</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">Приложения</a>
+          <a href="../index.html#privacy">Конфиденциальность</a>
+          <a href="../index.html#support">Поддержка</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="" lang="en" href="../../en/support/vpnxx.html">EN</a><a class="" lang="zh-Hans" href="../../zh-Hans/support/vpnxx.html">中</a><a class="active" lang="ru" href="./vpnxx.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <p class="eyebrow accent-blue">Поддержка</p>
+      <h1>VPN XX Поддержка</h1>
+      <p class="lead">Для помощи свяжитесь с нами: <a href="mailto:support@your-domain.example">support@your-domain.example</a>.</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/vpnxx.html">VPN XX</a>
+        <a class="button secondary" href="../privacy/vpnxx.html">Политика конфиденциальности</a>
+      </div>
+    </section>
+
+    <article class="legal-layout">
+
+      <h2>Частые вопросы</h2>
+
+      <h3>Что делает VPN XX?</h3>
+      <p>VPN XX управляет URL подписок и сведениями о proxy-узлах, помогает импортировать, обновлять, организовывать, отправлять и тестировать узлы.</p>
+
+      <h3>Предоставляет ли VPN XX VPN-серверы?</h3>
+      <p>Нет. VPN XX не продает узлы, не предоставляет proxy-подписки и не управляет VPN-сетью.</p>
+
+      <h3>Почему некоторые проверки скорости не проходят?</h3>
+      <p>Задержка и доступность зависят от протокола, конечной точки, сети, поставщика подписки и поддержки метода проверки импортированным узлом.</p>
+
+      <h3>Как удалить данные?</h3>
+      <p>Используйте настройки приложения, чтобы очистить локальные данные, восстановить из iCloud, очистить iCloud или удалить данные и локально, и в iCloud.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 Clearnova Apps. Все права защищены.</span>
+      <span><a href="../index.html#privacy">Конфиденциальность</a> · <a href="../index.html#support">Поддержка</a></span>
+    </div>
+  </footer>
+</body>
+</html>

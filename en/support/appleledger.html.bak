@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple Ledger Support</title>
+  <meta name="description" content="Apple Ledger Support">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" href="../../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://your-domain.example/en/support/appleledger.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://your-domain.example/zh-Hans/support/appleledger.html">
+  <link rel="alternate" hreflang="ru" href="https://your-domain.example/ru/support/appleledger.html">
+  <link rel="alternate" hreflang="x-default" href="https://your-domain.example/en/support/appleledger.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">CA</span>
+        <span>Clearnova Apps</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">Apps</a>
+          <a href="../index.html#privacy">Privacy</a>
+          <a href="../index.html#support">Support</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="active" lang="en" href="./appleledger.html">EN</a><a class="" lang="zh-Hans" href="../../zh-Hans/support/appleledger.html">中</a><a class="" lang="ru" href="../../ru/support/appleledger.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <p class="eyebrow accent-violet">Support</p>
+      <h1>Apple Ledger Support</h1>
+      <p class="lead">For help, contact <a href="mailto:support@your-domain.example">support@your-domain.example</a>.</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/appleledger.html">Apple Ledger</a>
+        <a class="button secondary" href="../privacy/appleledger.html">Privacy Policy</a>
+      </div>
+    </section>
+
+    <article class="legal-layout">
+
+      <h2>Common Questions</h2>
+
+      <h3>Where is my finance data stored?</h3>
+      <p>Finance data is stored locally on your device. If iCloud sync is enabled, it syncs through your private iCloud account.</p>
+
+      <h3>Does Apple Ledger upload data to a developer server?</h3>
+      <p>No. The current version has no developer-operated finance-data server and no third-party analytics SDK.</p>
+
+      <h3>How do I protect the app?</h3>
+      <p>Enable the privacy lock in settings. Authentication is handled by Apple system services such as Face ID, Touch ID, or device passcode.</p>
+
+      <h3>How can I move data?</h3>
+      <p>Use JSON backup and restore for full app data, or CSV import and export for transaction workflows.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 Clearnova Apps. All rights reserved.</span>
+      <span><a href="../index.html#privacy">Privacy</a> · <a href="../index.html#support">Support</a></span>
+    </div>
+  </footer>
+</body>
+</html>

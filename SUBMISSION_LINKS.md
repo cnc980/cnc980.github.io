@@ -89,7 +89,7 @@ App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-priv
 ## Notes
 
 - Brand name: `Clearnova Apps` / `澄序应用`.
-- Support email: `support@cnc980.github.io`.
+- Support email: `support.github.io`.
 - App Store buttons link to the developer page above.
 - Use each app's matching privacy URL in App Store Connect.
 - For VPN XX Free, make sure App Privacy answers disclose the advertising SDK data that may be processed, including identifiers, approximate location, usage/ad interaction data, diagnostics, performance data, and device/app information as applicable to the shipped SDK configuration and consent flow.

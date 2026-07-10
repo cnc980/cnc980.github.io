@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArtCut Политика конфиденциальности</title>
+  <meta name="description" content="ArtCut Политика конфиденциальности">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" href="../../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://your-domain.example/en/privacy/artcut.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://your-domain.example/zh-Hans/privacy/artcut.html">
+  <link rel="alternate" hreflang="ru" href="https://your-domain.example/ru/privacy/artcut.html">
+  <link rel="alternate" hreflang="x-default" href="https://your-domain.example/en/privacy/artcut.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">CA</span>
+        <span>Clearnova Apps</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">Приложения</a>
+          <a href="../index.html#privacy">Конфиденциальность</a>
+          <a href="../index.html#support">Поддержка</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="" lang="en" href="../../en/privacy/artcut.html">EN</a><a class="" lang="zh-Hans" href="../../zh-Hans/privacy/artcut.html">中</a><a class="active" lang="ru" href="./artcut.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <p class="eyebrow accent-amber">Дата вступления в силу: 9 июля 2026 г.</p>
+      <h1>ArtCut Политика конфиденциальности</h1>
+      <p class="lead">Локальный видеоредактор для монтажа на таймлайне, обрезки, субтитров, реверса, переходов, наложений, аудио и экспорта.</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/artcut.html">ArtCut</a>
+        <a class="button secondary" href="../support/artcut.html">Поддержка</a>
+      </div>
+    </section>
+
+    <article class="legal-layout">
+
+      <h2>Какие данные мы собираем</h2>
+      <p>Текущая версия ArtCut не требует учетной записи, не содержит рекламных SDK и не отслеживает пользователей между приложениями или сайтами.</p>
+
+      <h2>Медиа, черновики и кэш</h2>
+      <p>Импортированные видео, черновики проектов, экспортированные файлы, рендеры обратного воспроизведения, извлеченное аудио, результаты автосубтитров и кэш по умолчанию хранятся на устройстве.</p>
+
+      <h2>Фото</h2>
+      <p>ArtCut может запросить доступ к Фото, чтобы вы могли импортировать видео и сохранять экспортированные ролики.</p>
+
+      <h2>Камера и микрофон</h2>
+      <p>Если функции записи включены в финальной версии, ArtCut может запросить камеру и микрофон для записи видео или аудио для монтажа.</p>
+
+      <h2>Распознавание речи</h2>
+      <p>Автоматические субтитры используют фреймворк распознавания речи Apple, когда вы явно запускаете генерацию субтитров.</p>
+
+      <h2>Обмен и экспорт</h2>
+      <p>При экспорте, сохранении или отправке видео выбранный результат может обрабатываться системными службами Apple или приложениями и сервисами, выбранными вами в меню отправки.</p>
+      <h2>Конфиденциальность детей</h2>
+      <p>ArtCut не предназначено для детей и не собирает сознательно персональные данные детей.</p>
+      <h2>Изменения</h2>
+      <p>Если будущая версия добавит учетные записи, облачную синхронизацию разработчика, аналитику, отчеты о сбоях, платежи, рекламу или иной сбор данных, эта политика и метки конфиденциальности App Store будут обновлены.</p>
+      <h2>Контакты</h2>
+      <p>По вопросам конфиденциальности пишите: <a href="mailto:support@your-domain.example">support@your-domain.example</a>.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 Clearnova Apps. Все права защищены.</span>
+      <span><a href="../index.html#privacy">Конфиденциальность</a> · <a href="../index.html#support">Поддержка</a></span>
+    </div>
+  </footer>
+</body>
+</html>

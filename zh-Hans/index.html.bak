@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>澄序应用 | 官方应用、支持与隐私</title>
+  <meta name="description" content="SpellVPN、VPN XX、ArtCut 和 Apple Ledger 的官方产品页、支持页和隐私政策页。">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://your-domain.example/en/index.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://your-domain.example/zh-Hans/index.html">
+  <link rel="alternate" hreflang="ru" href="https://your-domain.example/ru/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://your-domain.example/en/index.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">澄</span>
+        <span>澄序应用</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="./index.html#apps">应用</a>
+          <a href="./index.html#privacy">隐私</a>
+          <a href="./index.html#support">支持</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="" lang="en" href="../en/index.html">EN</a><a class="active" lang="zh-Hans" href="./index.html">中</a><a class="" lang="ru" href="../ru/index.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">官方应用网站</p>
+        <h1>为 Apple 应用准备清晰的支持与隐私页面。</h1>
+        <p class="lead">本站汇总正在准备提交 App Store 审核的应用产品页、支持入口和隐私政策。</p>
+        <div class="hero-actions">
+          <a class="button" href="#apps">查看应用</a>
+          <a class="button secondary" href="../SUBMISSION_LINKS.md">送审链接</a>
+        </div>
+      </div>
+      <div class="hero-mosaic" aria-label="App screenshots">
+        <img src="../assets/spellvpn-dashboard.png" alt="SpellVPN dashboard screenshot">
+        <img src="../assets/artcut-timeline.png" alt="ArtCut timeline screenshot">
+      </div>
+    </section>
+
+    <section class="section" id="apps">
+      <div class="section-header">
+        <h2>应用</h2>
+        <p>每个应用都有独立的产品页、支持页和隐私政策页，方便在 App Store Connect 中填写准确的审核链接。</p>
+      </div>
+      <div class="app-grid">
+
+        <a class="app-card" href="./apps/spellvpn.html">
+          <img class="icon" src="../assets/spellvpn-icon.png" alt="SpellVPN icon">
+          <h3>SpellVPN</h3>
+          <p>面向高级用户的付费 VPN 客户端，可导入自己的 sing-box 配置、订阅、代理链接、二维码或文件。</p>
+          <div class="tag-row">
+            <span class="tag">工具</span>
+            <span class="tag">无广告</span>
+            <span class="tag">自带配置</span>
+          </div>
+        </a>
+
+        <a class="app-card" href="./apps/vpnxx.html">
+          <img class="icon" src="../assets/vpnxx-icon.png" alt="VPN XX icon">
+          <h3>VPN XX</h3>
+          <p>代理订阅与节点管理工具，支持代理链接、扫码导入、iCloud 同步、收藏和端点测速。</p>
+          <div class="tag-row">
+            <span class="tag">工具</span>
+            <span class="tag">iCloud</span>
+            <span class="tag">免费 / Pro</span>
+          </div>
+        </a>
+
+        <a class="app-card" href="./apps/artcut.html">
+          <img class="icon" src="../assets/artcut-icon.png" alt="ArtCut icon">
+          <h3>ArtCut</h3>
+          <p>本地优先的视频剪辑 App，支持时间线拼接、截取、字幕、倒放、转场、叠加、音频和导出。</p>
+          <div class="tag-row">
+            <span class="tag">照片与视频</span>
+            <span class="tag">本地草稿</span>
+            <span class="tag">AVFoundation</span>
+          </div>
+        </a>
+
+        <a class="app-card" href="./apps/appleledger.html">
+          <span class="icon generated" aria-hidden="true">AL</span>
+          <h3>Apple Ledger</h3>
+          <p>本地优先的财务记账 App，支持账本、账户、预算、报表、周期记录、订阅和私有 iCloud 同步。</p>
+          <div class="tag-row">
+            <span class="tag">财务</span>
+            <span class="tag">SwiftData</span>
+            <span class="tag">iCloud</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="band" id="privacy">
+      <div class="section">
+        <div class="section-header">
+          <h2>隐私政策链接</h2>
+          <p>每个 App Store 条目建议使用对应应用的隐私政策 URL。页面内容已按当前项目行为拆分。</p>
+        </div>
+        <div class="link-list">
+
+          <div class="link-row">
+            <div><strong>SpellVPN</strong><span>付费下载。无广告、无分析 SDK，用户自带 VPN 配置。</span></div>
+            <a href="./privacy/spellvpn.html">隐私</a>
+            <a href="./support/spellvpn.html">支持</a>
+          </div>
+
+          <div class="link-row">
+            <div><strong>VPN XX</strong><span>免费版已接入 Yandex Mobile Ads 和 Google AdMob 广告；Pro 版为付费下载、无广告。订阅和节点可通过 iCloud 同步。</span></div>
+            <a href="./privacy/vpnxx.html">隐私</a>
+            <a href="./support/vpnxx.html">支持</a>
+          </div>
+
+          <div class="link-row">
+            <div><strong>ArtCut</strong><span>本地媒体剪辑，涉及照片权限，以及可选的相机、麦克风和语音识别权限。</span></div>
+            <a href="./privacy/artcut.html">隐私</a>
+            <a href="./support/artcut.html">支持</a>
+          </div>
+
+          <div class="link-row">
+            <div><strong>Apple Ledger</strong><span>本地财务记录、可选私有 iCloud 同步、本地通知和生物识别应用锁。</span></div>
+            <a href="./privacy/appleledger.html">隐私</a>
+            <a href="./support/appleledger.html">支持</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="support">
+      <div class="section-header">
+        <h2>支持</h2>
+        <p>面向 App Review 和用户，每个支持页都包含联系方式、常见问题和产品边界说明。</p>
+      </div>
+      <div class="support-grid">
+
+        <div class="support-card">
+          <h3>适合送审的结构</h3>
+          <p>整站为纯静态 HTML，可部署到 GitHub Pages、Cloudflare Pages、Netlify、Vercel、S3 或任意 HTTPS 静态托管。</p>
+        </div>
+
+        <div class="support-card">
+          <h3>按应用拆分政策</h3>
+          <p>VPN、广告、iCloud、视频媒体、语音识别和财务数据分别写在对应应用中，避免审核资料互相冲突。</p>
+        </div>
+
+        <div class="support-card">
+          <h3>联系方式</h3>
+          <p>支持邮箱为 support@your-domain.example，用于用户支持、隐私问题和 App Review 后续沟通。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>版权所有 2026 澄序应用。保留所有权利。</span>
+      <span><a href="./index.html#privacy">隐私</a> · <a href="./index.html#support">支持</a></span>
+    </div>
+  </footer>
+</body>
+</html>

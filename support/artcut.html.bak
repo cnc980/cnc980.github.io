@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArtCut Support</title>
+  <meta name="description" content="ArtCut Support">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://your-domain.example/en/support/artcut.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://your-domain.example/zh-Hans/support/artcut.html">
+  <link rel="alternate" hreflang="ru" href="https://your-domain.example/ru/support/artcut.html">
+  <link rel="alternate" hreflang="x-default" href="https://your-domain.example/en/support/artcut.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">CA</span>
+        <span>Clearnova Apps</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">Apps</a>
+          <a href="../index.html#privacy">Privacy</a>
+          <a href="../index.html#support">Support</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="active" lang="en" href="../en/support/artcut.html">EN</a><a class="" lang="zh-Hans" href="../zh-Hans/support/artcut.html">中</a><a class="" lang="ru" href="../ru/support/artcut.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <p class="eyebrow accent-amber">Support</p>
+      <h1>ArtCut Support</h1>
+      <p class="lead">For help, contact <a href="mailto:support@your-domain.example">support@your-domain.example</a>.</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/artcut.html">ArtCut</a>
+        <a class="button secondary" href="../privacy/artcut.html">Privacy Policy</a>
+      </div>
+    </section>
+
+    <article class="legal-layout">
+
+      <h2>Common Questions</h2>
+
+      <h3>Where are projects stored?</h3>
+      <p>Drafts and generated media caches are stored locally on your device unless you export or share them.</p>
+
+      <h3>Why does automatic captioning require permission?</h3>
+      <p>Automatic captions use Apple&#39;s speech recognition framework when you start caption generation.</p>
+
+      <h3>Why did export take a long time?</h3>
+      <p>Reverse clips, overlays, transitions, mosaics, speed changes, and high-resolution media can require additional on-device rendering time.</p>
+
+      <h3>How do I clear storage?</h3>
+      <p>Use the app&#39;s cache cleanup tools to remove generated renders and temporary files.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 Clearnova Apps. All rights reserved.</span>
+      <span><a href="../index.html#privacy">Privacy</a> · <a href="../index.html#support">Support</a></span>
+    </div>
+  </footer>
+</body>
+</html>
