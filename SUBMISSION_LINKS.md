@@ -4,6 +4,8 @@ Replace `https://your-domain.example` with the real HTTPS domain after deploymen
 
 Supported languages: English (`en`), Simplified Chinese (`zh-Hans`), Russian (`ru`).
 
+App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN
+
 ## SpellVPN
 
 ### English
@@ -88,5 +90,7 @@ Supported languages: English (`en`), Simplified Chinese (`zh-Hans`), Russian (`r
 
 - Brand name: `Clearnova Apps` / `澄序应用`.
 - Support email: `support@your-domain.example`.
+- App Store buttons link to the developer page above.
 - Use each app's matching privacy URL in App Store Connect.
-- For VPN XX, make sure App Privacy answers match the submitted edition: the free edition can show ads, while the Pro edition removes ads.
+- For VPN XX Free, make sure App Privacy answers disclose the advertising SDK data that may be processed, including identifiers, approximate location, usage/ad interaction data, diagnostics, performance data, and device/app information as applicable to the shipped SDK configuration and consent flow.
+- For VPN XX Pro, make sure App Privacy answers reflect that the paid edition does not show ads and does not initialize Yandex Mobile Ads or Google AdMob for ad serving.
