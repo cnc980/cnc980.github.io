@@ -1,0 +1,24 @@
+<svg width="1080" height="560" viewBox="0 0 1080 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="免费版和 Pro 版差异">
+  <defs>
+    <style>
+      .bg{fill:#f6f7fb}.card{fill:#fff;stroke:#d8deea;stroke-width:2}.free{fill:#fff7ed;stroke:#fdba74}.pro{fill:#ecfdf3;stroke:#86efac}.title{font:700 32px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#172033}.text{font:500 22px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#344054}.muted{font:400 18px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#667085}.badge{font:700 18px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:white}.blue{fill:#2f6fed}.green{fill:#12b76a}.orange{fill:#f97316}
+    </style>
+  </defs>
+  <rect class="bg" width="1080" height="560" rx="28"/>
+  <text x="58" y="70" class="title">版本差异</text>
+  <text x="58" y="106" class="muted">功能一致，主要区别是广告和付费方式。</text>
+  <rect class="card free" x="70" y="150" width="430" height="330" rx="26"/>
+  <circle class="orange" cx="122" cy="204" r="24"/><text x="108" y="211" class="badge">AD</text>
+  <text x="162" y="214" class="title" font-size="28">VPN XX 免费版</text>
+  <text x="112" y="272" class="text">包含广告</text>
+  <text x="112" y="314" class="muted">开屏广告、底部 Banner、信息流广告、插页广告。</text>
+  <text x="112" y="368" class="text">可能请求广告跟踪许可</text>
+  <text x="112" y="410" class="muted">用于在获得许可后提供更相关的广告。</text>
+  <rect class="card pro" x="580" y="150" width="430" height="330" rx="26"/>
+  <circle class="green" cx="632" cy="204" r="24"/><text x="619" y="211" class="badge">PRO</text>
+  <text x="672" y="214" class="title" font-size="28">VPN XX Pro</text>
+  <text x="622" y="272" class="text">无广告</text>
+  <text x="622" y="314" class="muted">不展示开屏、Banner、插页或信息流广告。</text>
+  <text x="622" y="368" class="text">功能一致</text>
+  <text x="622" y="410" class="muted">订阅、节点、测速、分享、iCloud 均保持一致。</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg width="1080" height="560" viewBox="0 0 1080 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VPN XX 功能总览">
+  <defs>
+    <style>
+      .bg{fill:#f6f7fb}.card{fill:#fff;stroke:#d8deea;stroke-width:2}.title{font:700 34px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#172033}.text{font:500 22px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#35425f}.small{font:400 18px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#68748a}.pill{fill:#eef3ff;stroke:#bdd0ff}.accent{fill:#2f6fed}.line{stroke:#91a4c7;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#91a4c7"/></marker>
+  </defs>
+  <rect class="bg" width="1080" height="560" rx="28"/>
+  <text x="54" y="70" class="title">VPN XX 使用流程</text>
+  <text x="54" y="108" class="small">导入订阅或节点，集中管理、测速、分享，并通过 iCloud 同步。</text>
+  <rect class="card" x="68" y="166" width="250" height="246" rx="24"/>
+  <circle class="accent" cx="193" cy="218" r="34"/>
+  <text x="180" y="226" font-size="30" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">1</text>
+  <text x="128" y="284" class="title" font-size="28">订阅</text>
+  <text x="103" y="324" class="text">添加 URL</text>
+  <text x="103" y="360" class="text">剪贴板导入</text>
+  <text x="103" y="396" class="text">扫码导入</text>
+  <path class="line" d="M328 289 H426"/>
+  <rect class="card" x="426" y="166" width="250" height="246" rx="24"/>
+  <circle class="accent" cx="551" cy="218" r="34"/>
+  <text x="537" y="226" font-size="30" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">2</text>
+  <text x="486" y="284" class="title" font-size="28">节点</text>
+  <text x="461" y="324" class="text">筛选排序</text>
+  <text x="461" y="360" class="text">批量测速</text>
+  <text x="461" y="396" class="text">收藏分享</text>
+  <path class="line" d="M686 289 H784"/>
+  <rect class="card" x="784" y="166" width="250" height="246" rx="24"/>
+  <circle class="accent" cx="909" cy="218" r="34"/>
+  <text x="895" y="226" font-size="30" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">3</text>
+  <text x="849" y="284" class="title" font-size="28">设置</text>
+  <text x="819" y="324" class="text">iCloud 同步</text>
+  <text x="819" y="360" class="text">数据清理</text>
+  <text x="819" y="396" class="text">版本信息</text>
+  <rect class="pill" x="68" y="460" width="300" height="48" rx="24"/>
+  <text x="92" y="491" class="small">免费版：含广告</text>
+  <rect class="pill" x="394" y="460" width="300" height="48" rx="24"/>
+  <text x="418" y="491" class="small">Pro 版：无广告</text>
+  <rect class="pill" x="720" y="460" width="300" height="48" rx="24"/>
+  <text x="744" y="491" class="small">功能保持一致</text>
+</svg>
+

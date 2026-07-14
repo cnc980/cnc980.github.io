@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VPN XX User Guide | Official app website</title>
+  <meta name="description" content="Use VPN XX to import, refresh, organize, sync, share, and test user-provided proxy subscription URLs and node information.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/vpnxx.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://cnc980.github.io/zh-Hans/tutorials/vpnxx.html">
+  <link rel="alternate" hreflang="ru" href="https://cnc980.github.io/ru/tutorials/vpnxx.html">
+  <link rel="alternate" hreflang="x-default" href="https://cnc980.github.io/en/tutorials/vpnxx.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">CA</span>
+        <span>Clearnova Apps</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">Apps</a>
+          <a href="../index.html#tutorials">Tutorials</a>
+          <a href="../index.html#privacy">Privacy</a>
+          <a href="../index.html#support">Support</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="active" lang="en" href="../en/tutorials/vpnxx.html">EN</a><a class="" lang="zh-Hans" href="../zh-Hans/tutorials/vpnxx.html">中</a><a class="" lang="ru" href="../ru/tutorials/vpnxx.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero tutorial-hero">
+      <div class="app-title">
+        <img class="icon" src="../assets/vpnxx-icon.png" alt="VPN XX icon">
+        <h1>VPN XX User Guide</h1>
+      </div>
+      <p class="eyebrow accent-blue">User Guide</p>
+      <p class="lead">Use VPN XX to import, refresh, organize, sync, share, and test user-provided proxy subscription URLs and node information.</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/vpnxx.html">VPN XX</a>
+        <a class="button secondary" href="../support/vpnxx.html">Support</a>
+        <a class="button secondary" href="../privacy/vpnxx.html">Privacy Policy</a>
+      </div>
+    </section>
+
+    <article class="tutorial-layout">
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">1</div>
+        <div>
+          <h2>First Launch and Permissions</h2>
+          <ol class="tutorial-steps">
+            <li>The main workspace is organized around Subscriptions, Nodes, and Settings.</li>
+            <li>Camera permission is needed only when you scan a QR code to import a subscription or node.</li>
+            <li>VPN XX Free may request advertising consent or tracking permission where required before showing personalized ads.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../assets/vpnxx-guide-overview.svg" alt="VPN XX is organized around subscriptions, nodes, settings, and private iCloud sync.">
+          <figcaption>VPN XX is organized around subscriptions, nodes, settings, and private iCloud sync.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">2</div>
+        <div>
+          <h2>Add Subscriptions or Nodes</h2>
+          <ol class="tutorial-steps">
+            <li>Add a name and paste a subscription URL, paste one or more proxy links, import from the clipboard, or scan a QR code.</li>
+            <li>HTTP or HTTPS subscription URLs are saved as subscriptions and can be refreshed later; direct proxy links are parsed into nodes.</li>
+            <li>Subscription URLs are data you provide. They are not App Store subscription purchases.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../assets/vpnxx-guide-add-subscription.svg" alt="Add subscriptions or nodes by URL, clipboard, or QR code.">
+          <figcaption>Add subscriptions or nodes by URL, clipboard, or QR code.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">3</div>
+        <div>
+          <h2>Supported Formats</h2>
+          <ol class="tutorial-steps">
+            <li>VPN XX parses plain text first, then tries Base64 decoding when needed.</li>
+            <li>Supported node formats include VMess, VLESS, Trojan, Shadowsocks, SSR, Hysteria, Hysteria2, TUIC, WireGuard, SOCKS, HTTP, and HTTPS where applicable.</li>
+            <li>The app can also extract recognizable node URIs from mixed text, Clash YAML, and sing-box JSON.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../assets/vpnxx-guide-supported-formats.svg" alt="Supported import formats include common proxy links, Base64 subscriptions, Clash, and sing-box.">
+          <figcaption>Supported import formats include common proxy links, Base64 subscriptions, Clash, and sing-box.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">4</div>
+        <div>
+          <h2>Refresh and Organize Nodes</h2>
+          <ol class="tutorial-steps">
+            <li>Refresh a subscription to fetch its latest node list from the URL you provided.</li>
+            <li>Use protocol, status, favorites, and latency filters to keep large node lists manageable.</li>
+            <li>Rename nodes or mark favorites so frequently used endpoints are easy to find.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../assets/vpnxx-guide-node-list.svg" alt="Search, filter, sort, favorite, refresh, and test nodes from one list.">
+          <figcaption>Search, filter, sort, favorite, refresh, and test nodes from one list.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">5</div>
+        <div>
+          <h2>Speed Test and Share</h2>
+          <ol class="tutorial-steps">
+            <li>Run batch tests or single-node checks to compare endpoint latency. Results depend on the provider, protocol, and current network.</li>
+            <li>UDP or handshake-heavy protocols such as Hysteria, TUIC, and WireGuard may be marked as requiring a protocol-specific check.</li>
+            <li>Share node details only with people or apps you trust because proxy links may contain credentials.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../assets/vpnxx-guide-node-share.svg" alt="Node sharing shows a QR code and raw link; share only with trusted people or apps.">
+          <figcaption>Node sharing shows a QR code and raw link; share only with trusted people or apps.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">6</div>
+        <div>
+          <h2>iCloud Sync and Data Management</h2>
+          <ol class="tutorial-steps">
+            <li>Enable iCloud sync if you want your subscription and node data to sync through your private iCloud account.</li>
+            <li>Use Check iCloud, Self Test, and Sync Now to confirm that iCloud is available before relying on cross-device sync.</li>
+            <li>Clear local data, restore from iCloud, clear iCloud data, or clear both only after you understand which copy will remain.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../assets/vpnxx-guide-settings-icloud.svg" alt="Settings include iCloud checks, sync, local clearing, cloud clearing, and restore actions.">
+          <figcaption>Settings include iCloud checks, sync, local clearing, cloud clearing, and restore actions.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">7</div>
+        <div>
+          <h2>Free and Pro Versions</h2>
+          <ol class="tutorial-steps">
+            <li>VPN XX Free can show Yandex/AdMob ads through Yandex Smart Waterfall mediation, including banner, app open, interstitial, and native in-feed placements.</li>
+            <li>VPN XX Pro is a paid download with no ads.</li>
+            <li>The Pro target does not render ads, initialize ad SDKs for ad serving, or include the free edition ad IDs.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../assets/vpnxx-guide-editions.svg" alt="Free includes ads through Yandex Smart Waterfall; Pro is the paid ad-free edition.">
+          <figcaption>Free includes ads through Yandex Smart Waterfall; Pro is the paid ad-free edition.</figcaption>
+        </figure>
+      </section>
+      <div class="legal-box">
+        <strong>For help, contact <a href="mailto:balamanigill@gmail.com">balamanigill@gmail.com</a>.</strong>
+        <p>Free version includes Yandex Mobile Ads and Google AdMob ads; Pro is a paid download with no ads. iCloud sync for subscriptions and nodes.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 Clearnova Apps. All rights reserved.</span>
+      <span><a href="../index.html#privacy">Privacy</a> · <a href="../index.html#support">Support</a></span>
+    </div>
+  </footer>
+</body>
+</html>

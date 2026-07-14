@@ -9,6 +9,13 @@ Static multilingual official website for App Store submission pages.
 - Russian: `/ru/`
 - The root pages are English aliases for compatibility.
 
+## Page Types
+
+- Product pages: `/apps/{app}.html`
+- User guides: `/tutorials/{app}.html`
+- Support pages: `/support/{app}.html`
+- Privacy policies: `/privacy/{app}.html`
+
 ## Site Identity
 
 - English brand: `Clearnova Apps`

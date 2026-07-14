@@ -1,0 +1,46 @@
+<svg width="1080" height="700" viewBox="0 0 1080 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="节点列表示意图">
+  <defs>
+    <style>
+      .bg{fill:#f6f7fb}.phone{fill:#101828}.screen{fill:#fff}.field{fill:#f8fafc;stroke:#d7deea}.btn{fill:#eef3ff;stroke:#bdd0ff}.row{fill:#fff;stroke:#e1e7f0}.ad{fill:#fff7ed;stroke:#fdba74}.title{font:700 28px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#172033}.text{font:500 20px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#344054}.muted{font:400 16px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#667085}.green{fill:#099250}.orange{fill:#dc6803}.call{fill:#fff;stroke:#d8deea;stroke-width:2}.line{stroke:#2f6fed;stroke-width:3;fill:none}
+    </style>
+  </defs>
+  <rect class="bg" width="1080" height="700" rx="28"/>
+  <text x="58" y="70" class="title">节点列表与测速</text>
+  <text x="58" y="106" class="muted">所有订阅中的节点会集中显示，可搜索、筛选、排序、收藏和分享。</text>
+  <rect class="phone" x="72" y="138" width="370" height="520" rx="48"/>
+  <rect class="screen" x="96" y="168" width="322" height="458" rx="28"/>
+  <text x="126" y="216" class="title" font-size="24">节点列表</text>
+  <rect class="field" x="126" y="240" width="262" height="36" rx="18"/>
+  <text x="144" y="264" class="muted">搜索节点、协议、地址</text>
+  <rect class="btn" x="126" y="292" width="122" height="38" rx="12"/>
+  <text x="166" y="316" class="text" font-size="18">刷新</text>
+  <rect class="btn" x="266" y="292" width="122" height="38" rx="12"/>
+  <text x="306" y="316" class="text" font-size="18">测速</text>
+  <rect class="btn" x="126" y="348" width="112" height="34" rx="12"/>
+  <text x="152" y="370" class="muted">筛选</text>
+  <rect class="btn" x="276" y="348" width="112" height="34" rx="12"/>
+  <text x="302" y="370" class="muted">排序</text>
+  <rect class="row" x="126" y="400" width="262" height="64" rx="14"/>
+  <text x="144" y="426" class="text" font-size="18">Japan 01</text>
+  <text x="144" y="450" class="muted">VLESS · jp.example.com:443</text>
+  <text x="330" y="436" class="green" font-size="18" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">88ms</text>
+  <rect class="ad" x="126" y="476" width="262" height="54" rx="14"/>
+  <text x="144" y="508" class="muted">信息流广告位（免费版）</text>
+  <rect class="row" x="126" y="542" width="262" height="64" rx="14"/>
+  <text x="144" y="568" class="text" font-size="18">US Backup</text>
+  <text x="144" y="592" class="muted">Trojan · us.example.com:443</text>
+  <text x="322" y="578" class="orange" font-size="18" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">240ms</text>
+  <rect class="call" x="520" y="164" width="430" height="94" rx="22"/>
+  <text x="552" y="202" class="text">搜索与筛选</text>
+  <text x="552" y="232" class="muted">可按节点名、协议、服务器、订阅名搜索。</text>
+  <path class="line" d="M518 220 C470 242 438 254 388 258"/>
+  <rect class="call" x="520" y="300" width="430" height="94" rx="22"/>
+  <text x="552" y="338" class="text">批量测速或单节点测速</text>
+  <text x="552" y="368" class="muted">TCP 协议会显示延迟，特殊协议会提示需专测。</text>
+  <path class="line" d="M518 350 C470 340 430 318 388 312"/>
+  <rect class="call" x="520" y="436" width="430" height="94" rx="22"/>
+  <text x="552" y="474" class="text">收藏和分享</text>
+  <text x="552" y="504" class="muted">节点行右侧可收藏、测速、进入分享页。</text>
+  <path class="line" d="M518 486 C470 468 430 444 388 432"/>
+</svg>
+

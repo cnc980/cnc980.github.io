@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Руководство VPN XX | Официальный сайт приложений</title>
+  <meta name="description" content="Используйте VPN XX для импорта, обновления, организации, синхронизации, отправки и проверки предоставленных пользователем URL подписок и proxy-узлов.">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" href="../../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/vpnxx.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://cnc980.github.io/zh-Hans/tutorials/vpnxx.html">
+  <link rel="alternate" hreflang="ru" href="https://cnc980.github.io/ru/tutorials/vpnxx.html">
+  <link rel="alternate" hreflang="x-default" href="https://cnc980.github.io/en/tutorials/vpnxx.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">CA</span>
+        <span>Clearnova Apps</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">Приложения</a>
+          <a href="../index.html#tutorials">Руководства</a>
+          <a href="../index.html#privacy">Конфиденциальность</a>
+          <a href="../index.html#support">Поддержка</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="" lang="en" href="../../en/tutorials/vpnxx.html">EN</a><a class="" lang="zh-Hans" href="../../zh-Hans/tutorials/vpnxx.html">中</a><a class="active" lang="ru" href="./vpnxx.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero tutorial-hero">
+      <div class="app-title">
+        <img class="icon" src="../../assets/vpnxx-icon.png" alt="VPN XX icon">
+        <h1>Руководство VPN XX</h1>
+      </div>
+      <p class="eyebrow accent-blue">Руководство пользователя</p>
+      <p class="lead">Используйте VPN XX для импорта, обновления, организации, синхронизации, отправки и проверки предоставленных пользователем URL подписок и proxy-узлов.</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/vpnxx.html">VPN XX</a>
+        <a class="button secondary" href="../support/vpnxx.html">Поддержка</a>
+        <a class="button secondary" href="../privacy/vpnxx.html">Политика конфиденциальности</a>
+      </div>
+    </section>
+
+    <article class="tutorial-layout">
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">1</div>
+        <div>
+          <h2>Первый запуск и разрешения</h2>
+          <ol class="tutorial-steps">
+            <li>Основной интерфейс состоит из разделов Subscriptions, Nodes и Settings.</li>
+            <li>Разрешение камеры нужно только для сканирования QR-кода подписки или узла.</li>
+            <li>VPN XX Free может запросить согласие на рекламу или разрешение на отслеживание там, где это требуется для персонализированной рекламы.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-overview.svg" alt="VPN XX построен вокруг подписок, узлов, настроек и приватной синхронизации iCloud.">
+          <figcaption>VPN XX построен вокруг подписок, узлов, настроек и приватной синхронизации iCloud.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">2</div>
+        <div>
+          <h2>Добавление подписок и узлов</h2>
+          <ol class="tutorial-steps">
+            <li>Добавьте имя и вставьте URL подписки, одну или несколько proxy-ссылок, импортируйте из буфера или отсканируйте QR-код.</li>
+            <li>HTTP или HTTPS URL сохраняются как подписки и могут обновляться позже; прямые proxy-ссылки разбираются как узлы.</li>
+            <li>URL подписок являются данными, которые вы предоставляете. Это не покупки подписки App Store.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-add-subscription.svg" alt="Добавляйте подписки или узлы через URL, буфер обмена или QR-код.">
+          <figcaption>Добавляйте подписки или узлы через URL, буфер обмена или QR-код.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">3</div>
+        <div>
+          <h2>Поддерживаемые форматы</h2>
+          <ol class="tutorial-steps">
+            <li>VPN XX сначала разбирает обычный текст, затем при необходимости пробует Base64-декодирование.</li>
+            <li>Поддерживаемые форматы узлов включают VMess, VLESS, Trojan, Shadowsocks, SSR, Hysteria, Hysteria2, TUIC, WireGuard, SOCKS, HTTP и HTTPS, где это применимо.</li>
+            <li>Приложение также может извлекать распознаваемые URI узлов из смешанного текста, Clash YAML и sing-box JSON.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-supported-formats.svg" alt="Поддерживаются распространенные proxy-ссылки, Base64-подписки, Clash и sing-box.">
+          <figcaption>Поддерживаются распространенные proxy-ссылки, Base64-подписки, Clash и sing-box.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">4</div>
+        <div>
+          <h2>Обновление и организация узлов</h2>
+          <ol class="tutorial-steps">
+            <li>Обновляйте подписку, чтобы получить актуальный список узлов с указанного вами URL.</li>
+            <li>Используйте фильтры протокола, статуса, избранного и задержки для удобной работы с большими списками.</li>
+            <li>Переименовывайте узлы или добавляйте их в избранное, чтобы быстро находить частые endpoints.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-node-list.svg" alt="Ищите, фильтруйте, сортируйте, добавляйте в избранное, обновляйте и проверяйте узлы.">
+          <figcaption>Ищите, фильтруйте, сортируйте, добавляйте в избранное, обновляйте и проверяйте узлы.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">5</div>
+        <div>
+          <h2>Проверка скорости и отправка</h2>
+          <ol class="tutorial-steps">
+            <li>Запускайте пакетную проверку или проверку одного узла, чтобы сравнить задержку endpoints. Результаты зависят от провайдера, протокола и текущей сети.</li>
+            <li>UDP-протоколы или протоколы с отдельным рукопожатием, такие как Hysteria, TUIC и WireGuard, могут требовать специальной проверки.</li>
+            <li>Отправляйте данные узла только доверенным людям или приложениям, потому что proxy-ссылки могут содержать учетные данные.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-node-share.svg" alt="Отправка узла показывает QR-код и исходную ссылку; делитесь только с доверенными людьми или приложениями.">
+          <figcaption>Отправка узла показывает QR-код и исходную ссылку; делитесь только с доверенными людьми или приложениями.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">6</div>
+        <div>
+          <h2>iCloud-синхронизация и данные</h2>
+          <ol class="tutorial-steps">
+            <li>Включите iCloud-синхронизацию, если хотите синхронизировать подписки и узлы через личный iCloud.</li>
+            <li>Используйте Check iCloud, Self Test и Sync Now, чтобы подтвердить доступность iCloud перед синхронизацией между устройствами.</li>
+            <li>Очищайте локальные данные, восстанавливайте из iCloud, очищайте iCloud или удаляйте обе копии только после понимания, какая копия останется.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-settings-icloud.svg" alt="Настройки включают проверку iCloud, синхронизацию, локальную очистку, очистку облака и восстановление.">
+          <figcaption>Настройки включают проверку iCloud, синхронизацию, локальную очистку, очистку облака и восстановление.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">7</div>
+        <div>
+          <h2>Free и Pro</h2>
+          <ol class="tutorial-steps">
+            <li>VPN XX Free может показывать рекламу Yandex/AdMob через медиацию Yandex Smart Waterfall, включая banner, app open, interstitial и native in-feed.</li>
+            <li>VPN XX Pro является платной загрузкой без рекламы.</li>
+            <li>Цель Pro не показывает рекламу, не инициализирует рекламные SDK для показа рекламы и не содержит рекламные ID бесплатной версии.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-editions.svg" alt="Free содержит рекламу через Yandex Smart Waterfall; Pro является платной версией без рекламы.">
+          <figcaption>Free содержит рекламу через Yandex Smart Waterfall; Pro является платной версией без рекламы.</figcaption>
+        </figure>
+      </section>
+      <div class="legal-box">
+        <strong>Для помощи свяжитесь с нами: <a href="mailto:balamanigill@gmail.com">balamanigill@gmail.com</a>.</strong>
+        <p>Бесплатная версия включает рекламу Yandex Mobile Ads и Google AdMob; Pro является платной загрузкой без рекламы. Подписки и узлы синхронизируются через iCloud.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 Clearnova Apps. Все права защищены.</span>
+      <span><a href="../index.html#privacy">Конфиденциальность</a> · <a href="../index.html#support">Поддержка</a></span>
+    </div>
+  </footer>
+</body>
+</html>

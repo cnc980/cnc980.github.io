@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Руководство SpellVPN | Официальный сайт приложений</title>
+  <meta name="description" content="Узнайте, как импортировать собственную VPN-конфигурацию, разрешить iOS VPN, запустить Packet Tunnel и управлять функциями Pro или Ultra.">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" href="../../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/spellvpn.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://cnc980.github.io/zh-Hans/tutorials/spellvpn.html">
+  <link rel="alternate" hreflang="ru" href="https://cnc980.github.io/ru/tutorials/spellvpn.html">
+  <link rel="alternate" hreflang="x-default" href="https://cnc980.github.io/en/tutorials/spellvpn.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">CA</span>
+        <span>Clearnova Apps</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">Приложения</a>
+          <a href="../index.html#tutorials">Руководства</a>
+          <a href="../index.html#privacy">Конфиденциальность</a>
+          <a href="../index.html#support">Поддержка</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="" lang="en" href="../../en/tutorials/spellvpn.html">EN</a><a class="" lang="zh-Hans" href="../../zh-Hans/tutorials/spellvpn.html">中</a><a class="active" lang="ru" href="./spellvpn.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero tutorial-hero">
+      <div class="app-title">
+        <img class="icon" src="../../assets/spellvpn-icon.png" alt="SpellVPN icon">
+        <h1>Руководство SpellVPN</h1>
+      </div>
+      <p class="eyebrow accent-green">Руководство пользователя</p>
+      <p class="lead">Узнайте, как импортировать собственную VPN-конфигурацию, разрешить iOS VPN, запустить Packet Tunnel и управлять функциями Pro или Ultra.</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/spellvpn.html">SpellVPN</a>
+        <a class="button secondary" href="../support/spellvpn.html">Поддержка</a>
+        <a class="button secondary" href="../privacy/spellvpn.html">Политика конфиденциальности</a>
+      </div>
+    </section>
+
+    <article class="tutorial-layout">
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">1</div>
+        <div>
+          <h2>Перед началом</h2>
+          <ol class="tutorial-steps">
+            <li>Подготовьте совместимый sing-box JSON, URL подписки, proxy URI, QR-код, текст из буфера или локальный файл от своего провайдера.</li>
+            <li>Перед импортом проверьте, что сервер или URL подписки доступен из вашей сети.</li>
+            <li>SpellVPN является клиентом. Он не продает proxy-узлы и не управляет VPN-сетью трафика разработчика.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-dashboard.png" alt="Панель SpellVPN и обзор подключения.">
+          <figcaption>Панель SpellVPN и обзор подключения.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">2</div>
+        <div>
+          <h2>Импорт конфигурации</h2>
+          <ol class="tutorial-steps">
+            <li>Откройте SpellVPN и выберите подходящий способ импорта: QR, QR из Фото, буфер обмена, Файлы, URL подписки, proxy-ссылка или URL-схема.</li>
+            <li>Перед сохранением проверьте имя конфигурации, протокол, сервер и правила.</li>
+            <li>Если импорт не удался, проверьте срок действия URL подписки, формат JSON, поддержку протокола, сервер и порт.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-import.png" alt="Импорт QR-кодов, ссылок, текста из буфера и файлов.">
+          <figcaption>Импорт QR-кодов, ссылок, текста из буфера и файлов.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">3</div>
+        <div>
+          <h2>Подключение и отключение</h2>
+          <ol class="tutorial-steps">
+            <li>Выберите сохраненную конфигурацию и нажмите кнопку подключения.</li>
+            <li>При первой установке Packet Tunnel подтвердите системное разрешение iOS VPN.</li>
+            <li>Для отключения используйте тот же элемент управления; если туннель не запускается, проверьте локальный статус и логи.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-config.png" alt="Проверьте детали конфигурации перед сохранением или запуском туннеля.">
+          <figcaption>Проверьте детали конфигурации перед сохранением или запуском туннеля.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">4</div>
+        <div>
+          <h2>Резервные копии, логи и версии</h2>
+          <ol class="tutorial-steps">
+            <li>Используйте локальный экспорт или резервную копию iCloud Drive только когда хотите сохранить копию конфигураций.</li>
+            <li>Логи хранятся на устройстве и помогают диагностировать ошибки соединения или проверки конфигурации.</li>
+            <li>SpellVPN Pro платная, без рекламы и встроенных покупок. SpellVPN Ultra бесплатна с рекламой; необязательная подписка App Store убирает рекламу и открывает Ultra-функции.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-ultra-subscription.png" alt="Подписка SpellVPN Ultra убирает рекламу и открывает Ultra-функции; Pro остается платной без рекламы.">
+          <figcaption>Подписка SpellVPN Ultra убирает рекламу и открывает Ultra-функции; Pro остается платной без рекламы.</figcaption>
+        </figure>
+      </section>
+      <div class="legal-box">
+        <strong>Для помощи свяжитесь с нами: <a href="mailto:balamanigill@gmail.com">balamanigill@gmail.com</a>.</strong>
+        <p>Pro является платной загрузкой без рекламы и встроенных покупок. Ultra бесплатна, использует рекламу Yandex/AdMob и предлагает необязательные автопродлеваемые подписки.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 Clearnova Apps. Все права защищены.</span>
+      <span><a href="../index.html#privacy">Конфиденциальность</a> · <a href="../index.html#support">Поддержка</a></span>
+    </div>
+  </footer>
+</body>
+</html>

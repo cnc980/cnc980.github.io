@@ -20,18 +20,21 @@ App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-priv
 ### English
 
 - Marketing URL: `https://cnc980.github.io/en/apps/spellvpn.html`
+- Tutorial URL: `https://cnc980.github.io/en/tutorials/spellvpn.html`
 - Support URL: `https://cnc980.github.io/en/support/spellvpn.html`
 - Privacy Policy URL: `https://cnc980.github.io/en/privacy/spellvpn.html`
 
 ### 简体中文
 
 - Marketing URL: `https://cnc980.github.io/zh-Hans/apps/spellvpn.html`
+- Tutorial URL: `https://cnc980.github.io/zh-Hans/tutorials/spellvpn.html`
 - Support URL: `https://cnc980.github.io/zh-Hans/support/spellvpn.html`
 - Privacy Policy URL: `https://cnc980.github.io/zh-Hans/privacy/spellvpn.html`
 
 ### Русский
 
 - Marketing URL: `https://cnc980.github.io/ru/apps/spellvpn.html`
+- Tutorial URL: `https://cnc980.github.io/ru/tutorials/spellvpn.html`
 - Support URL: `https://cnc980.github.io/ru/support/spellvpn.html`
 - Privacy Policy URL: `https://cnc980.github.io/ru/privacy/spellvpn.html`
 
@@ -40,18 +43,21 @@ App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-priv
 ### English
 
 - Marketing URL: `https://cnc980.github.io/en/apps/vpnxx.html`
+- Tutorial URL: `https://cnc980.github.io/en/tutorials/vpnxx.html`
 - Support URL: `https://cnc980.github.io/en/support/vpnxx.html`
 - Privacy Policy URL: `https://cnc980.github.io/en/privacy/vpnxx.html`
 
 ### 简体中文
 
 - Marketing URL: `https://cnc980.github.io/zh-Hans/apps/vpnxx.html`
+- Tutorial URL: `https://cnc980.github.io/zh-Hans/tutorials/vpnxx.html`
 - Support URL: `https://cnc980.github.io/zh-Hans/support/vpnxx.html`
 - Privacy Policy URL: `https://cnc980.github.io/zh-Hans/privacy/vpnxx.html`
 
 ### Русский
 
 - Marketing URL: `https://cnc980.github.io/ru/apps/vpnxx.html`
+- Tutorial URL: `https://cnc980.github.io/ru/tutorials/vpnxx.html`
 - Support URL: `https://cnc980.github.io/ru/support/vpnxx.html`
 - Privacy Policy URL: `https://cnc980.github.io/ru/privacy/vpnxx.html`
 
@@ -60,18 +66,21 @@ App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-priv
 ### English
 
 - Marketing URL: `https://cnc980.github.io/en/apps/artcut.html`
+- Tutorial URL: `https://cnc980.github.io/en/tutorials/artcut.html`
 - Support URL: `https://cnc980.github.io/en/support/artcut.html`
 - Privacy Policy URL: `https://cnc980.github.io/en/privacy/artcut.html`
 
 ### 简体中文
 
 - Marketing URL: `https://cnc980.github.io/zh-Hans/apps/artcut.html`
+- Tutorial URL: `https://cnc980.github.io/zh-Hans/tutorials/artcut.html`
 - Support URL: `https://cnc980.github.io/zh-Hans/support/artcut.html`
 - Privacy Policy URL: `https://cnc980.github.io/zh-Hans/privacy/artcut.html`
 
 ### Русский
 
 - Marketing URL: `https://cnc980.github.io/ru/apps/artcut.html`
+- Tutorial URL: `https://cnc980.github.io/ru/tutorials/artcut.html`
 - Support URL: `https://cnc980.github.io/ru/support/artcut.html`
 - Privacy Policy URL: `https://cnc980.github.io/ru/privacy/artcut.html`
 
@@ -80,18 +89,21 @@ App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-priv
 ### English
 
 - Marketing URL: `https://cnc980.github.io/en/apps/appleledger.html`
+- Tutorial URL: `https://cnc980.github.io/en/tutorials/appleledger.html`
 - Support URL: `https://cnc980.github.io/en/support/appleledger.html`
 - Privacy Policy URL: `https://cnc980.github.io/en/privacy/appleledger.html`
 
 ### 简体中文
 
 - Marketing URL: `https://cnc980.github.io/zh-Hans/apps/appleledger.html`
+- Tutorial URL: `https://cnc980.github.io/zh-Hans/tutorials/appleledger.html`
 - Support URL: `https://cnc980.github.io/zh-Hans/support/appleledger.html`
 - Privacy Policy URL: `https://cnc980.github.io/zh-Hans/privacy/appleledger.html`
 
 ### Русский
 
 - Marketing URL: `https://cnc980.github.io/ru/apps/appleledger.html`
+- Tutorial URL: `https://cnc980.github.io/ru/tutorials/appleledger.html`
 - Support URL: `https://cnc980.github.io/ru/support/appleledger.html`
 - Privacy Policy URL: `https://cnc980.github.io/ru/privacy/appleledger.html`
 

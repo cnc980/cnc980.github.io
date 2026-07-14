@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VPN XX 使用教程 | 官方应用网站</title>
+  <meta name="description" content="使用 VPN XX 导入、刷新、整理、同步、分享和测试用户提供的代理订阅 URL 与节点信息。">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" href="../../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/vpnxx.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://cnc980.github.io/zh-Hans/tutorials/vpnxx.html">
+  <link rel="alternate" hreflang="ru" href="https://cnc980.github.io/ru/tutorials/vpnxx.html">
+  <link rel="alternate" hreflang="x-default" href="https://cnc980.github.io/en/tutorials/vpnxx.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">澄</span>
+        <span>澄序应用</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">应用</a>
+          <a href="../index.html#tutorials">教程</a>
+          <a href="../index.html#privacy">隐私</a>
+          <a href="../index.html#support">支持</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+    <a class="" lang="en" href="../../en/tutorials/vpnxx.html">EN</a><a class="active" lang="zh-Hans" href="./vpnxx.html">中</a><a class="" lang="ru" href="../../ru/tutorials/vpnxx.html">RU</a>
+  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero tutorial-hero">
+      <div class="app-title">
+        <img class="icon" src="../../assets/vpnxx-icon.png" alt="VPN XX icon">
+        <h1>VPN XX 使用教程</h1>
+      </div>
+      <p class="eyebrow accent-blue">使用教程</p>
+      <p class="lead">使用 VPN XX 导入、刷新、整理、同步、分享和测试用户提供的代理订阅 URL 与节点信息。</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/vpnxx.html">VPN XX</a>
+        <a class="button secondary" href="../support/vpnxx.html">支持</a>
+        <a class="button secondary" href="../privacy/vpnxx.html">隐私政策</a>
+      </div>
+    </section>
+
+    <article class="tutorial-layout">
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">1</div>
+        <div>
+          <h2>首次使用和权限</h2>
+          <ol class="tutorial-steps">
+            <li>主界面按“订阅”“节点”“设置”三个栏目组织。</li>
+            <li>只有在扫码导入订阅或节点时，才需要相机权限。</li>
+            <li>VPN XX 免费版在需要时可能请求广告同意或跟踪许可，用于展示个性化广告。</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-overview.svg" alt="VPN XX 围绕订阅、节点、设置和私有 iCloud 同步组织。">
+          <figcaption>VPN XX 围绕订阅、节点、设置和私有 iCloud 同步组织。</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">2</div>
+        <div>
+          <h2>添加订阅或节点</h2>
+          <ol class="tutorial-steps">
+            <li>填写名称并粘贴订阅 URL，粘贴一个或多个代理链接，从剪贴板导入，或扫描二维码。</li>
+            <li>HTTP 或 HTTPS 订阅地址会保存为订阅，之后可刷新；直接的代理链接会被解析为节点。</li>
+            <li>订阅 URL 是你提供的数据，不是 App Store 订阅内购。</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-add-subscription.svg" alt="通过 URL、剪贴板或二维码添加订阅和节点。">
+          <figcaption>通过 URL、剪贴板或二维码添加订阅和节点。</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">3</div>
+        <div>
+          <h2>支持的格式</h2>
+          <ol class="tutorial-steps">
+            <li>VPN XX 会先解析明文内容，必要时再尝试 Base64 解码。</li>
+            <li>支持的节点格式包括 VMess、VLESS、Trojan、Shadowsocks、SSR、Hysteria、Hysteria2、TUIC、WireGuard、SOCKS、HTTP 和 HTTPS 等。</li>
+            <li>App 也可从混合文本、Clash YAML 和 sing-box JSON 中提取可识别的节点 URI。</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-supported-formats.svg" alt="支持常见代理链接、Base64 订阅、Clash 和 sing-box 等导入格式。">
+          <figcaption>支持常见代理链接、Base64 订阅、Clash 和 sing-box 等导入格式。</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">4</div>
+        <div>
+          <h2>刷新和整理节点</h2>
+          <ol class="tutorial-steps">
+            <li>刷新订阅可从你提供的 URL 获取最新节点列表。</li>
+            <li>使用协议、状态、收藏和延迟筛选，让大量节点更容易管理。</li>
+            <li>可以重命名节点或加入收藏，方便快速找到常用端点。</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-node-list.svg" alt="在节点列表中搜索、筛选、排序、收藏、刷新和测速。">
+          <figcaption>在节点列表中搜索、筛选、排序、收藏、刷新和测速。</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">5</div>
+        <div>
+          <h2>测速和分享</h2>
+          <ol class="tutorial-steps">
+            <li>运行批量测速或单节点检测来比较端点延迟；结果取决于服务提供方、协议和当前网络。</li>
+            <li>Hysteria、TUIC、WireGuard 等 UDP 或需要专门握手的协议，可能提示需要协议专测。</li>
+            <li>代理链接可能包含凭据，只应分享给你信任的人或 App。</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-node-share.svg" alt="节点分享会显示二维码和原始链接；只分享给可信的人或 App。">
+          <figcaption>节点分享会显示二维码和原始链接；只分享给可信的人或 App。</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">6</div>
+        <div>
+          <h2>iCloud 同步和数据管理</h2>
+          <ol class="tutorial-steps">
+            <li>如果希望订阅和节点数据通过你的私有 iCloud 账号同步，可以启用 iCloud 同步。</li>
+            <li>使用检查 iCloud、自检和立即同步，先确认 iCloud 可用，再依赖跨设备同步。</li>
+            <li>清除本地数据、从 iCloud 恢复、清除 iCloud 数据或全部清除前，请确认哪一份数据会保留。</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-settings-icloud.svg" alt="设置页包含 iCloud 检查、同步、本地清除、云端清除和恢复操作。">
+          <figcaption>设置页包含 iCloud 检查、同步、本地清除、云端清除和恢复操作。</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">7</div>
+        <div>
+          <h2>免费版和 Pro 版</h2>
+          <ol class="tutorial-steps">
+            <li>VPN XX 免费版可通过 Yandex Smart Waterfall 调解展示 Yandex/AdMob 广告，包括 Banner、开屏、插页和信息流广告位。</li>
+            <li>VPN XX Pro 是付费下载版本，无广告。</li>
+            <li>Pro target 不渲染广告，不为广告展示初始化广告 SDK，也不包含免费版广告 ID。</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media diagram-media">
+          <img src="../../assets/vpnxx-guide-editions.svg" alt="免费版通过 Yandex Smart Waterfall 展示广告；Pro 是付费无广告版本。">
+          <figcaption>免费版通过 Yandex Smart Waterfall 展示广告；Pro 是付费无广告版本。</figcaption>
+        </figure>
+      </section>
+      <div class="legal-box">
+        <strong>如需帮助，请联系 <a href="mailto:balamanigill@gmail.com">balamanigill@gmail.com</a>.</strong>
+        <p>免费版已接入 Yandex Mobile Ads 和 Google AdMob 广告；Pro 版为付费下载、无广告。订阅和节点可通过 iCloud 同步。</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>版权所有 2026 澄序应用。保留所有权利。</span>
+      <span><a href="../index.html#privacy">隐私</a> · <a href="../index.html#support">支持</a></span>
+    </div>
+  </footer>
+</body>
+</html>

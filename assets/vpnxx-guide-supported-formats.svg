@@ -1,0 +1,36 @@
+<svg width="1080" height="560" viewBox="0 0 1080 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="支持的协议和格式">
+  <defs>
+    <style>
+      .bg{fill:#f6f7fb}.card{fill:#fff;stroke:#d8deea;stroke-width:2}.title{font:700 32px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#172033}.text{font:600 22px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#344054}.muted{font:400 18px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#667085}.pill{fill:#eef3ff;stroke:#bdd0ff}.pill2{fill:#ecfdf3;stroke:#abdcbc}
+    </style>
+  </defs>
+  <rect class="bg" width="1080" height="560" rx="28"/>
+  <text x="58" y="70" class="title">支持的导入内容</text>
+  <text x="58" y="106" class="muted">先解析明文，必要时再尝试 Base64 解码，并从文本中提取节点 URI。</text>
+  <rect class="card" x="58" y="150" width="470" height="330" rx="24"/>
+  <text x="92" y="202" class="title" font-size="26">节点协议</text>
+  <g class="text">
+    <rect class="pill" x="92" y="232" width="116" height="42" rx="21"/><text x="121" y="260">VMess</text>
+    <rect class="pill" x="222" y="232" width="116" height="42" rx="21"/><text x="253" y="260">VLESS</text>
+    <rect class="pill" x="352" y="232" width="120" height="42" rx="21"/><text x="382" y="260">Trojan</text>
+    <rect class="pill" x="92" y="292" width="90" height="42" rx="21"/><text x="123" y="320">SS</text>
+    <rect class="pill" x="196" y="292" width="92" height="42" rx="21"/><text x="225" y="320">SSR</text>
+    <rect class="pill" x="302" y="292" width="152" height="42" rx="21"/><text x="328" y="320">Hysteria</text>
+    <rect class="pill" x="92" y="352" width="160" height="42" rx="21"/><text x="121" y="380">Hysteria2</text>
+    <rect class="pill" x="266" y="352" width="100" height="42" rx="21"/><text x="294" y="380">TUIC</text>
+    <rect class="pill" x="380" y="352" width="120" height="42" rx="21"/><text x="405" y="380">WireGuard</text>
+    <rect class="pill" x="92" y="412" width="126" height="42" rx="21"/><text x="119" y="440">SOCKS5</text>
+    <rect class="pill" x="232" y="412" width="100" height="42" rx="21"/><text x="260" y="440">HTTP</text>
+    <rect class="pill" x="346" y="412" width="112" height="42" rx="21"/><text x="370" y="440">HTTPS</text>
+  </g>
+  <rect class="card" x="552" y="150" width="470" height="330" rx="24"/>
+  <text x="586" y="202" class="title" font-size="26">配置格式</text>
+  <rect class="pill2" x="586" y="232" width="170" height="46" rx="23"/><text x="622" y="262" class="text">单行节点</text>
+  <rect class="pill2" x="776" y="232" width="176" height="46" rx="23"/><text x="812" y="262" class="text">多行混合</text>
+  <rect class="pill2" x="586" y="300" width="190" height="46" rx="23"/><text x="627" y="330" class="text">Base64 订阅</text>
+  <rect class="pill2" x="796" y="300" width="150" height="46" rx="23"/><text x="838" y="330" class="text">Clash</text>
+  <rect class="pill2" x="586" y="368" width="170" height="46" rx="23"/><text x="624" y="398" class="text">Sing-box</text>
+  <rect class="pill2" x="776" y="368" width="176" height="46" rx="23"/><text x="807" y="398" class="text">文本提取</text>
+  <text x="586" y="456" class="muted">也支持从二维码、剪贴板、远程订阅地址导入。</text>
+</svg>
+
