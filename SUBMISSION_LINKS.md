@@ -1,10 +1,19 @@
 # Submission Links
 
-Replace `https://cnc980.github.io` with the real HTTPS domain after deployment.
+Deployment domain: https://cnc980.github.io
+
+Current project scan: 2026-07-14
 
 Supported languages: English (`en`), Simplified Chinese (`zh-Hans`), Russian (`ru`).
 
 App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN
+
+## Current App Status
+
+- SpellVPN: Pro is a paid download with no ads and no in-app purchases. Ultra is free, uses Yandex Mobile Ads with Google AdMob mediation, and uses StoreKit auto-renewing subscriptions to remove ads and unlock Ultra features.
+- VPN XX: Free uses Yandex Smart Waterfall with Yandex Mobile Ads and Google AdMob mediation. Pro is a paid download with no ads. Proxy subscription URLs managed by the app are user-provided data, not App Store subscription purchases.
+- ArtCut: Free uses Yandex Mobile Ads with Google AdMob mediation for editor/banner, native, and interstitial placements. Paid is a paid download with no ads. Membership or premium-template subscriptions are not treated as active until they are enabled in a submitted build.
+- Apple Ledger: No ads or StoreKit purchase logic were found in the current project scan. Subscription items are user-created finance records for bill reminders, not App Store purchases.
 
 ## SpellVPN
 
@@ -91,6 +100,12 @@ App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-priv
 - Brand name: `Clearnova Apps` / `澄序应用`.
 - Support email: `balamanigill@gmail.com`.
 - App Store buttons link to the developer page above.
+- `app-ads.txt` is included at the site root for the ad-supported free editions.
 - Use each app's matching privacy URL in App Store Connect.
-- For VPN XX Free, make sure App Privacy answers disclose the advertising SDK data that may be processed, including identifiers, approximate location, usage/ad interaction data, diagnostics, performance data, and device/app information as applicable to the shipped SDK configuration and consent flow.
+- For SpellVPN Pro, make sure App Privacy answers reflect that the paid edition does not show ads and has no in-app purchases.
+- For SpellVPN Ultra, disclose Yandex Mobile Ads and Google AdMob advertising data, IDFA/consent behavior where applicable, and StoreKit auto-renewing subscription data used to unlock paid features.
+- For VPN XX Free, make sure App Privacy answers disclose Yandex Smart Waterfall with Yandex Mobile Ads and Google AdMob mediation, plus the advertising SDK data that may be processed, including identifiers, approximate location, usage/ad interaction data, diagnostics, performance data, and device/app information as applicable to the shipped SDK configuration and consent flow.
 - For VPN XX Pro, make sure App Privacy answers reflect that the paid edition does not show ads and does not initialize Yandex Mobile Ads or Google AdMob for ad serving.
+- For ArtCut Free, make sure App Privacy answers disclose Yandex Mobile Ads with Google AdMob mediation and the ad-related data categories described in the privacy policy.
+- For ArtCut Paid, make sure App Privacy answers reflect that the paid edition does not show ads and does not initialize Yandex Mobile Ads or Google AdMob for ad serving.
+- Apple Ledger "subscriptions" are user-created finance records, not App Store subscription purchases. The current scan did not find ads or StoreKit purchase logic for Apple Ledger.

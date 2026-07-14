@@ -14,14 +14,13 @@ Static multilingual official website for App Store submission pages.
 - English brand: `Clearnova Apps`
 - Chinese brand: `澄序应用`
 - Support email: `balamanigill@gmail.com`
-
-## Before Publishing
-
-Replace `https://your-domain.example` in `SUBMISSION_LINKS.md`, `sitemap.xml`, and alternate links with your real HTTPS domain.
+- Deployment domain: `https://cnc980.github.io`
+- Current project scan: `2026-07-14`
+- Root app ads authorization: `/app-ads.txt`
 
 ## Deploy
 
-Upload the full `app-official-site` folder to any static host, such as GitHub Pages, Cloudflare Pages, Netlify, Vercel, S3, or another HTTPS static host.
+Upload the full `app-official-site` folder to GitHub Pages or another HTTPS static host.
 
 ## App Store Connect
 
