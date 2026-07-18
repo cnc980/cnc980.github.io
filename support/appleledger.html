@@ -50,19 +50,25 @@
       <h2>Common Questions</h2>
 
       <h3>Where is my finance data stored?</h3>
-      <p>Finance data is stored locally on your device. If iCloud sync is enabled, it syncs through your private iCloud account.</p>
+      <p>Finance data is stored locally on your device. If iCloud sync is enabled, it syncs through your private iCloud account using CloudKit.</p>
 
       <h3>Does Apple Ledger upload data to a developer server?</h3>
-      <p>No. The current version has no developer-operated finance-data server and no third-party analytics SDK.</p>
+      <p>No. The current version has no developer-operated finance-data server, no ad SDKs, no third-party analytics SDK, and no tracking SDK.</p>
+
+      <h3>Does Apple Ledger have subscriptions, Pro, or a paywall?</h3>
+      <p>No. The current project has no StoreKit products, no membership tier, no Pro subscription, and no paywall. Advanced features are currently free in the app.</p>
 
       <h3>Are subscription reminders App Store subscriptions?</h3>
       <p>No. Subscription items in Apple Ledger are finance records that you create to track bills. They are not App Store purchases sold by the app.</p>
+
+      <h3>Does OCR upload receipt images?</h3>
+      <p>No. Receipt and bill OCR uses Apple&#39;s on-device Vision framework for images you choose. Receipt images can be stored with your local records, optional private iCloud sync, and JSON/ZIP backups.</p>
 
       <h3>How do I protect the app?</h3>
       <p>Enable the privacy lock in settings. Authentication is handled by Apple system services such as Face ID, Touch ID, or device passcode.</p>
 
       <h3>How can I move data?</h3>
-      <p>Use JSON backup and restore for full app data, or CSV import and export for transaction workflows.</p>
+      <p>Use JSON or ZIP backup and restore for full app data, or CSV, Excel, OFX, QIF, and PDF workflows for transaction and report tasks. Widget and Watch use App Group sharing with the main app when configured.</p>
     </article>
   </main>
 

@@ -10,10 +10,10 @@ App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-priv
 
 ## Current App Status
 
-- SpellVPN: Pro is a paid download with no ads and no in-app purchases. Ultra is free, uses Yandex Mobile Ads with Google AdMob mediation, and uses StoreKit auto-renewing subscriptions to remove ads and unlock Ultra features.
+- SpellVPN: Pro is a paid download with no ads and no in-app purchases. Ultra is free, uses Yandex Mobile Ads with Google AdMob mediation, requests ATT before ad initialization where applicable, and uses StoreKit auto-renewing subscriptions to remove ads and unlock Ultra features.
 - VPN XX: Free uses Yandex Smart Waterfall with Yandex Mobile Ads and Google AdMob mediation. Pro is a paid download with no ads. Proxy subscription URLs managed by the app are user-provided data, not App Store subscription purchases.
-- ArtCut: Free uses Yandex Mobile Ads with Google AdMob mediation for editor/banner, native, and interstitial placements. Paid is a paid download with no ads. Membership or premium-template subscriptions are not treated as active until they are enabled in a submitted build.
-- Apple Ledger: No ads or StoreKit purchase logic were found in the current project scan. Subscription items are user-created finance records for bill reminders, not App Store purchases.
+- ArtCut: Free uses Yandex Mobile Ads with Google AdMob mediation for banner, native/feed, interstitial, and app-open placements after ATT status is resolved. Paid is a paid download with no ads and does not initialize advertising SDKs. Membership or premium-template subscriptions are not treated as active until they are enabled in a submitted build.
+- Apple Ledger: No ads, StoreKit purchase logic, membership, Pro subscription, or paywall were found in the current project scan. Advanced features are currently free. Subscription items are user-created finance records for bill reminders, not App Store purchases.
 
 ## SpellVPN
 
@@ -115,9 +115,9 @@ App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-priv
 - `app-ads.txt` is included at the site root for the ad-supported free editions.
 - Use each app's matching privacy URL in App Store Connect.
 - For SpellVPN Pro, make sure App Privacy answers reflect that the paid edition does not show ads and has no in-app purchases.
-- For SpellVPN Ultra, disclose Yandex Mobile Ads and Google AdMob advertising data, IDFA/consent behavior where applicable, and StoreKit auto-renewing subscription data used to unlock paid features.
+- For SpellVPN Ultra, disclose Yandex Mobile Ads and Google AdMob advertising data, IDFA/ATT/consent behavior where applicable, StoreKit auto-renewing subscription data used to unlock paid features, and the fact that VPN configs/logs stay local unless exported or backed up by the user.
 - For VPN XX Free, make sure App Privacy answers disclose Yandex Smart Waterfall with Yandex Mobile Ads and Google AdMob mediation, plus the advertising SDK data that may be processed, including identifiers, approximate location, usage/ad interaction data, diagnostics, performance data, and device/app information as applicable to the shipped SDK configuration and consent flow.
 - For VPN XX Pro, make sure App Privacy answers reflect that the paid edition does not show ads and does not initialize Yandex Mobile Ads or Google AdMob for ad serving.
-- For ArtCut Free, make sure App Privacy answers disclose Yandex Mobile Ads with Google AdMob mediation and the ad-related data categories described in the privacy policy.
+- For ArtCut Free, make sure App Privacy answers disclose Yandex Mobile Ads with Google AdMob mediation, ATT before ad SDK initialization/ad requests, app-open/feed placements, and the ad-related data categories described in the privacy policy.
 - For ArtCut Paid, make sure App Privacy answers reflect that the paid edition does not show ads and does not initialize Yandex Mobile Ads or Google AdMob for ad serving.
-- Apple Ledger "subscriptions" are user-created finance records, not App Store subscription purchases. The current scan did not find ads or StoreKit purchase logic for Apple Ledger.
+- Apple Ledger "subscriptions" are user-created finance records, not App Store subscription purchases. The current scan did not find ads, StoreKit purchase logic, membership, Pro subscription, or a paywall for Apple Ledger; App Privacy should reflect no tracking, no developer server, local storage, optional private CloudKit sync, App Group sharing for Widget/Watch, local OCR, and user-controlled import/export/deletion.

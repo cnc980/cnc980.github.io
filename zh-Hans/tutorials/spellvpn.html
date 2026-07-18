@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SpellVPN 使用教程 | 官方应用网站</title>
-  <meta name="description" content="了解如何导入自己的 VPN 配置、批准 iOS VPN 权限、启动 Packet Tunnel 会话，并管理 Pro 或 Ultra 功能。">
+  <meta name="description" content="按 SpellVPN 的真实路径学习导入、节点、连接、订阅更新、DNS、诊断、备份以及 Pro 和 Ultra 的使用方法。">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="icon" href="../../assets/spellvpn-icon.png">
   <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/spellvpn.html">
@@ -40,11 +40,15 @@
         <h1>SpellVPN 使用教程</h1>
       </div>
       <p class="eyebrow accent-green">使用教程</p>
-      <p class="lead">了解如何导入自己的 VPN 配置、批准 iOS VPN 权限、启动 Packet Tunnel 会话，并管理 Pro 或 Ultra 功能。</p>
+      <p class="lead">按 App 中的真实流程操作：首页 → + → 导入 → 节点 → 选择节点 → 首页 → 连接。本教程还包括订阅更新、路由和 DNS、诊断、备份，以及 Pro / Ultra 的功能边界。</p>
       <div class="legal-actions">
         <a class="button secondary" href="../apps/spellvpn.html">SpellVPN</a>
         <a class="button secondary" href="../support/spellvpn.html">支持</a>
         <a class="button secondary" href="../privacy/spellvpn.html">隐私政策</a>
+      </div>
+      <div class="legal-box">
+        <strong>快速路径</strong>
+        <p>导入：<strong>首页 → +</strong> 或 <strong>配置 → 导入</strong>。更新订阅：<strong>设置 → 网络与配置 → 管理订阅 → 选择订阅 → 更新</strong>。购买或恢复 Ultra：<strong>设置 → 订阅 → Ultra Subscription</strong>。</p>
       </div>
     </section>
 
@@ -55,13 +59,14 @@
         <div>
           <h2>开始前准备</h2>
           <ol class="tutorial-steps">
-            <li>准备来自你自己服务提供方的 sing-box JSON、订阅 URL、代理 URI、二维码、剪贴板文本或本地文件。</li>
-            <li>导入前先确认服务器或订阅端点在当前网络下可访问。</li>
-            <li>SpellVPN 是客户端，不销售代理节点，也不运营开发者托管的 VPN 流量网络。</li>
+            <li>准备来自你自己服务提供方的 sing-box JSON、Clash/Mihomo YAML、订阅 URL、代理 URI、二维码、剪贴板文本、本地文件或 Wi-Fi 上传文件。</li>
+            <li>如果要使用完整 VPN 配置，请确认导入的 sing-box 配置包含 <code>tun</code> 入站和至少一个可用的代理 outbound。也可以先导入节点链接，再将节点转换为当前运行配置。</li>
+            <li>导入前先确认服务器或订阅端点在当前网络下可访问。对于无效的服务商配置，SpellVPN 不会创建账号、服务器、凭据或可用流量。</li>
+            <li>SpellVPN 是客户端，不销售代理节点，也不运营开发者托管的 VPN 流量网络。请只使用你获准使用的配置。</li>
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/spellvpn-dashboard.png" alt="SpellVPN 仪表盘和连接概览。">
+          <img src="../../assets/spellvpn-zh-dashboard.png" alt="SpellVPN 仪表盘和连接概览。">
           <figcaption>SpellVPN 仪表盘和连接概览。</figcaption>
         </figure>
       </section>
@@ -71,13 +76,15 @@
         <div>
           <h2>导入配置</h2>
           <ol class="tutorial-steps">
-            <li>打开 SpellVPN，根据来源选择扫码、照片二维码、剪贴板、文件、订阅 URL、代理链接或 URL Scheme。</li>
-            <li>保存前检查识别出的配置名称、协议、服务器和规则信息。</li>
-            <li>如果导入失败，请检查订阅 URL 是否过期、JSON 是否格式错误、协议是否不支持，或服务器与端口是否缺失。</li>
+            <li>打开 SpellVPN，停留在首页，点击右上角的 <strong>+</strong>。根据来源选择扫码、照片二维码、剪贴板、文件、Wi-Fi 上传、订阅 URL、代理链接、系统分享或 URL Scheme。</li>
+            <li>导入订阅时粘贴完整 URL，等待下载和解析结果。导入单节点时粘贴当前送审版本支持的代理 URI，例如 <code>ss://</code>、<code>vmess://</code>、<code>vless://</code>、<code>trojan://</code>、<code>hysteria2://</code>、<code>hy2://</code>、<code>tuic://</code>、<code>socks://</code>、<code>socks5://</code>、<code>http://</code> 或 <code>https://</code> 代理链接。</li>
+            <li>保存前检查识别出的配置名称、协议、服务器、端口、传输方式、TLS 和规则信息。列表中显示节点名称不代表远端服务器一定可用。</li>
+            <li>如果导入失败，请检查订阅 URL 是否过期或被阻断、JSON/YAML 是否格式错误、Base64 是否混入额外字符、字段是否不支持，或服务器与端口是否缺失。打开 Logs 查看具体解析错误。</li>
+            <li>对于 OpenVPN <code>.ovpn</code> 和 IKEv2 <code>.mobileconfig</code>，App 会给出明确限制提示，因为当前版本没有包含对应的原生配置核心。</li>
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/spellvpn-import.png" alt="二维码、链接、剪贴板文本和文件导入流程。">
+          <img src="../../assets/spellvpn-zh-import.png" alt="二维码、链接、剪贴板文本和文件导入流程。">
           <figcaption>二维码、链接、剪贴板文本和文件导入流程。</figcaption>
         </figure>
       </section>
@@ -85,32 +92,71 @@
       <section class="tutorial-section">
         <div class="tutorial-number">3</div>
         <div>
-          <h2>连接与断开</h2>
+          <h2>管理订阅和节点</h2>
           <ol class="tutorial-steps">
-            <li>选择已保存的配置，点击连接控制。</li>
-            <li>首次安装 Packet Tunnel 配置时，在 iOS VPN 权限弹窗中确认允许。</li>
-            <li>需要断开时使用同一个控制；如果隧道无法启动，可查看本地状态和日志。</li>
+            <li>成功导入订阅后，打开 <strong>设置 → 网络与配置 → 管理订阅</strong>。每个 URL 都有自己的分组，更新一个分组不会覆盖其他分组。</li>
+            <li>打开分组后可以更新 URL、复制 URL、重命名分组或删除分组。等待结果提示，并检查导入或跳过了多少节点。</li>
+            <li>打开 <strong>Nodes</strong>，可以按名称搜索、按协议筛选、展开分组、选择当前节点、编辑支持的 outbound 字段、收藏节点、导出单节点 JSON，或显示节点二维码。</li>
+            <li>连接前使用 <strong>Config</strong> 检查当前 JSON，以及支持的路由、DNS、TUN、IPv6、MTU、包含路由和排除路由设置。</li>
+            <li>导出的节点链接可能包含服务器地址、端口和凭据，只应分享给你信任的人或 App。不要把不属于你的配置、订阅或凭据公开传播。</li>
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/spellvpn-config.png" alt="保存或启动隧道前先检查配置详情。">
-          <figcaption>保存或启动隧道前先检查配置详情。</figcaption>
+          <img src="../../assets/spellvpn-zh-nodes.png" alt="管理导入节点、收藏、单节点导出和节点二维码。">
+          <figcaption>管理导入节点、收藏、单节点导出和节点二维码。</figcaption>
         </figure>
       </section>
 
       <section class="tutorial-section">
         <div class="tutorial-number">4</div>
         <div>
-          <h2>备份、日志和版本</h2>
+          <h2>连接与断开</h2>
           <ol class="tutorial-steps">
-            <li>仅在你需要保留配置副本时使用本地导出或 iCloud Drive 备份。</li>
-            <li>日志保存在设备本地，可用于排查连接或配置校验问题。</li>
-            <li>SpellVPN Pro 为付费下载，无广告、无 App 内购买。SpellVPN Ultra 免费使用并展示广告；可选 App Store 订阅可去广告并解锁 Ultra 权益。</li>
+            <li>选择有效的配置和节点，返回 <strong>首页</strong>，点击 <strong>连接</strong>。</li>
+            <li>首次安装 Packet Tunnel 配置时，在 iOS VPN 权限弹窗中确认允许。设备状态栏中的 VPN 标识由 iOS 控制。</li>
+            <li>当 App 和 iOS 都显示“已连接”后，打开真实网站测试，或使用网络工具里的 HTTP、TCP、DNS 和 IP 检查。系统显示已连接只能证明隧道配置启动，不代表所选远程节点一定可用。</li>
+            <li>打开 <strong>设置 → 网络与配置 → 管理 DNS</strong>，检查 DNS 模式、bootstrap 解析器、hosts、Fake-IP 和 IPv6 选项。切换节点前先确认当前路由模式。</li>
+            <li>需要断开时使用同一个控制。连接仍处于 Connecting 时不要连续点击连接，等待结果或打开 Logs。</li>
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/spellvpn-ultra-subscription.png" alt="SpellVPN Ultra 订阅可去广告并解锁 Ultra 权益；Pro 保持付费无广告。">
-          <figcaption>SpellVPN Ultra 订阅可去广告并解锁 Ultra 权益；Pro 保持付费无广告。</figcaption>
+          <img src="../../assets/spellvpn-zh-dashboard.png" alt="返回首页连接、断开，并确认当前连接状态。">
+          <figcaption>返回首页连接、断开，并确认当前连接状态。</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">5</div>
+        <div>
+          <h2>诊断和网络工具</h2>
+          <ol class="tutorial-steps">
+            <li>如果 VPN 显示已连接，但 Google、YouTube 或其他网站打不开，先检查当前节点、路由模式、DNS 设置、TLS/传输字段、服务器端口和节点协议测试。一次只调整一个因素，先尝试其他节点。</li>
+            <li>使用 App 当前版本提供的网络工具检查端点，包括 TCP Ping、DNS 查询、IP 查询、Whois、GeoIP、TLS 测试、HTTP 测试、TCP 端口检测、UDP 发送、IPv6 可见性检查和测速。</li>
+            <li>在导入、Ping 或连接后打开 <strong>Logs</strong>，按分类和时间筛选；然后使用 <strong>Export Diagnostics Report</strong> 导出文本报告提供给支持人员。</li>
+            <li>节点列表中的空白或 <code>0 ms</code> 表示端点尚未测量、测量失败，或需要活动中的 UDP/QUIC 协议测试，不代表延迟为零。App Store 构建使用 TCP 可达性检查，而不是原始 ICMP 套接字。</li>
+            <li>当前 App Store 构建不展示 Traceroute、WebRTC 泄漏测试、MITM、Rewrite 脚本、原生 OpenVPN 或原生 WireGuardKit。</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-zh-logs.png" alt="使用日志和诊断排查连接问题。">
+          <figcaption>使用日志和诊断排查连接问题。</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">6</div>
+        <div>
+          <h2>备份、数据和版本</h2>
+          <ol class="tutorial-steps">
+            <li>打开 <strong>设置 → 数据与同步 → 导出 App 数据文件</strong> 创建 JSON 备份；如果签名后的 App ID 具备 iCloud Documents capability，也可以使用 iCloud Drive 备份。备份可包含配置、节点、订阅、规则、DNS、路由模式、适配器设置和统计数据。</li>
+            <li>日志会保存在设备本地，除非你主动导出或分享。清除本地数据不会删除 iCloud Drive 备份文件；iOS VPN 权限和当前系统隧道也不会包含在可移植备份中。</li>
+            <li>在 Ultra 中打开 <strong>设置 → 订阅 → Ultra Subscription</strong>，查看 StoreKit 价格、购买、恢复或管理订阅。四个方案分别是周、月、季和年订阅，由 Apple 管理。</li>
+            <li>SpellVPN Pro 为付费下载，无广告、无 App 内购买。SpellVPN Ultra 免费使用并展示广告；可选 App Store 订阅可去广告并保持 Ultra 权益。</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-zh-settings.png" alt="设置页展示版本信息、隐私状态、Wi-Fi 上传、iCloud Drive 备份、本地清理和网络工具。">
+          <figcaption>设置页展示版本信息、隐私状态、Wi-Fi 上传、iCloud Drive 备份、本地清理和网络工具。</figcaption>
         </figure>
       </section>
       <div class="legal-box">

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SpellVPN User Guide | Official app website</title>
-  <meta name="description" content="Learn how to import your own VPN configuration, approve the iOS VPN permission, start a Packet Tunnel session, and manage Pro or Ultra features.">
+  <meta name="description" content="Follow SpellVPN's real import, node, connection, subscription update, DNS, diagnostics, backup, and Pro or Ultra workflows.">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="icon" href="../../assets/spellvpn-icon.png">
   <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/spellvpn.html">
@@ -40,11 +40,15 @@
         <h1>SpellVPN User Guide</h1>
       </div>
       <p class="eyebrow accent-green">User Guide</p>
-      <p class="lead">Learn how to import your own VPN configuration, approve the iOS VPN permission, start a Packet Tunnel session, and manage Pro or Ultra features.</p>
+      <p class="lead">Follow the same real workflow shown in the app: Dashboard → + → Import → Nodes → select a node → Dashboard → Connect. This guide also covers subscription updates, routing and DNS, diagnostics, backups, and the Pro / Ultra boundaries.</p>
       <div class="legal-actions">
         <a class="button secondary" href="../apps/spellvpn.html">SpellVPN</a>
         <a class="button secondary" href="../support/spellvpn.html">Support</a>
         <a class="button secondary" href="../privacy/spellvpn.html">Privacy Policy</a>
+      </div>
+      <div class="legal-box">
+        <strong>Quick paths</strong>
+        <p>Import: <strong>Dashboard → +</strong> or <strong>Config → Import</strong>. Update a subscription: <strong>Settings → Network &amp; Configuration → Manage Subscriptions → select a subscription → Update</strong>. Buy or restore Ultra: <strong>Settings → Subscription → Ultra Subscription</strong>.</p>
       </div>
     </section>
 
@@ -55,9 +59,10 @@
         <div>
           <h2>Before You Start</h2>
           <ol class="tutorial-steps">
-            <li>Prepare a compatible sing-box JSON file, subscription URL, proxy URI, QR code, clipboard text, or local file from your own provider.</li>
-            <li>Confirm that the server or subscription endpoint is reachable from your network before importing it.</li>
-            <li>SpellVPN is a client. It does not sell proxy nodes or operate a developer-hosted VPN traffic network.</li>
+            <li>Prepare a compatible sing-box JSON file, Clash/Mihomo YAML, subscription URL, proxy URI, QR code, clipboard text, local file, or Wi-Fi upload file from your own provider.</li>
+            <li>For a complete VPN configuration, make sure the imported sing-box profile contains a <code>tun</code> inbound and at least one usable proxy outbound. A node link can be imported first, then converted into the active runtime configuration.</li>
+            <li>Confirm that the server or subscription endpoint is reachable from your network before importing it. SpellVPN does not create accounts, servers, credentials, or working traffic for an invalid provider.</li>
+            <li>SpellVPN is a client. It does not sell proxy nodes or operate a developer-hosted VPN traffic network. Use only configurations you are allowed to use.</li>
           </ol>
         </div>
         <figure class="tutorial-media">
@@ -71,9 +76,11 @@
         <div>
           <h2>Import a Configuration</h2>
           <ol class="tutorial-steps">
-            <li>Open SpellVPN and choose the import method that matches your source: QR scan, photo QR, clipboard, Files, subscription URL, proxy link, or URL scheme.</li>
-            <li>Review the detected configuration name, protocol, server, and rule details before saving.</li>
-            <li>If the import fails, check for an expired subscription URL, malformed JSON, unsupported protocol, or missing server and port.</li>
+            <li>Open SpellVPN, stay on Dashboard, and tap the <strong>+</strong> button in the top-right corner. Choose QR scan, photo QR, clipboard, Files, Wi-Fi Upload, subscription URL, proxy link, system share, or URL scheme.</li>
+            <li>For a subscription, paste the complete URL and wait for the download and parser result. For a single node, paste a proxy URI supported by the submitted build, such as <code>ss://</code>, <code>vmess://</code>, <code>vless://</code>, <code>trojan://</code>, <code>hysteria2://</code>, <code>hy2://</code>, <code>tuic://</code>, <code>socks://</code>, <code>socks5://</code>, <code>http://</code>, or <code>https://</code> proxy links.</li>
+            <li>Review the detected configuration name, protocol, server, port, transport, TLS, and rule details before saving. Do not treat a displayed node name as proof that the remote server works.</li>
+            <li>If the import fails, check for an expired or blocked subscription URL, malformed JSON/YAML, Base64 text with extra characters, unsupported fields, or missing server and port. Open Logs for the exact parser message.</li>
+            <li>OpenVPN <code>.ovpn</code> and IKEv2 <code>.mobileconfig</code> are detected with a clear limitation because this build does not include those separate native profile cores.</li>
           </ol>
         </div>
         <figure class="tutorial-media">
@@ -85,32 +92,71 @@
       <section class="tutorial-section">
         <div class="tutorial-number">3</div>
         <div>
-          <h2>Connect and Disconnect</h2>
+          <h2>Manage Subscriptions and Nodes</h2>
           <ol class="tutorial-steps">
-            <li>Select the saved configuration and tap the connect control.</li>
-            <li>Approve the iOS VPN permission prompt the first time a Packet Tunnel profile is installed.</li>
-            <li>Use the same control to disconnect, then review local status and logs if the tunnel does not start.</li>
+            <li>After a successful subscription import, open <strong>Settings → Network &amp; Configuration → Manage Subscriptions</strong>. Each saved URL has its own group, so importing or updating one group does not replace unrelated groups.</li>
+            <li>Open a group to update its URL, copy the URL, rename the group, or delete it. Wait for the result message and check how many nodes were imported or skipped.</li>
+            <li>Open <strong>Nodes</strong> to search by name, filter by protocol, expand a group, select the active node, edit supported outbound fields, mark favorites, export a node as JSON, or show a node QR code.</li>
+            <li>Use <strong>Config</strong> to review the active JSON and supported route, DNS, TUN, IPv6, MTU, include-route, and exclude-route settings before connecting.</li>
+            <li>Exported node links can contain server addresses, ports, and credentials. Share them only with people or apps you trust, and do not publicly distribute configs, subscriptions, or credentials that are not yours.</li>
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/spellvpn-config.png" alt="Review configuration details before saving or starting a tunnel.">
-          <figcaption>Review configuration details before saving or starting a tunnel.</figcaption>
+          <img src="../../assets/spellvpn-nodes.png" alt="Manage imported nodes, favorites, single-node export, and node QR codes.">
+          <figcaption>Manage imported nodes, favorites, single-node export, and node QR codes.</figcaption>
         </figure>
       </section>
 
       <section class="tutorial-section">
         <div class="tutorial-number">4</div>
         <div>
-          <h2>Backups, Logs, and Editions</h2>
+          <h2>Connect and Disconnect</h2>
           <ol class="tutorial-steps">
-            <li>Use local export or iCloud Drive backup only when you want to keep a copy of your configuration data.</li>
-            <li>Logs are stored on device and are useful for diagnosing connection or validation problems.</li>
-            <li>SpellVPN Pro is paid, ad-free, and has no in-app purchases. SpellVPN Ultra is free with ads; optional App Store subscriptions remove ads and unlock Ultra features.</li>
+            <li>Select a valid saved configuration and node, return to <strong>Dashboard</strong>, and tap <strong>Connect</strong>.</li>
+            <li>Approve the iOS VPN permission prompt the first time a Packet Tunnel profile is installed. The iOS status bar VPN indicator is controlled by iOS.</li>
+            <li>When the app and iOS both show Connected, open a real website test or use HTTP, TCP, DNS, and IP checks in Network Tools. A system Connected status only confirms that the tunnel profile started; it does not prove that the selected remote node is usable.</li>
+            <li>Use <strong>Settings → Network &amp; Configuration → Manage DNS</strong> to review DNS mode, bootstrap resolvers, hosts, Fake-IP, and IPv6 choices. Check the active routing mode before changing the node.</li>
+            <li>Use the same control to disconnect. Do not repeatedly tap Connect while the app is still in Connecting; wait for the result or open Logs.</li>
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/spellvpn-ultra-subscription.png" alt="SpellVPN Ultra subscriptions remove ads and unlock Ultra features; Pro stays paid and ad-free.">
-          <figcaption>SpellVPN Ultra subscriptions remove ads and unlock Ultra features; Pro stays paid and ad-free.</figcaption>
+          <img src="../../assets/spellvpn-dashboard.png" alt="Return to the dashboard to connect, disconnect, and confirm the active status.">
+          <figcaption>Return to the dashboard to connect, disconnect, and confirm the active status.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">5</div>
+        <div>
+          <h2>Diagnostics and Network Tools</h2>
+          <ol class="tutorial-steps">
+            <li>If the VPN is connected but Google, YouTube, or other websites do not load, first check the active node, route mode, DNS settings, TLS/transport fields, server port, and the node protocol test. Switch to another node before changing several settings at once.</li>
+            <li>Use the Network Tools available in the submitted build, including TCP Ping, DNS lookup, IP lookup, Whois, GeoIP, TLS test, HTTP test, TCP port check, UDP send, IPv6 visibility check, and speed test.</li>
+            <li>Use <strong>Logs</strong> after an import, Ping, or connection attempt. Filter by category and time, then use <strong>Export Diagnostics Report</strong> to share a text report with support.</li>
+            <li>In node lists, a blank or <code>0 ms</code> result means the endpoint was not measured, failed, or requires an active UDP/QUIC protocol test. It is not proof of a zero-latency connection. App Store builds use TCP reachability instead of raw ICMP sockets.</li>
+            <li>The current App Store build does not expose traceroute, WebRTC leak testing, MITM, rewrite scripts, native OpenVPN, or native WireGuardKit.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-logs.png" alt="Use logs and diagnostics to troubleshoot connection issues.">
+          <figcaption>Use logs and diagnostics to troubleshoot connection issues.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">6</div>
+        <div>
+          <h2>Backups, Data, and Editions</h2>
+          <ol class="tutorial-steps">
+            <li>Use <strong>Settings → Data &amp; Sync → Export App Data File</strong> to create a JSON backup, or use iCloud Drive backup when the signed App ID has the required iCloud Documents capability. The backup can include configs, nodes, subscriptions, rules, DNS, route mode, adapter settings, and statistics.</li>
+            <li>Logs stay on device unless you export or share them. Clearing local data does not delete iCloud Drive backup files. The iOS VPN permission and active system tunnel are not portable backup data.</li>
+            <li>On Ultra, open <strong>Settings → Subscription → Ultra Subscription</strong> to view StoreKit prices, purchase, restore, or manage the subscription. The four plan IDs are weekly, monthly, quarterly, and yearly products managed by Apple.</li>
+            <li>SpellVPN Pro is paid, ad-free, and has no in-app purchases. SpellVPN Ultra is free with ads; optional App Store subscriptions remove ads and keep Ultra benefits active.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-settings.png" alt="Settings show edition details, privacy status, Wi-Fi Upload, iCloud Drive backups, local reset, and network tools.">
+          <figcaption>Settings show edition details, privacy status, Wi-Fi Upload, iCloud Drive backups, local reset, and network tools.</figcaption>
         </figure>
       </section>
       <div class="legal-box">

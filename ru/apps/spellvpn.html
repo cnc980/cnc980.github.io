@@ -41,7 +41,7 @@
           <h1>SpellVPN</h1>
         </div>
         <p class="eyebrow accent-green">Pro платная без рекламы · Ultra бесплатно с рекламой и подпиской</p>
-        <p class="lead">Импортируйте собственный sing-box JSON, URL подписки, proxy-ссылку, QR-код, текст из буфера или локальный файл и запускайте iOS Packet Tunnel одним нажатием.</p>
+        <p class="lead">Импортируйте собственный sing-box JSON, Clash/Mihomo YAML, URL подписки, proxy-ссылку, QR-код, буфер обмена, локальный файл, Wi-Fi Upload или URL-схему и запускайте iOS Packet Tunnel одним нажатием.</p>
         <div class="app-actions">
           <a class="app-store-link" href="https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN" aria-label="Скачать в App Store: SpellVPN" target="_blank" rel="noopener noreferrer">
             <img src="../../assets/appstore-button.svg" alt="Скачать в App Store">
@@ -61,12 +61,17 @@
 
         <div class="feature-card">
           <h3>Способы импорта</h3>
-          <p>QR-сканирование, QR из Фото, буфер обмена, Файлы, URL подписки, proxy-ссылки и URL-схемы.</p>
+          <p>QR-сканирование, QR из Фото, буфер обмена, Файлы, Wi-Fi Upload, URL подписки, proxy-ссылки и URL-схемы. Поддерживаются sing-box JSON, Clash/Mihomo YAML, списки Base64 URI, SIP008, Surge, Quantumult, текст Shadowrocket и распространенные proxy-ссылки.</p>
         </div>
 
         <div class="feature-card">
-          <h3>Packet Tunnel</h3>
-          <p>Запуск и остановка VPN-сессий через iOS Network Extension и системный запрос Packet Tunnel.</p>
+          <h3>Узлы и подписки</h3>
+          <p>Управляйте сохраненными URL подписок, обновляйте или копируйте их, выбирайте узлы, редактируйте реальные proxy outbounds, экспортируйте один узел в JSON и показывайте QR-коды узлов.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Профили, инструменты и виджеты</h3>
+          <p>Используйте профили подключения, паузу VPN, privacy filters, DNS management, Network Tools для TCP Ping, DNS, IP, Whois, GeoIP, TLS, HTTP, TCP/UDP, IPv6 и speed test, виджеты Home/Lock Screen, базовые App Shortcuts, локальные логи, диагностику, JSON импорт/экспорт и резервные копии iCloud Drive.</p>
         </div>
 
         <div class="feature-card">
@@ -88,7 +93,11 @@
 
           <div class="phone-shot"><img src="../../assets/spellvpn-import.png" alt="SpellVPN import screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-config.png" alt="SpellVPN configuration screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-nodes.png" alt="SpellVPN nodes screenshot"></div>
+
+          <div class="phone-shot"><img src="../../assets/spellvpn-settings.png" alt="SpellVPN settings screenshot"></div>
+
+          <div class="phone-shot"><img src="../../assets/spellvpn-logs.png" alt="SpellVPN logs screenshot"></div>
         </div>
       </div>
     </section>
@@ -96,7 +105,7 @@
     <section class="section">
       <div class="section-header">
         <h2>Важные ограничения</h2>
-        <p>SpellVPN не продает proxy-узлы и не размещает пользовательский трафик. Качество соединения зависит от выбранной пользователем конфигурации, сервера и сети. Pro и Ultra различаются монетизацией, а не наличием VPN-сети разработчика.</p>
+        <p>SpellVPN не продает proxy-узлы и не размещает пользовательский трафик. Качество соединения зависит от выбранной пользователем конфигурации, сервера и сети. Текущая сборка включает status widgets и базовые App Shortcuts, но не рекламирует фоновое подключение/отключение VPN через Shortcuts, MITM, rewrite-скрипты, Apple TV/tvOS, Live Activities, Apple Watch, raw ICMP ping, traceroute, WebRTC leak testing, native OpenVPN или native WireGuardKit.</p>
       </div>
     </section>
   </main>

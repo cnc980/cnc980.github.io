@@ -41,7 +41,7 @@
           <h1>SpellVPN</h1>
         </div>
         <p class="eyebrow accent-green">Pro 付费无广告 · Ultra 免费含广告与订阅</p>
-        <p class="lead">导入你自己的 sing-box JSON、订阅 URL、代理链接、二维码、剪贴板内容或本地文件，然后一键启动 iOS Packet Tunnel。</p>
+        <p class="lead">导入你自己的 sing-box JSON、Clash/Mihomo YAML、订阅 URL、代理链接、二维码、剪贴板内容、本地文件、Wi-Fi 上传或 URL Scheme，然后一键启动 iOS Packet Tunnel。</p>
         <div class="app-actions">
           <a class="app-store-link" href="https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN" aria-label="在 App Store 下载: SpellVPN" target="_blank" rel="noopener noreferrer">
             <img src="../../assets/appstore-button.svg" alt="在 App Store 下载">
@@ -52,7 +52,7 @@
         </div>
       </div>
       <div class="hero-shot">
-        <img src="../../assets/spellvpn-dashboard.png" alt="SpellVPN dashboard screenshot">
+        <img src="../../assets/spellvpn-zh-dashboard.png" alt="SpellVPN dashboard screenshot">
       </div>
     </section>
 
@@ -61,12 +61,17 @@
 
         <div class="feature-card">
           <h3>多种导入方式</h3>
-          <p>支持扫码、照片二维码、剪贴板、文件、订阅 URL、代理链接和 URL Scheme。</p>
+          <p>支持扫码、照片二维码、剪贴板、文件、Wi-Fi 上传、订阅 URL、代理链接和 URL Scheme。可处理 sing-box JSON、Clash/Mihomo YAML、Base64 URI 列表、SIP008、Surge、Quantumult、Shadowrocket 风格文本和常见代理链接。</p>
         </div>
 
         <div class="feature-card">
-          <h3>Packet Tunnel</h3>
-          <p>通过 iOS Network Extension 和 Packet Tunnel 系统弹窗启动或停止 VPN 会话。</p>
+          <h3>节点与订阅管理</h3>
+          <p>管理已保存订阅 URL，支持更新、复制、删除；可选择节点、编辑真实代理 outbound、单节点 JSON 导出并显示节点二维码。</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>配置档、工具与小组件</h3>
+          <p>可使用连接配置档、VPN 暂停、隐私过滤、DNS 管理、TCP Ping、DNS 查询、IP 查询、Whois、GeoIP、TLS、HTTP、TCP/UDP、IPv6 和测速等网络工具，Home/Lock Screen Widget、基础 App Shortcuts、本地日志、诊断报告、JSON 导入导出和 iCloud Drive App 数据备份。</p>
         </div>
 
         <div class="feature-card">
@@ -84,11 +89,15 @@
         </div>
         <div class="screens">
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-dashboard.png" alt="SpellVPN dashboard screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-zh-dashboard.png" alt="SpellVPN dashboard screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-import.png" alt="SpellVPN import screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-zh-import.png" alt="SpellVPN import screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-config.png" alt="SpellVPN configuration screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-zh-nodes.png" alt="SpellVPN nodes screenshot"></div>
+
+          <div class="phone-shot"><img src="../../assets/spellvpn-zh-settings.png" alt="SpellVPN settings screenshot"></div>
+
+          <div class="phone-shot"><img src="../../assets/spellvpn-zh-logs.png" alt="SpellVPN logs screenshot"></div>
         </div>
       </div>
     </section>
@@ -96,7 +105,7 @@
     <section class="section">
       <div class="section-header">
         <h2>重要边界</h2>
-        <p>SpellVPN 不销售代理节点，也不托管用户流量。连接质量取决于用户选择的配置、服务器和网络。Pro 与 Ultra 的区别在于付费模式，并不代表应用运营开发者自有 VPN 流量网络。</p>
+        <p>SpellVPN 不销售代理节点，也不托管用户流量。连接质量取决于用户选择的配置、服务器和网络。当前构建包含状态 Widget 和基础 App Shortcuts，但不宣传通过快捷指令后台直接连接/断开 VPN、MITM、Rewrite 脚本、Apple TV/tvOS、Live Activity、Apple Watch、原始 ICMP Ping、Traceroute、WebRTC 泄漏测试、原生 OpenVPN 或原生 WireGuardKit。</p>
       </div>
     </section>
   </main>

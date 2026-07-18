@@ -50,19 +50,25 @@
       <h2>常见问题</h2>
 
       <h3>我的财务数据存在哪里？</h3>
-      <p>财务数据存储在你的设备本地。如果启用 iCloud 同步，会通过你的私有 iCloud 账号同步。</p>
+      <p>财务数据存储在你的设备本地。如果启用 iCloud 同步，会通过你的私有 iCloud 账号使用 CloudKit 同步。</p>
 
       <h3>Apple Ledger 会把数据上传到开发者服务器吗？</h3>
-      <p>不会。当前版本没有开发者运营的财务数据服务器，也没有第三方分析 SDK。</p>
+      <p>不会。当前版本没有开发者运营的财务数据服务器，没有广告 SDK，没有第三方分析 SDK，也没有追踪 SDK。</p>
+
+      <h3>Apple Ledger 有订阅、Pro 或付费墙吗？</h3>
+      <p>没有。当前工程没有 StoreKit 商品，没有会员层级，没有 Pro 订阅，也没有付费墙。当前 App 内高级功能免费开放。</p>
 
       <h3>订阅提醒是 App Store 订阅内购吗？</h3>
       <p>不是。Apple Ledger 里的订阅项目是你创建的财务记录，用来追踪账单，不是应用销售的 App Store 订阅内购。</p>
+
+      <h3>OCR 会上传票据图片吗？</h3>
+      <p>不会。票据和账单 OCR 使用 Apple 本机 Vision 框架处理你选择的图片。票据图片可随本地记录、可选私有 iCloud 同步以及 JSON/ZIP 备份保存。</p>
 
       <h3>如何保护应用？</h3>
       <p>在设置中启用隐私锁。认证由 Apple 系统服务处理，例如 Face ID、Touch ID 或设备密码。</p>
 
       <h3>如何迁移数据？</h3>
-      <p>使用 JSON 备份和恢复迁移完整应用数据，或使用 CSV 导入导出处理流水工作流。</p>
+      <p>使用 JSON 或 ZIP 备份和恢复迁移完整应用数据；也可使用 CSV、Excel、OFX、QIF 和 PDF 工作流处理流水和报表。配置后 Widget 和 Watch 会通过 App Group 与主 App 共享数据。</p>
     </article>
   </main>
 

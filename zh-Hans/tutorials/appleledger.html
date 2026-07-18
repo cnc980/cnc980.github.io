@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Apple Ledger 使用教程 | 官方应用网站</title>
-  <meta name="description" content="设置账本和账户、记录流水、查看预算与报表、追踪周期账单，并保护本地财务数据。">
+  <meta name="description" content="设置账本和账户、使用票据 OCR 记录流水、查看预算与报表、追踪周期账单、使用 Widget 与 Watch 快捷记账，并保护本地财务数据。">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="icon" href="../../assets/spellvpn-icon.png">
   <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/appleledger.html">
@@ -40,7 +40,7 @@
         <h1>Apple Ledger 使用教程</h1>
       </div>
       <p class="eyebrow accent-violet">使用教程</p>
-      <p class="lead">设置账本和账户、记录流水、查看预算与报表、追踪周期账单，并保护本地财务数据。</p>
+      <p class="lead">设置账本和账户、使用票据 OCR 记录流水、查看预算与报表、追踪周期账单、使用 Widget 与 Watch 快捷记账，并保护本地财务数据。</p>
       <div class="legal-actions">
         <a class="button secondary" href="../apps/appleledger.html">Apple Ledger</a>
         <a class="button secondary" href="../support/appleledger.html">支持</a>
@@ -57,7 +57,7 @@
           <ol class="tutorial-steps">
             <li>为个人、家庭、项目或经营场景创建账本。</li>
             <li>添加现金、银行卡、信用卡、存款、贷款或其他资产负债账户。</li>
-            <li>在开始日常记账前，可先整理分类、标签、商家、项目和成员。</li>
+            <li>在开始日常记账前，可先整理分类、标签、商家、项目和成员。当前高级功能免费开放，没有 StoreKit 商品、会员层级、Pro 订阅或付费墙。</li>
           </ol>
         </div>
         <figure class="tutorial-media">
@@ -72,13 +72,13 @@
           <h2>记录和查看流水</h2>
           <ol class="tutorial-steps">
             <li>添加支出、收入、转账、退款、报销、借贷、分期、手续费或余额调整。</li>
-            <li>必要时为流水添加备注和票据图片，方便后续核对。</li>
-            <li>通过总览卡片、分类排行、商家排行和趋势图查看支出结构与净资产。</li>
+            <li>必要时为流水添加备注和票据图片，并可对你选择的票据或账单图片使用本机 Vision OCR。</li>
+            <li>通过总览卡片、分类排行、商家排行、净资产明细和趋势图查看支出结构与资产。</li>
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/appleledger-expense.png" alt="记录支出、收入、转账、备注和相关明细。">
-          <figcaption>记录支出、收入、转账、备注和相关明细。</figcaption>
+          <img src="../../assets/appleledger-expense.png" alt="记录支出、收入、转账、备注、票据图片和 OCR 辅助明细。">
+          <figcaption>记录支出、收入、转账、备注、票据图片和 OCR 辅助明细。</figcaption>
         </figure>
       </section>
 
@@ -103,20 +103,20 @@
         <div>
           <h2>隐私、同步和备份</h2>
           <ol class="tutorial-steps">
-            <li>财务数据保存在设备本地。可选 iCloud 同步通过你的私有 iCloud 账号和 CloudKit 完成。</li>
+            <li>财务数据保存在设备本地。可选 iCloud 同步通过你的私有 iCloud 账号和 CloudKit 完成。共享账本使用 Apple 系统 CloudKit Sharing 邀请和角色；Widget、Watch 和主 App 通过 App Group 共享本机数据和偏好设置。</li>
             <li>开启隐私锁后，可使用 Face ID、Touch ID 或设备认证保护应用。</li>
-            <li>完整迁移可使用 JSON 备份和恢复；流水工作流可使用 CSV 导入导出。</li>
-            <li>Widget、Watch、快捷指令和 macOS 菜单栏入口依赖 Apple 平台共享能力，上架前应使用最终 App Group 和 iCloud container 做真机验证。</li>
+            <li>完整迁移可使用 JSON 或 ZIP 备份和恢复，包括票据图片；流水和报表工作流可使用 CSV、Excel、OFX、QIF 和 PDF。</li>
+            <li>上架前应在签名设备或 TestFlight 中验证最终 App Group、iCloud container、CloudKit Sharing、Widget/Watch 快捷记账、App Shortcuts、macOS 菜单栏快捷记账，以及远端变更通知行为。</li>
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/appleledger-settings.png" alt="在设置中管理主题、隐私锁、iCloud 同步、备份和数据工具。">
-          <figcaption>在设置中管理主题、隐私锁、iCloud 同步、备份和数据工具。</figcaption>
+          <img src="../../assets/appleledger-settings.png" alt="在设置中管理免费高级功能、主题、隐私锁、iCloud 同步、备份、导入导出和数据工具。">
+          <figcaption>在设置中管理免费高级功能、主题、隐私锁、iCloud 同步、备份、导入导出和数据工具。</figcaption>
         </figure>
       </section>
       <div class="legal-box">
         <strong>如需帮助，请联系 <a href="mailto:balamanigill@gmail.com">balamanigill@gmail.com</a>.</strong>
-        <p>本地财务记录、可选私有 iCloud 同步、本地通知和生物识别应用锁。</p>
+        <p>本地财务记录、无广告无付费墙、可选私有 iCloud 同步、Widget/Watch App Group 共享、本机 OCR、本地通知和生物识别应用锁。</p>
       </div>
     </article>
   </main>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Руководство SpellVPN | Официальный сайт приложений</title>
-  <meta name="description" content="Узнайте, как импортировать собственную VPN-конфигурацию, разрешить iOS VPN, запустить Packet Tunnel и управлять функциями Pro или Ultra.">
+  <meta name="description" content="Следуйте реальным путям SpellVPN для импорта, узлов, подключения, обновления подписки, DNS, диагностики, резервных копий и Pro или Ultra.">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="icon" href="../../assets/spellvpn-icon.png">
   <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/spellvpn.html">
@@ -40,11 +40,15 @@
         <h1>Руководство SpellVPN</h1>
       </div>
       <p class="eyebrow accent-green">Руководство пользователя</p>
-      <p class="lead">Узнайте, как импортировать собственную VPN-конфигурацию, разрешить iOS VPN, запустить Packet Tunnel и управлять функциями Pro или Ultra.</p>
+      <p class="lead">Следуйте реальному сценарию в приложении: Dashboard → + → Import → Nodes → выберите узел → Dashboard → Connect. Руководство также объясняет обновление подписки, маршрутизацию и DNS, диагностику, резервные копии и границы Pro / Ultra.</p>
       <div class="legal-actions">
         <a class="button secondary" href="../apps/spellvpn.html">SpellVPN</a>
         <a class="button secondary" href="../support/spellvpn.html">Поддержка</a>
         <a class="button secondary" href="../privacy/spellvpn.html">Политика конфиденциальности</a>
+      </div>
+      <div class="legal-box">
+        <strong>Быстрые пути</strong>
+        <p>Импорт: <strong>Dashboard → +</strong> или <strong>Config → Import</strong>. Обновление подписки: <strong>Settings → Network &amp; Configuration → Manage Subscriptions → выберите подписку → Update</strong>. Покупка или восстановление Ultra: <strong>Settings → Subscription → Ultra Subscription</strong>.</p>
       </div>
     </section>
 
@@ -55,9 +59,10 @@
         <div>
           <h2>Перед началом</h2>
           <ol class="tutorial-steps">
-            <li>Подготовьте совместимый sing-box JSON, URL подписки, proxy URI, QR-код, текст из буфера или локальный файл от своего провайдера.</li>
-            <li>Перед импортом проверьте, что сервер или URL подписки доступен из вашей сети.</li>
-            <li>SpellVPN является клиентом. Он не продает proxy-узлы и не управляет VPN-сетью трафика разработчика.</li>
+            <li>Подготовьте совместимый sing-box JSON, Clash/Mihomo YAML, URL подписки, proxy URI, QR-код, текст из буфера, локальный файл или файл для Wi-Fi Upload от своего провайдера.</li>
+            <li>Для полной VPN-конфигурации проверьте, что профиль sing-box содержит входящий <code>tun</code> и как минимум один рабочий proxy outbound. Ссылку на узел можно импортировать отдельно, а затем преобразовать в активную конфигурацию.</li>
+            <li>Перед импортом проверьте доступность сервера или URL подписки из вашей сети. SpellVPN не создает аккаунты, серверы, учетные данные или рабочий трафик для недействительного провайдера.</li>
+            <li>SpellVPN является клиентом. Он не продает proxy-узлы и не управляет VPN-сетью трафика разработчика. Используйте только разрешенные вам конфигурации.</li>
           </ol>
         </div>
         <figure class="tutorial-media">
@@ -71,9 +76,11 @@
         <div>
           <h2>Импорт конфигурации</h2>
           <ol class="tutorial-steps">
-            <li>Откройте SpellVPN и выберите подходящий способ импорта: QR, QR из Фото, буфер обмена, Файлы, URL подписки, proxy-ссылка или URL-схема.</li>
-            <li>Перед сохранением проверьте имя конфигурации, протокол, сервер и правила.</li>
-            <li>Если импорт не удался, проверьте срок действия URL подписки, формат JSON, поддержку протокола, сервер и порт.</li>
+            <li>Откройте SpellVPN, оставайтесь на Dashboard и нажмите <strong>+</strong> в правом верхнем углу. Выберите QR, QR из Фото, буфер обмена, Файлы, Wi-Fi Upload, URL подписки, proxy-ссылку, системный Share или URL-схему.</li>
+            <li>Для подписки вставьте полный URL и дождитесь результата загрузки и разбора. Для одного узла используйте proxy URI, поддерживаемый отправляемой сборкой: <code>ss://</code>, <code>vmess://</code>, <code>vless://</code>, <code>trojan://</code>, <code>hysteria2://</code>, <code>hy2://</code>, <code>tuic://</code>, <code>socks://</code>, <code>socks5://</code>, <code>http://</code> или <code>https://</code> proxy links.</li>
+            <li>Перед сохранением проверьте имя, протокол, сервер, порт, транспорт, TLS и правила. Отображаемое имя узла не доказывает, что удаленный сервер работает.</li>
+            <li>Если импорт не удался, проверьте просроченный или заблокированный URL, JSON/YAML, лишние символы в Base64, неподдерживаемые поля, сервер и порт. Откройте Logs для точного сообщения парсера.</li>
+            <li>Для OpenVPN <code>.ovpn</code> и IKEv2 <code>.mobileconfig</code> приложение показывает ограничение: текущая сборка не содержит отдельных нативных ядер этих профилей.</li>
           </ol>
         </div>
         <figure class="tutorial-media">
@@ -85,32 +92,71 @@
       <section class="tutorial-section">
         <div class="tutorial-number">3</div>
         <div>
-          <h2>Подключение и отключение</h2>
+          <h2>Подписки и узлы</h2>
           <ol class="tutorial-steps">
-            <li>Выберите сохраненную конфигурацию и нажмите кнопку подключения.</li>
-            <li>При первой установке Packet Tunnel подтвердите системное разрешение iOS VPN.</li>
-            <li>Для отключения используйте тот же элемент управления; если туннель не запускается, проверьте локальный статус и логи.</li>
+            <li>После успешного импорта откройте <strong>Settings → Network &amp; Configuration → Manage Subscriptions</strong>. У каждого URL своя группа, поэтому обновление одной группы не заменяет другие.</li>
+            <li>Откройте группу, чтобы обновить URL, скопировать URL, переименовать группу или удалить ее. Дождитесь сообщения о результате и проверьте число импортированных или пропущенных узлов.</li>
+            <li>Откройте <strong>Nodes</strong>, чтобы искать по имени, фильтровать по протоколу, раскрывать группу, выбирать активный узел, редактировать поддерживаемые поля outbound, добавлять в избранное, экспортировать JSON или показать QR-код узла.</li>
+            <li>Перед подключением используйте <strong>Config</strong> для проверки активного JSON и поддерживаемых настроек route, DNS, TUN, IPv6, MTU, include-route и exclude-route.</li>
+            <li>Экспортированные ссылки узлов могут содержать адреса серверов, порты и учетные данные. Делитесь ими только с доверенными людьми или приложениями и не публикуйте чужие конфигурации, подписки или учетные данные.</li>
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/spellvpn-config.png" alt="Проверьте детали конфигурации перед сохранением или запуском туннеля.">
-          <figcaption>Проверьте детали конфигурации перед сохранением или запуском туннеля.</figcaption>
+          <img src="../../assets/spellvpn-nodes.png" alt="Управляйте импортированными узлами, избранным, экспортом одного узла и QR-кодами.">
+          <figcaption>Управляйте импортированными узлами, избранным, экспортом одного узла и QR-кодами.</figcaption>
         </figure>
       </section>
 
       <section class="tutorial-section">
         <div class="tutorial-number">4</div>
         <div>
-          <h2>Резервные копии, логи и версии</h2>
+          <h2>Подключение и отключение</h2>
           <ol class="tutorial-steps">
-            <li>Используйте локальный экспорт или резервную копию iCloud Drive только когда хотите сохранить копию конфигураций.</li>
-            <li>Логи хранятся на устройстве и помогают диагностировать ошибки соединения или проверки конфигурации.</li>
-            <li>SpellVPN Pro платная, без рекламы и встроенных покупок. SpellVPN Ultra бесплатна с рекламой; необязательная подписка App Store убирает рекламу и открывает Ultra-функции.</li>
+            <li>Выберите действующую конфигурацию и узел, вернитесь в <strong>Dashboard</strong> и нажмите <strong>Connect</strong>.</li>
+            <li>При первой установке Packet Tunnel подтвердите системное разрешение iOS VPN. Индикатор VPN в строке состояния iOS контролируется системой.</li>
+            <li>Когда приложение и iOS показывают Connected, откройте реальный сайт или используйте HTTP, TCP, DNS и IP проверки в Network Tools. Статус Connected подтверждает запуск профиля туннеля, но не доказывает, что выбранный удаленный узел доступен.</li>
+            <li>Откройте <strong>Settings → Network &amp; Configuration → Manage DNS</strong>, чтобы проверить режим DNS, bootstrap-resolvers, hosts, Fake-IP и IPv6. Перед сменой узла проверьте режим маршрутизации.</li>
+            <li>Для отключения используйте тот же элемент управления. Не нажимайте Connect несколько раз во время Connecting: дождитесь результата или откройте Logs.</li>
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/spellvpn-ultra-subscription.png" alt="Подписка SpellVPN Ultra убирает рекламу и открывает Ultra-функции; Pro остается платной без рекламы.">
-          <figcaption>Подписка SpellVPN Ultra убирает рекламу и открывает Ultra-функции; Pro остается платной без рекламы.</figcaption>
+          <img src="../../assets/spellvpn-dashboard.png" alt="Вернитесь на панель, чтобы подключиться, отключиться и проверить активный статус.">
+          <figcaption>Вернитесь на панель, чтобы подключиться, отключиться и проверить активный статус.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">5</div>
+        <div>
+          <h2>Диагностика и сетевые инструменты</h2>
+          <ol class="tutorial-steps">
+            <li>Если VPN подключен, но Google, YouTube или другие сайты не открываются, сначала проверьте активный узел, режим маршрутизации, DNS, TLS/транспорт, порт сервера и protocol test узла. Сначала попробуйте другой узел.</li>
+            <li>Используйте Network Tools, доступные в отправляемой сборке: TCP Ping, DNS lookup, IP lookup, Whois, GeoIP, TLS test, HTTP test, TCP port check, UDP send, IPv6 visibility check и speed test.</li>
+            <li>После импорта, Ping или подключения откройте <strong>Logs</strong>, отфильтруйте по категории и времени, затем используйте <strong>Export Diagnostics Report</strong> для отправки текстового отчета в поддержку.</li>
+            <li>Пустой результат или <code>0 ms</code> в списке узлов означает, что endpoint не измерен, измерение завершилось ошибкой или требуется активный UDP/QUIC protocol test. Это не означает нулевую задержку. App Store-сборки используют TCP reachability, а не raw ICMP sockets.</li>
+            <li>Текущая сборка App Store не показывает traceroute, WebRTC leak testing, MITM, rewrite scripts, native OpenVPN или native WireGuardKit.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-logs.png" alt="Используйте логи и диагностику для устранения проблем соединения.">
+          <figcaption>Используйте логи и диагностику для устранения проблем соединения.</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">6</div>
+        <div>
+          <h2>Резервные копии, данные и версии</h2>
+          <ol class="tutorial-steps">
+            <li>Откройте <strong>Settings → Data &amp; Sync → Export App Data File</strong>, чтобы создать JSON-копию, или используйте iCloud Drive backup при наличии у подписанного App ID нужной iCloud Documents capability. Копия может включать конфигурации, узлы, подписки, правила, DNS, режим маршрутизации, параметры адаптера и статистику.</li>
+            <li>Логи остаются на устройстве, если вы сами не экспортируете или не отправите их. Очистка локальных данных не удаляет файлы iCloud Drive; разрешение iOS VPN и активный системный туннель не являются переносимыми данными резервной копии.</li>
+            <li>В Ultra откройте <strong>Settings → Subscription → Ultra Subscription</strong>, чтобы увидеть цены StoreKit, купить, восстановить или управлять подпиской. Четыре плана: неделя, месяц, квартал и год; ими управляет Apple.</li>
+            <li>SpellVPN Pro платная, без рекламы и встроенных покупок. SpellVPN Ultra бесплатна с рекламой; необязательная подписка App Store убирает рекламу и сохраняет активные преимущества Ultra.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-settings.png" alt="Settings показывает сведения о версии, статус приватности, Wi-Fi Upload, резервные копии iCloud Drive, локальный сброс и network tools.">
+          <figcaption>Settings показывает сведения о версии, статус приватности, Wi-Fi Upload, резервные копии iCloud Drive, локальный сброс и network tools.</figcaption>
         </figure>
       </section>
       <div class="legal-box">

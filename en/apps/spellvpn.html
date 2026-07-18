@@ -41,7 +41,7 @@
           <h1>SpellVPN</h1>
         </div>
         <p class="eyebrow accent-green">Pro paid no ads · Ultra free with ads + subscription</p>
-        <p class="lead">Import your own sing-box JSON, subscription URL, proxy link, QR code, clipboard content, or local file, then start an iOS Packet Tunnel in one tap.</p>
+        <p class="lead">Import your own sing-box JSON, Clash/Mihomo YAML, subscription URL, proxy link, QR code, clipboard content, local file, Wi-Fi upload, or URL scheme, then start an iOS Packet Tunnel in one tap.</p>
         <div class="app-actions">
           <a class="app-store-link" href="https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN" aria-label="Get it on the App Store: SpellVPN" target="_blank" rel="noopener noreferrer">
             <img src="../../assets/appstore-button.svg" alt="Get it on the App Store">
@@ -61,12 +61,17 @@
 
         <div class="feature-card">
           <h3>Import options</h3>
-          <p>Use QR scan, photo QR, clipboard, Files, subscription URLs, proxy links, and URL schemes.</p>
+          <p>Use QR scan, photo QR, clipboard, Files, Wi-Fi Upload, subscription URLs, proxy links, and URL schemes. Supported inputs include sing-box JSON, Clash/Mihomo YAML, Base64 URI lists, SIP008, Surge, Quantumult, Shadowrocket-style text, and common proxy links.</p>
         </div>
 
         <div class="feature-card">
-          <h3>Packet Tunnel</h3>
-          <p>Start and stop VPN sessions through the iOS Network Extension and Packet Tunnel system prompt.</p>
+          <h3>Nodes and subscriptions</h3>
+          <p>Manage saved subscription URLs, update or copy them, choose nodes, edit real proxy outbounds, export a single node as JSON, and show node QR codes.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Profiles, tools, and widgets</h3>
+          <p>Use connection profiles, VPN pause, privacy filters, DNS management, Network Tools for TCP Ping, DNS, IP, Whois, GeoIP, TLS, HTTP, TCP/UDP, IPv6, and speed tests, Home/Lock Screen widgets, basic App Shortcuts, local logs, diagnostics, JSON export/import, and iCloud Drive backups.</p>
         </div>
 
         <div class="feature-card">
@@ -88,7 +93,11 @@
 
           <div class="phone-shot"><img src="../../assets/spellvpn-import.png" alt="SpellVPN import screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-config.png" alt="SpellVPN configuration screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-nodes.png" alt="SpellVPN nodes screenshot"></div>
+
+          <div class="phone-shot"><img src="../../assets/spellvpn-settings.png" alt="SpellVPN settings screenshot"></div>
+
+          <div class="phone-shot"><img src="../../assets/spellvpn-logs.png" alt="SpellVPN logs screenshot"></div>
         </div>
       </div>
     </section>
@@ -96,7 +105,7 @@
     <section class="section">
       <div class="section-header">
         <h2>Important Boundaries</h2>
-        <p>SpellVPN does not sell proxy nodes or host user traffic. Connection quality depends on the configuration, server, and network selected by the user. Pro and Ultra differ by monetization, not by creating a developer-operated VPN traffic network.</p>
+        <p>SpellVPN does not sell proxy nodes or host user traffic. Connection quality depends on the configuration, server, and network selected by the user. The current build includes status widgets and basic App Shortcuts, but does not advertise background VPN connect/disconnect through Shortcuts, MITM, rewrite scripts, Apple TV/tvOS, Live Activities, Apple Watch, raw ICMP ping, traceroute, WebRTC leak testing, native OpenVPN, or native WireGuardKit.</p>
       </div>
     </section>
   </main>
