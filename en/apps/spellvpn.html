@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SpellVPN | Official app website</title>
-  <meta name="description" content="A VPN configuration client with a paid ad-free Pro edition and a free Ultra edition that can show ads; Ultra subscriptions remove ads and unlock Ultra features.">
+  <meta name="description" content="SpellVPN official page, support, tutorials, and privacy information for iPhone, iPad, and the native macOS Packet Tunnel version.">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="icon" href="../../assets/spellvpn-icon.png">
   <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/apps/spellvpn.html">
@@ -40,8 +40,8 @@
           <img class="icon" src="../../assets/spellvpn-icon.png" alt="SpellVPN icon">
           <h1>SpellVPN</h1>
         </div>
-        <p class="eyebrow accent-green">Pro paid no ads · Ultra free with ads + subscription</p>
-        <p class="lead">Import your own sing-box JSON, Clash/Mihomo YAML, subscription URL, proxy link, QR code, clipboard content, local file, Wi-Fi upload, or URL scheme, then start an iOS Packet Tunnel in one tap.</p>
+        <p class="eyebrow accent-green">iOS Pro / Ultra · Native macOS Packet Tunnel</p>
+        <p class="lead">Import your own sing-box JSON, Clash/Mihomo YAML, WireGuard text, proxy links, QR codes, clipboard text, local files, Wi-Fi uploads, or remote configuration URLs, then connect on iOS or with the native macOS Packet Tunnel.</p>
         <div class="app-actions">
           <a class="app-store-link" href="https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN" aria-label="Get it on the App Store: SpellVPN" target="_blank" rel="noopener noreferrer">
             <img src="../../assets/appstore-button.svg" alt="Get it on the App Store">
@@ -78,6 +78,12 @@
           <h3>Pro and Ultra</h3>
           <p>Pro is a paid download with no ads or in-app purchases. Ultra is free with Yandex/AdMob ads; auto-renewing subscriptions remove ads and unlock Ultra features.</p>
         </div>
+
+
+        <div class="feature-card" data-site-update="spellvpn-macos">
+          <h3>macOS App Store build</h3>
+          <p>The Mac version is a native macOS client with its own Packet Tunnel Provider. It imports sing-box JSON, Clash/Mihomo YAML, common proxy links, SIP008 Shadowsocks JSON, WireGuard text, QR codes, clipboard text, files, and remote configuration URLs. It manages profiles, node groups, favorites, source updates, rules, local privacy filters, Relay / MultiHop, diagnostics, encrypted backups, and menu bar connect/disconnect. The macOS target has no ad SDKs, analytics SDKs, StoreKit products, subscriptions, provider-lines service, or built-in VPN account.</p>
+        </div>
       </div>
     </section>
 
@@ -85,19 +91,29 @@
       <div class="section">
         <div class="section-header">
           <h2>Screenshots</h2>
-          <p>Current App Store screenshots show the dashboard, import flow, and configuration controls.</p>
+          <p>Mac App Store screenshots now show the desktop dashboard, node management, routing, configuration, and security/privacy tools from the macOS submission package.</p>
         </div>
         <div class="screens">
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-dashboard.png" alt="SpellVPN dashboard screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-dashboard.png" alt="SpellVPN mobile dashboard screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-import.png" alt="SpellVPN import screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-import.png" alt="SpellVPN mobile import screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-nodes.png" alt="SpellVPN nodes screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-nodes.png" alt="SpellVPN mobile nodes screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-settings.png" alt="SpellVPN settings screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-settings.png" alt="SpellVPN mobile settings screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-logs.png" alt="SpellVPN logs screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-logs.png" alt="SpellVPN mobile logs screenshot"></div>
+
+          <div class="wide-shot" data-site-update="spellvpn-macos-screens"><img src="../../assets/spellvpn-mac-appstore-dashboard.jpg" alt="SpellVPN macOS dashboard screenshot"></div>
+
+          <div class="wide-shot"><img src="../../assets/spellvpn-mac-appstore-nodes.jpg" alt="SpellVPN macOS node management screenshot"></div>
+
+          <div class="wide-shot"><img src="../../assets/spellvpn-mac-appstore-routing.jpg" alt="SpellVPN macOS routing and tunnel screenshot"></div>
+
+          <div class="wide-shot"><img src="../../assets/spellvpn-mac-appstore-configuration.jpg" alt="SpellVPN macOS configuration screenshot"></div>
+
+          <div class="wide-shot"><img src="../../assets/spellvpn-mac-appstore-security.jpg" alt="SpellVPN macOS security and privacy tools screenshot"></div>
         </div>
       </div>
     </section>
@@ -105,7 +121,7 @@
     <section class="section">
       <div class="section-header">
         <h2>Important Boundaries</h2>
-        <p>SpellVPN does not sell proxy nodes or host user traffic. Connection quality depends on the configuration, server, and network selected by the user. The current build includes status widgets and basic App Shortcuts, but does not advertise background VPN connect/disconnect through Shortcuts, MITM, rewrite scripts, Apple TV/tvOS, Live Activities, Apple Watch, raw ICMP ping, traceroute, WebRTC leak testing, native OpenVPN, or native WireGuardKit.</p>
+        <p>SpellVPN does not sell proxy nodes or host user traffic. Both iOS and Mac versions require users to bring configurations and servers they are authorized to use. The macOS version uses its own Packet Tunnel Provider, Bundle ID/App Group, and Network Extension entitlement; it does not include the iOS Ultra advertising SDKs, subscriptions, or StoreKit products. The current build does not claim MITM, Rewrite scripts, native OpenVPN, or IKEv2 configuration import.</p>
       </div>
     </section>
   </main>

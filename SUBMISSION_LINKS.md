@@ -110,7 +110,7 @@ App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-priv
 ## Notes
 
 - Brand name: `Clearnova Apps` / `澄序应用`.
-- Support email: `balamanigill@gmail.com`.
+- Support email: `support@your-domain.example`.
 - App Store buttons link to the developer page above.
 - `app-ads.txt` is included at the site root for the ad-supported free editions.
 - Use each app's matching privacy URL in App Store Connect.

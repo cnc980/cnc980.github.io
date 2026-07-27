@@ -20,7 +20,7 @@ Static multilingual official website for App Store submission pages.
 
 - English brand: `Clearnova Apps`
 - Chinese brand: `澄序应用`
-- Support email: `balamanigill@gmail.com`
+- Support email: `support@your-domain.example`
 - Deployment domain: `https://cnc980.github.io`
 - Current project scan: `2026-07-14`
 - Root app ads authorization: `/app-ads.txt`

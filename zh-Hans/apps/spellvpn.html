@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SpellVPN | 官方应用网站</title>
-  <meta name="description" content="VPN 配置客户端，提供付费无广告的 Pro 版，以及可展示广告的免费 Ultra 版；Ultra 订阅可去广告并解锁 Ultra 权益。">
+  <meta name="description" content="SpellVPN 官方页面，包含 iPhone、iPad 和原生 macOS Packet Tunnel 电脑版本的支持、教程和隐私信息。">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="icon" href="../../assets/spellvpn-icon.png">
   <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/apps/spellvpn.html">
@@ -40,8 +40,8 @@
           <img class="icon" src="../../assets/spellvpn-icon.png" alt="SpellVPN icon">
           <h1>SpellVPN</h1>
         </div>
-        <p class="eyebrow accent-green">Pro 付费无广告 · Ultra 免费含广告与订阅</p>
-        <p class="lead">导入你自己的 sing-box JSON、Clash/Mihomo YAML、订阅 URL、代理链接、二维码、剪贴板内容、本地文件、Wi-Fi 上传或 URL Scheme，然后一键启动 iOS Packet Tunnel。</p>
+        <p class="eyebrow accent-green">iOS Pro / Ultra · 原生 macOS Packet Tunnel</p>
+        <p class="lead">导入你自己的 sing-box JSON、Clash/Mihomo YAML、WireGuard 文本、订阅 URL、代理链接、二维码、剪贴板内容、本地文件、Wi-Fi 上传或远程配置 URL，然后在 iOS 或原生 macOS Packet Tunnel 中连接。</p>
         <div class="app-actions">
           <a class="app-store-link" href="https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN" aria-label="在 App Store 下载: SpellVPN" target="_blank" rel="noopener noreferrer">
             <img src="../../assets/appstore-button.svg" alt="在 App Store 下载">
@@ -78,6 +78,12 @@
           <h3>Pro 与 Ultra</h3>
           <p>Pro 为付费下载，无广告、无 App 内购买。Ultra 免费下载，接入 Yandex/AdMob 广告；自动续期订阅可去广告并解锁 Ultra 权益。</p>
         </div>
+
+
+        <div class="feature-card" data-site-update="spellvpn-macos">
+          <h3>macOS App Store 版</h3>
+          <p>Mac 电脑版本是原生 macOS 客户端，带独立 Packet Tunnel Provider。它可导入 sing-box JSON、Clash/Mihomo YAML、常见代理链接、SIP008 Shadowsocks JSON、WireGuard 文本、二维码、剪贴板、文件和远程配置 URL；支持配置档、节点分组、收藏、来源更新、规则、本地隐私过滤、Relay / MultiHop、诊断、加密备份和菜单栏连接/断开。macOS target 没有广告 SDK、分析 SDK、StoreKit 商品、订阅、provider-lines 服务或内置 VPN 账号。</p>
+        </div>
       </div>
     </section>
 
@@ -85,19 +91,29 @@
       <div class="section">
         <div class="section-header">
           <h2>截图</h2>
-          <p>当前 App Store 截图展示仪表盘、导入流程和配置控制。</p>
+          <p>当前 Mac App Store 展示图已同步为 macOS 送审包中的桌面仪表盘、节点管理、路由、配置和安全/隐私工具页面。</p>
         </div>
         <div class="screens">
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-zh-dashboard.png" alt="SpellVPN dashboard screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-zh-dashboard.png" alt="SpellVPN mobile dashboard screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-zh-import.png" alt="SpellVPN import screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-zh-import.png" alt="SpellVPN mobile import screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-zh-nodes.png" alt="SpellVPN nodes screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-zh-nodes.png" alt="SpellVPN mobile nodes screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-zh-settings.png" alt="SpellVPN settings screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-zh-settings.png" alt="SpellVPN mobile settings screenshot"></div>
 
-          <div class="phone-shot"><img src="../../assets/spellvpn-zh-logs.png" alt="SpellVPN logs screenshot"></div>
+          <div class="phone-shot"><img src="../../assets/spellvpn-zh-logs.png" alt="SpellVPN mobile logs screenshot"></div>
+
+          <div class="wide-shot" data-site-update="spellvpn-macos-screens"><img src="../../assets/spellvpn-mac-zh-appstore-dashboard.jpg" alt="SpellVPN macOS dashboard screenshot"></div>
+
+          <div class="wide-shot"><img src="../../assets/spellvpn-mac-zh-appstore-nodes.jpg" alt="SpellVPN macOS node management screenshot"></div>
+
+          <div class="wide-shot"><img src="../../assets/spellvpn-mac-zh-appstore-routing.jpg" alt="SpellVPN macOS routing and tunnel screenshot"></div>
+
+          <div class="wide-shot"><img src="../../assets/spellvpn-mac-zh-appstore-configuration.jpg" alt="SpellVPN macOS configuration screenshot"></div>
+
+          <div class="wide-shot"><img src="../../assets/spellvpn-mac-zh-appstore-security.jpg" alt="SpellVPN macOS security and privacy tools screenshot"></div>
         </div>
       </div>
     </section>
@@ -105,7 +121,7 @@
     <section class="section">
       <div class="section-header">
         <h2>重要边界</h2>
-        <p>SpellVPN 不销售代理节点，也不托管用户流量。连接质量取决于用户选择的配置、服务器和网络。当前构建包含状态 Widget 和基础 App Shortcuts，但不宣传通过快捷指令后台直接连接/断开 VPN、MITM、Rewrite 脚本、Apple TV/tvOS、Live Activity、Apple Watch、原始 ICMP Ping、Traceroute、WebRTC 泄漏测试、原生 OpenVPN 或原生 WireGuardKit。</p>
+        <p>SpellVPN 不销售代理节点，也不托管用户流量。iOS 版本和 Mac 电脑版本都需要用户提供自己有权使用的配置和服务器。macOS 版使用独立 Packet Tunnel Provider、独立 Bundle ID/App Group 和 Network Extension entitlement；它不包含 iOS Ultra 的广告 SDK、订阅或 StoreKit 商品。当前构建不宣传 MITM、Rewrite 脚本、原生 OpenVPN 或 IKEv2 配置导入。</p>
       </div>
     </section>
   </main>

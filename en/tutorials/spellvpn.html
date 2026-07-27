@@ -48,7 +48,7 @@
       </div>
       <div class="legal-box">
         <strong>Quick paths</strong>
-        <p>Import: <strong>Dashboard → +</strong> or <strong>Config → Import</strong>. Update a subscription: <strong>Settings → Network &amp; Configuration → Manage Subscriptions → select a subscription → Update</strong>. Buy or restore Ultra: <strong>Settings → Subscription → Ultra Subscription</strong>.</p>
+        <p>iOS: Dashboard -> + -> Import -> Nodes -> select a node -> Dashboard -> Connect. Mac: Configurations or menu bar import -> choose a profile and node -> Connect -> use Logs, Network Tools, or diagnostics if the tunnel fails.</p>
       </div>
     </section>
 
@@ -125,8 +125,25 @@
         </figure>
       </section>
 
-      <section class="tutorial-section">
+      <section class="tutorial-section" data-site-update="spellvpn-macos">
         <div class="tutorial-number">5</div>
+        <div>
+          <h2>Use SpellVPN on macOS</h2>
+          <ol class="tutorial-steps">
+            <li>Import a supported configuration from a file, clipboard, QR image, proxy link, WireGuard text, or HTTP/HTTPS remote URL, then save it as a profile.</li>
+            <li>Choose a profile and node from Dashboard, Nodes, or the macOS menu bar. The app starts a real native macOS Packet Tunnel and does not provide its own VPN account or traffic network.</li>
+            <li>Use Configurations and Settings to validate and edit TUN, route, DNS, IPv6, MTU, split tunnel, Fake-IP, DNS hijack, privacy filters, and Relay / MultiHop before the next connection.</li>
+            <li>Use Network Tools, protocol health checks, traffic checks, logs, diagnostics, plain JSON backup, or password-protected AES-GCM backup when troubleshooting. OpenVPN .ovpn and IKEv2 .mobileconfig are not supported by this target.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-mac-appstore-dashboard.jpg" alt="SpellVPN macOS dashboard and menu bar workflow.">
+          <figcaption>macOS App Store build</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">6</div>
         <div>
           <h2>Diagnostics and Network Tools</h2>
           <ol class="tutorial-steps">
@@ -144,7 +161,7 @@
       </section>
 
       <section class="tutorial-section">
-        <div class="tutorial-number">6</div>
+        <div class="tutorial-number">7</div>
         <div>
           <h2>Backups, Data, and Editions</h2>
           <ol class="tutorial-steps">
@@ -160,8 +177,8 @@
         </figure>
       </section>
       <div class="legal-box">
-        <strong>For help, contact <a href="mailto:balamanigill@gmail.com">balamanigill@gmail.com</a>.</strong>
-        <p>Pro is a paid download with no ads or in-app purchases. Ultra is free with Yandex/AdMob ads and optional auto-renewing subscriptions.</p>
+        <strong>For help, contact <a href="mailto:support@your-domain.example">support@your-domain.example</a>.</strong>
+        <p>iOS Pro is a paid ad-free download; iOS Ultra is free with Yandex/AdMob ads and optional auto-renewing subscriptions. The macOS build is separate and has no advertising SDKs, analytics SDKs, StoreKit products, subscriptions, or built-in VPN account.</p>
       </div>
     </article>
   </main>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Apple Ledger | 官方应用网站</title>
+  <title>好记 / Apple Ledger | 官方应用网站</title>
   <meta name="description" content="本地优先的财务记账 App，高级功能免费开放，支持账本、账户、预算、报表、周期账单、OCR 票据、Widget、Watch、快捷指令和私有 iCloud 同步。">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="icon" href="../../assets/spellvpn-icon.png">
@@ -37,13 +37,13 @@
     <section class="app-hero">
       <div>
         <div class="app-title">
-          <span class="icon generated" aria-hidden="true">AL</span>
-          <h1>Apple Ledger</h1>
+          <span class="icon generated" aria-hidden="true">HJ</span>
+          <h1>好记 / Apple Ledger</h1>
         </div>
         <p class="eyebrow accent-violet">Apple 设备上的本地优先财务管理</p>
-        <p class="lead">在 iPhone、iPad、Mac 和 Apple Watch 上记录收入、支出、转账、预算、账户、订阅账单、报表、周期记录、OCR 票据图片，并通过 Widget、Watch 快捷记账、私有 iCloud 同步和可选 CloudKit Sharing 共享账本保持数据一致。</p>
+        <p class="lead">为个人、家庭、旅行、项目和订阅账单做本地优先记账，支持共享账本、预算、报表、Widget、iCloud 同步，以及仅存本机钥匙串的冷钱包保险箱。</p>
         <div class="app-actions">
-          <a class="app-store-link" href="https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN" aria-label="在 App Store 下载: Apple Ledger" target="_blank" rel="noopener noreferrer">
+          <a class="app-store-link" href="https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN" aria-label="在 App Store 下载: 好记 / Apple Ledger" target="_blank" rel="noopener noreferrer">
             <img src="../../assets/appstore-button.svg" alt="在 App Store 下载">
           </a>
           <a class="button secondary" href="../tutorials/appleledger.html">使用教程</a>
@@ -52,7 +52,7 @@
         </div>
       </div>
       <div class="hero-shot">
-        <img src="../../assets/appleledger-iphone.png" alt="Apple Ledger iPhone dashboard">
+        <img src="../../assets/appleledger-zh-iphone.png" alt="好记 / Apple Ledger iPhone dashboard">
       </div>
     </section>
 
@@ -78,20 +78,34 @@
           <h3>私有同步与共享</h3>
           <p>使用本地 SwiftData、可选私有 CloudKit 同步、Apple 系统 CloudKit Sharing 邀请、Widget/Watch App Group 共享、生物识别锁、本地通知和系统管理的远端变更通知。</p>
         </div>
+
+
+        <div class="feature-card" data-site-update="appleledger-cold-wallet">
+          <h3>冷钱包保险箱</h3>
+          <p>可保存钱包地址、助记词、私钥、Keystore JSON、硬件钱包备份备注和相关提醒。敏感秘密只保存在本机 this-device Keychain，不进入 iCloud 同步、共享账本、App 备份、报表或导出文件。</p>
+        </div>
       </div>
     </section>
 
-    <section class="band">
+    <section class="band" data-site-update="appleledger-screens">
       <div class="section">
         <div class="section-header">
           <h2>截图</h2>
-          <p>当前项目包含首个可送审版本的 iPhone 和 iPad 仪表盘截图。</p>
+          <p>当前截图已换成“好记”送审包里的总览、快捷记账、预算、报表、共享账本、iPad 和 Mac 页面。</p>
         </div>
-        <div class="screens two">
+        <div class="screens">
 
-          <div class="phone-shot"><img src="../../assets/appleledger-iphone.png" alt="Apple Ledger iPhone dashboard"></div>
+          <div class="phone-shot"><img src="../../assets/appleledger-zh-iphone.png" alt="好记 / Apple Ledger dashboard screenshot"></div>
 
-          <div class="wide-shot"><img src="../../assets/appleledger-ipad.png" alt="Apple Ledger iPad dashboard"></div>
+          <div class="phone-shot"><img src="../../assets/appleledger-zh-expense.png" alt="好记 / Apple Ledger quick entry screenshot"></div>
+
+          <div class="phone-shot" data-site-update="appleledger-reports"><img src="../../assets/appleledger-zh-reports.png" alt="好记 / Apple Ledger reports screenshot"></div>
+
+          <div class="phone-shot"><img src="../../assets/appleledger-zh-sharing.png" alt="好记 / Apple Ledger shared ledger screenshot"></div>
+
+          <div class="wide-shot"><img src="../../assets/appleledger-zh-ipad.png" alt="好记 / Apple Ledger iPad dashboard screenshot"></div>
+
+          <div class="wide-shot"><img src="../../assets/appleledger-zh-mac.png" alt="好记 / Apple Ledger Mac dashboard screenshot"></div>
         </div>
       </div>
     </section>
@@ -99,7 +113,7 @@
     <section class="section">
       <div class="section-header">
         <h2>1.0 版本范围</h2>
-        <p>当前项目已包含本地记账、账户、预算、报表、导入导出、隐私锁、提醒、App Shortcuts、Widget、Watch 快捷记账、本机 OCR 票据、银行 CSV 解析、可选私有 iCloud 同步、CloudKit Sharing 共享账本，以及周期项目和共享变更的本地/后台自动化。真正上架前仍需完成 Apple Developer 签名、App Group、CloudKit production schema、APNs production entitlement 检查和 TestFlight 真机复验。</p>
+        <p>当前项目已包含本地账本、账户、流水、预算、报表、导入导出、隐私锁、提醒、App Shortcuts、Widget、Watch 快捷记账、本机 OCR 票据、银行 CSV 解析、可选私有 iCloud 同步、CloudKit Sharing 共享账本，以及本机冷钱包保险箱。真正上架前仍需完成 Apple Developer 签名、App Group、CloudKit production schema、APNs production entitlement 检查和 TestFlight 真机复验。</p>
       </div>
     </section>
   </main>

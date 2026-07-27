@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Руководство Apple Ledger | Официальный сайт приложений</title>
+  <title>Руководство Haoji / Apple Ledger | Официальный сайт приложений</title>
   <meta name="description" content="Настройте книги и счета, записывайте операции с OCR чеков, смотрите бюджеты и отчеты, отслеживайте регулярные счета, используйте быстрый ввод Widget и Watch и защищайте локальные финансовые данные.">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="icon" href="../../assets/spellvpn-icon.png">
@@ -36,13 +36,13 @@
   <main>
     <section class="legal-hero tutorial-hero">
       <div class="app-title">
-        <span class="icon generated" aria-hidden="true">AL</span>
-        <h1>Руководство Apple Ledger</h1>
+        <span class="icon generated" aria-hidden="true">HJ</span>
+        <h1>Руководство Haoji / Apple Ledger</h1>
       </div>
       <p class="eyebrow accent-violet">Руководство пользователя</p>
       <p class="lead">Настройте книги и счета, записывайте операции с OCR чеков, смотрите бюджеты и отчеты, отслеживайте регулярные счета, используйте быстрый ввод Widget и Watch и защищайте локальные финансовые данные.</p>
       <div class="legal-actions">
-        <a class="button secondary" href="../apps/appleledger.html">Apple Ledger</a>
+        <a class="button secondary" href="../apps/appleledger.html">Haoji / Apple Ledger</a>
         <a class="button secondary" href="../support/appleledger.html">Поддержка</a>
         <a class="button secondary" href="../privacy/appleledger.html">Политика конфиденциальности</a>
       </div>
@@ -110,13 +110,29 @@
           </ol>
         </div>
         <figure class="tutorial-media">
-          <img src="../../assets/appleledger-settings.png" alt="Используйте настройки для бесплатных расширенных функций, тем, блокировки приватности, iCloud, резервных копий, импорта/экспорта и данных.">
+          <img src="../../assets/appleledger-sharing.png" alt="Используйте настройки для бесплатных расширенных функций, тем, блокировки приватности, iCloud, резервных копий, импорта/экспорта и данных.">
           <figcaption>Используйте настройки для бесплатных расширенных функций, тем, блокировки приватности, iCloud, резервных копий, импорта/экспорта и данных.</figcaption>
         </figure>
       </section>
+      <section class="tutorial-section" data-site-update="appleledger-cold-wallet">
+        <div class="tutorial-number">5</div>
+        <div>
+          <h2>Использование Cold Wallet Vault</h2>
+          <ol class="tutorial-steps">
+            <li>Создавайте запись только для секретов кошельков, которыми вы владеете и которые можно хранить на этом устройстве.</li>
+            <li>Перед показом, копированием, редактированием, экспортом non-secret metadata или удалением записи используйте Face ID, Touch ID или пароль устройства.</li>
+            <li>Seed-фразы, private keys и Keystore JSON остаются в this-device Keychain и не попадают в iCloud sync, shared ledgers, backups, reports или exports.</li>
+            <li>Храните отдельную offline backup копию секретов кошелька. Приложение не восстановит this-device-only secret из iCloud после потери устройства.</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/appleledger-sharing.png" alt="Haoji / Apple Ledger secure sharing and vault related view.">
+          <figcaption>Сейф холодного кошелька</figcaption>
+        </figure>
+      </section>
       <div class="legal-box">
-        <strong>Для помощи свяжитесь с нами: <a href="mailto:balamanigill@gmail.com">balamanigill@gmail.com</a>.</strong>
-        <p>Локальные финансовые записи, без рекламы и paywall, опциональная приватная iCloud-синхронизация, App Group для Widget/Watch, локальный OCR, уведомления и биометрическая блокировка.</p>
+        <strong>Для помощи свяжитесь с нами: <a href="mailto:support@your-domain.example">support@your-domain.example</a>.</strong>
+        <p>Локальные финансовые записи, без рекламы и paywall, опциональная приватная iCloud-синхронизация и CloudKit Sharing, App Group для Widget/Watch, локальный OCR, уведомления, биометрическая блокировка и секреты холодного кошелька только в Keychain устройства.</p>
       </div>
     </article>
   </main>

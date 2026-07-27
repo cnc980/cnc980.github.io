@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Apple Ledger | Official app website</title>
+  <title>Haoji / Apple Ledger | Official app website</title>
   <meta name="description" content="A local-first finance app with free advanced features for ledgers, accounts, budgets, reports, recurring bills, OCR receipts, Widget, Watch, Shortcuts, and private iCloud sync.">
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" href="../assets/spellvpn-icon.png">
@@ -37,13 +37,13 @@
     <section class="app-hero">
       <div>
         <div class="app-title">
-          <span class="icon generated" aria-hidden="true">AL</span>
-          <h1>Apple Ledger</h1>
+          <span class="icon generated" aria-hidden="true">HJ</span>
+          <h1>Haoji / Apple Ledger</h1>
         </div>
         <p class="eyebrow accent-violet">Local-first finance for Apple devices</p>
-        <p class="lead">Track income, expenses, transfers, budgets, accounts, subscriptions, reports, recurring records, OCR receipt images, Widget and Watch quick entry, private iCloud sync, and optional shared ledgers through CloudKit Sharing across iPhone, iPad, Mac, and Apple Watch.</p>
+        <p class="lead">Track personal, family, travel, project, and subscription spending with local-first ledgers, budgets, reports, shared CloudKit ledgers, widgets, and a local cold wallet vault.</p>
         <div class="app-actions">
-          <a class="app-store-link" href="https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN" aria-label="Get it on the App Store: Apple Ledger" target="_blank" rel="noopener noreferrer">
+          <a class="app-store-link" href="https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN" aria-label="Get it on the App Store: Haoji / Apple Ledger" target="_blank" rel="noopener noreferrer">
             <img src="../assets/appstore-button.svg" alt="Get it on the App Store">
           </a>
           <a class="button secondary" href="../tutorials/appleledger.html">User Guide</a>
@@ -52,7 +52,7 @@
         </div>
       </div>
       <div class="hero-shot">
-        <img src="../assets/appleledger-iphone.png" alt="Apple Ledger iPhone dashboard">
+        <img src="../assets/appleledger-iphone.png" alt="Haoji / Apple Ledger iPhone dashboard">
       </div>
     </section>
 
@@ -78,28 +78,43 @@
           <h3>Private sync and sharing</h3>
           <p>Use local SwiftData storage, optional private CloudKit sync, Apple system CloudKit Sharing invitations, App Group sharing for Widget and Watch, biometric lock, local notifications, and system-managed remote change notifications.</p>
         </div>
+
+
+        <div class="feature-card" data-site-update="appleledger-cold-wallet">
+          <h3>Cold Wallet Vault</h3>
+          <p>Store wallet addresses, seed phrases, private keys, Keystore JSON, hardware wallet backup notes, and related reminders in the local this-device Keychain. These secrets are not included in CloudKit sync, shared ledgers, app backups, reports, or exports.</p>
+        </div>
       </div>
     </section>
 
-    <section class="band">
+    <section class="band" data-site-update="appleledger-screens">
       <div class="section">
         <div class="section-header">
           <h2>Screenshots</h2>
-          <p>The current project includes iPhone and iPad dashboard screenshots for the first App Store-ready build.</p>
+          <p>Current screenshots show Haoji dashboards, quick entry, budgets, reports, sharing, iPad, and Mac views from the updated App Store package.</p>
         </div>
-        <div class="screens two">
+        <div class="screens">
 
-          <div class="phone-shot"><img src="../assets/appleledger-iphone.png" alt="Apple Ledger iPhone dashboard"></div>
+          <div class="phone-shot"><img src="../assets/appleledger-iphone.png" alt="Haoji / Apple Ledger dashboard screenshot"></div>
 
-          <div class="wide-shot"><img src="../assets/appleledger-ipad.png" alt="Apple Ledger iPad dashboard"></div>
+          <div class="phone-shot"><img src="../assets/appleledger-expense.png" alt="Haoji / Apple Ledger quick entry screenshot"></div>
+
+          <div class="phone-shot" data-site-update="appleledger-reports"><img src="../assets/appleledger-reports.png" alt="Haoji / Apple Ledger reports screenshot"></div>
+
+          <div class="phone-shot"><img src="../assets/appleledger-sharing.png" alt="Haoji / Apple Ledger shared ledger screenshot"></div>
+
+          <div class="wide-shot"><img src="../assets/appleledger-ipad.png" alt="Haoji / Apple Ledger iPad dashboard screenshot"></div>
+
+          <div class="wide-shot"><img src="../assets/appleledger-mac.png" alt="Haoji / Apple Ledger Mac dashboard screenshot"></div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+
+    <section class="section" data-site-update="appleledger-scope">
       <div class="section-header">
         <h2>Version 1.0 Scope</h2>
-        <p>The current project includes local ledger records, accounts, budgets, reports, import/export, privacy lock, reminders, App Shortcuts, Widget, Watch quick entry, local OCR receipts, bank CSV parsing, optional private iCloud sync, shared ledgers through CloudKit Sharing, and local/background automation for recurring items and shared changes. Real App Store release still requires final Apple Developer signing, App Group, CloudKit production schema, APNs production entitlement checks, and TestFlight device review.</p>
+        <p>The current project includes local ledgers, accounts, transactions, budgets, reports, import/export, privacy lock, reminders, App Shortcuts, Widget, Watch quick entry, local OCR receipts, bank CSV parsing, optional private iCloud sync, shared ledgers through CloudKit Sharing, and the local Cold Wallet Vault. Real App Store release still requires final Apple Developer signing, App Group, CloudKit production schema, APNs production entitlement checks, and TestFlight device review.</p>
       </div>
     </section>
   </main>

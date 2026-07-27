@@ -48,7 +48,7 @@
       </div>
       <div class="legal-box">
         <strong>快速路径</strong>
-        <p>导入：<strong>首页 → +</strong> 或 <strong>配置 → 导入</strong>。更新订阅：<strong>设置 → 网络与配置 → 管理订阅 → 选择订阅 → 更新</strong>。购买或恢复 Ultra：<strong>设置 → 订阅 → Ultra Subscription</strong>。</p>
+        <p>iOS：首页 → + → 导入 → 节点 → 选择节点 → 首页 → 连接。Mac：Configurations 或菜单栏导入 → 选择配置档和节点 → Connect；连接失败时查看 Logs、Network Tools 或诊断信息。</p>
       </div>
     </section>
 
@@ -125,8 +125,25 @@
         </figure>
       </section>
 
-      <section class="tutorial-section">
+      <section class="tutorial-section" data-site-update="spellvpn-macos">
         <div class="tutorial-number">5</div>
+        <div>
+          <h2>在 macOS 上使用 SpellVPN</h2>
+          <ol class="tutorial-steps">
+            <li>从文件、剪贴板、二维码图片、代理链接、WireGuard 文本或 HTTP/HTTPS 远程 URL 导入支持的配置，并保存为配置档。</li>
+            <li>在 Dashboard、Nodes 或 macOS 菜单栏选择配置档和节点。App 会启动真实的原生 macOS Packet Tunnel，但不提供自己的 VPN 账号或流量网络。</li>
+            <li>在 Configurations 和 Settings 中验证并编辑 TUN、路由、DNS、IPv6、MTU、分流、Fake-IP、DNS 劫持、隐私过滤和 Relay / MultiHop；更改会在下次连接时生效。</li>
+            <li>排障时使用 Network Tools、协议健康检查、流量检查、日志、诊断、普通 JSON 备份或密码保护的 AES-GCM 备份。当前 macOS target 不支持 OpenVPN .ovpn 和 IKEv2 .mobileconfig。</li>
+          </ol>
+        </div>
+        <figure class="tutorial-media">
+          <img src="../../assets/spellvpn-mac-zh-appstore-dashboard.jpg" alt="SpellVPN macOS dashboard and menu bar workflow.">
+          <figcaption>macOS App Store 版</figcaption>
+        </figure>
+      </section>
+
+      <section class="tutorial-section">
+        <div class="tutorial-number">6</div>
         <div>
           <h2>诊断和网络工具</h2>
           <ol class="tutorial-steps">
@@ -144,7 +161,7 @@
       </section>
 
       <section class="tutorial-section">
-        <div class="tutorial-number">6</div>
+        <div class="tutorial-number">7</div>
         <div>
           <h2>备份、数据和版本</h2>
           <ol class="tutorial-steps">
@@ -160,8 +177,8 @@
         </figure>
       </section>
       <div class="legal-box">
-        <strong>如需帮助，请联系 <a href="mailto:balamanigill@gmail.com">balamanigill@gmail.com</a>.</strong>
-        <p>Pro 为付费下载，无广告、无 App 内购买。Ultra 免费版接入 Yandex/AdMob 广告，并提供可选自动续期订阅。</p>
+        <strong>如需帮助，请联系 <a href="mailto:support@your-domain.example">support@your-domain.example</a>.</strong>
+        <p>iOS Pro 是付费无广告版本；iOS Ultra 免费版接入 Yandex/AdMob 广告，并提供可选自动续期订阅。macOS 构建是独立电脑版本，没有广告 SDK、分析 SDK、StoreKit 商品、订阅或内置 VPN 账号。</p>
       </div>
     </article>
   </main>
