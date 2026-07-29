@@ -116,7 +116,7 @@ SpellVPN iOS listings:
 ## Notes
 
 - Brand name: `Clearnova Apps` / `澄序应用`.
-- Support email: `support@your-domain.example`.
+- Support email: `balamanigill@gmail.com`.
 - SpellVPN App Store buttons link directly to the Ultra and paid Tool / Pro listings. Add the Mac listing after publication.
 - `app-ads.txt` is included at the site root for the ad-supported free editions.
 - Use each app's matching privacy URL in App Store Connect.
@@ -144,6 +144,8 @@ SpellVPN iOS listings:
 
 
 
+
+
 ## US Apple Account guide
 
 - English tutorial URL: `https://cnc980.github.io/en/tutorials/us-apple-account.html`
@@ -153,6 +155,8 @@ SpellVPN iOS listings:
 - SpellVPN Ultra free download: https://apps.apple.com/app/id6790699220
 - SpellVPN Tool / Pro paid download: https://apps.apple.com/app/id6788655739
 - App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN
+
+
 
 
 
