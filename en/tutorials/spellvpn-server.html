@@ -3,18 +3,242 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=../../tutorials/spellvpn-server.html">
   <title>SpellVPN Self-hosted Test Server | Official app website</title>
   <meta name="description" content="Build a maintainable multi-protocol test server for SpellVPN with sing-box, Xray, systemd, TLS, subscriptions, validation, and security hardening.">
-  <link rel="canonical" href="https://cnc980.github.io/tutorials/spellvpn-server.html">
   <link rel="stylesheet" href="../../styles.css">
   <link rel="icon" href="../../assets/spellvpn-icon.png">
+  <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/spellvpn-server.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://cnc980.github.io/zh-Hans/tutorials/spellvpn-server.html">
+  <link rel="alternate" hreflang="ru" href="https://cnc980.github.io/ru/tutorials/spellvpn-server.html">
+  <link rel="alternate" hreflang="x-default" href="https://cnc980.github.io/en/tutorials/spellvpn-server.html">
 </head>
 <body>
-  <main class="legal-layout">
-    <h1>SpellVPN Self-hosted Test Server</h1>
-    <p>The English deployment guide has moved to the canonical page.</p>
-    <p><a class="button secondary" href="../../tutorials/spellvpn-server.html">Open the deployment guide</a></p>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html"><span class="brand-mark">CA</span><span>Clearnova Apps</span></a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">Apps</a>
+          <a href="../index.html#tutorials">Tutorials</a>
+          <a href="../index.html#privacy">Privacy</a>
+          <a href="../index.html#support">Support</a>
+        </div>
+        <div class="language-switch" aria-label="Language">
+          <a class="active" lang="en" href="./spellvpn-server.html">EN</a><a lang="zh-Hans" href="../../zh-Hans/tutorials/spellvpn-server.html">中</a><a lang="ru" href="../../ru/tutorials/spellvpn-server.html">RU</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero tutorial-hero">
+      <div class="app-title">
+        <img class="icon" src="../../assets/spellvpn-icon.png" alt="SpellVPN icon">
+        <h1>Self-hosted Test Server</h1>
+      </div>
+      <p class="eyebrow accent-green">SpellVPN · Server Lab</p>
+      <p class="lead">A maintainable way to build a multi-protocol lab for app compatibility testing: sing-box handles the broad protocol set, Xray covers XHTTP and Vision variants, Nginx publishes a protected subscription, and systemd keeps every service recoverable.</p>
+      <div class="legal-actions">
+        <a class="button secondary" href="../apps/spellvpn.html">SpellVPN</a>
+        <a class="button secondary" href="./spellvpn.html">User Guide</a>
+        <a class="button secondary" href="../support/spellvpn.html">Support</a>
+      </div>
+      <div class="legal-box">
+        <strong>Scope and authorization</strong>
+        <p>This guide is for servers and networks you own or are authorized to administer. SpellVPN is a client and does not provide servers, accounts, traffic, certificates, or proxy credentials.</p>
+      </div>
+    </section>
+
+    <article class="server-guide">
+      <nav class="guide-toc" aria-label="Guide contents">
+        <h2>Deployment map</h2>
+        <ol>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#preflight">Preflight audit</a></li>
+          <li><a href="#ports">Protocol and port plan</a></li>
+          <li><a href="#install">Install the cores</a></li>
+          <li><a href="#tls">TLS or Reality</a></li>
+          <li><a href="#configure">Configure and validate</a></li>
+          <li><a href="#subscription">Publish a subscription</a></li>
+          <li><a href="#verify">Local and remote tests</a></li>
+          <li><a href="#operations">Operations and hardening</a></li>
+        </ol>
+      </nav>
+
+      <section class="guide-section" id="architecture">
+        <h2>1. Architecture</h2>
+        <div class="guide-grid">
+          <div class="guide-card"><strong>sing-box</strong>Primary service for Shadowsocks, Trojan, VLESS, VMess, Hysteria2, TUIC, AnyTLS, SOCKS5, HTTP CONNECT, ShadowTLS, Naive and compatible transports.</div>
+          <div class="guide-card"><strong>Xray</strong>Separate service for XHTTP, gRPC, mKCP and VLESS Vision variants that need current Xray transport behavior.</div>
+          <div class="guide-card"><strong>Nginx</strong>HTTPS endpoint for the Base64 subscription and optional client bundle. Use a long unguessable path token.</div>
+          <div class="guide-card"><strong>systemd + UFW</strong>Automatic startup, restart policy, logs, least-privilege service users and narrowly scoped firewall rules.</div>
+        </div>
+        <div class="guide-note warning"><strong>Do not replace a working service in place.</strong> Audit first, back up every edited file, allocate unused ports, validate the new configuration, then start the new service. Keep sing-box and Xray separate when that reduces upgrade risk.</div>
+      </section>
+
+      <section class="guide-section" id="preflight">
+        <h2>2. Preflight audit</h2>
+        <p>Start with a small Debian or Ubuntu VPS. Record the OS, memory, routes, listeners, firewall state, existing web server and failed services before making changes.</p>
+        <div class="code-block"><pre>cat /etc/os-release
+uname -a
+free -h
+ip -brief address
+ip route
+ss -lntup
+systemctl --failed
+systemctl list-unit-files --state=enabled
+ufw status verbose
+nginx -T 2&gt;/dev/null
+certbot certificates 2&gt;/dev/null</pre></div>
+        <ul class="guide-checklist">
+          <li>Reserve at least 512 MB RAM; add swap or reduce the protocol set on smaller systems.</li>
+          <li>Keep SSH reachable before enabling or changing the firewall.</li>
+          <li>Back up existing sing-box, Xray, Nginx and firewall files with a timestamp.</li>
+          <li>Create a written port plan so protocols never compete for the same TCP or UDP socket.</li>
+        </ul>
+      </section>
+
+      <section class="guide-section" id="ports">
+        <h2>3. Protocol and port plan</h2>
+        <p>Use your own high ports; the values below are examples, not a required public layout. Generate a separate UUID, password or key for every row.</p>
+        <div class="protocol-table-wrap">
+          <table class="protocol-table">
+            <thead><tr><th>Engine</th><th>Protocol / transport</th><th>Example</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>sing-box</td><td>Shadowsocks</td><td>8388/TCP+UDP</td><td>Use a modern AEAD or 2022 method supported by the client.</td></tr>
+              <tr><td>sing-box</td><td>VLESS + Reality</td><td>8443/TCP</td><td>Useful without a domain; select a real reachable target and never invent a certificate.</td></tr>
+              <tr><td>sing-box</td><td>Trojan / VMess over TLS</td><td>9443–9444/TCP</td><td>Use a valid domain or IP certificate.</td></tr>
+              <tr><td>sing-box</td><td>Hysteria2 / TUIC</td><td>9445–9446/UDP</td><td>QUIC-based; test from an external network and check provider UDP policy.</td></tr>
+              <tr><td>sing-box</td><td>AnyTLS</td><td>9447/TCP</td><td>Use a valid certificate and a unique password.</td></tr>
+              <tr><td>sing-box</td><td>SOCKS5 / HTTP CONNECT</td><td>9450–9451/TCP</td><td>Always require authentication; do not expose an open relay.</td></tr>
+              <tr><td>Xray</td><td>VLESS / VMess + XHTTP + TLS</td><td>9471–9473/TCP</td><td>Test both current core compatibility and subscription parsing.</td></tr>
+              <tr><td>Xray</td><td>VLESS / VMess + mKCP + TLS</td><td>9474–9475</td><td>Verify the actual listener and firewall protocol in the selected Xray release.</td></tr>
+              <tr><td>Xray</td><td>VLESS + gRPC or RAW Vision + TLS</td><td>9476–9477/TCP</td><td>Keep each transport on its own port during app testing.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>WireGuard, OpenVPN, IKEv2 and OpenConnect are useful comparison VPNs, but they normally use separate client files rather than VLESS/VMess-style subscription links.</p>
+      </section>
+
+      <section class="guide-section" id="install">
+        <h2>4. Install maintained cores</h2>
+        <h3>sing-box from its official APT repository</h3>
+        <div class="code-block"><pre>install -d -m 0755 /etc/apt/keyrings
+curl -fsSL https://sing-box.app/gpg.key -o /etc/apt/keyrings/sagernet.asc
+chmod a+r /etc/apt/keyrings/sagernet.asc
+
+# Add the official deb.sagernet.org source as documented upstream.
+apt-get update
+apt-get install sing-box nginx ufw curl unzip</pre></div>
+        <h3>Xray from the official release</h3>
+        <ol>
+          <li>Download the current stable Linux archive and its <code>.dgst</code> file from the official XTLS/Xray-core release.</li>
+          <li>Compare the local SHA-256 with <code>SHA2-256</code> in the digest file before extracting.</li>
+          <li>Install the binary and geodata, create an unprivileged <code>xray</code> system user, and keep configuration under <code>/etc/xray/</code>.</li>
+        </ol>
+        <div class="code-block"><pre>sha256sum Xray-linux-64.zip
+sed -n '1,8p' Xray-linux-64.zip.dgst
+unzip Xray-linux-64.zip -d xray-release
+install -m 0755 xray-release/xray /usr/local/bin/xray
+/usr/local/bin/xray version</pre></div>
+        <p>Official references: <a href="https://sing-box.sagernet.org/installation/package-manager/" target="_blank" rel="noopener noreferrer">sing-box package installation</a> and <a href="https://xtls.github.io/document/install.html" target="_blank" rel="noopener noreferrer">Xray installation and checksum verification</a>.</p>
+      </section>
+
+      <section class="guide-section" id="tls">
+        <h2>5. Choose TLS or Reality honestly</h2>
+        <div class="guide-grid">
+          <div class="guide-card"><strong>Domain available</strong>Point DNS to the server, request a trusted certificate, use correct SNI, and automate renewal plus service reload.</div>
+          <div class="guide-card"><strong>No domain</strong>Use Reality for compatible VLESS tests, or obtain a legitimate IP-address certificate if your CA and environment support it. Never create a fake public TLS identity.</div>
+        </div>
+        <p>Place readable certificate copies in service-specific directories with restricted ownership instead of granting the proxy daemon broad access to the entire ACME archive. Add a Certbot deploy hook that refreshes the copies and restarts or reloads only the affected services.</p>
+      </section>
+
+      <section class="guide-section" id="configure">
+        <h2>6. Configure, isolate and validate</h2>
+        <p>Generate credentials locally on the server and store the mapping in a root-only inventory. Use a different secret for every protocol so one test account can be revoked independently.</p>
+        <div class="code-block"><pre>/usr/local/bin/xray uuid
+/usr/local/bin/xray x25519
+openssl rand -base64 32
+openssl rand -hex 16
+
+chmod 0640 /etc/sing-box/config.json /etc/xray/config.json
+chown root:sing-box /etc/sing-box/config.json
+chown root:xray /etc/xray/config.json</pre></div>
+        <p>Build one inbound per protocol with a unique tag, port and credential. Keep direct and block outbounds explicit, block private destination ranges unless the lab specifically needs them, and avoid logging credentials or full subscription URLs.</p>
+        <div class="code-block"><pre>sing-box check -c /etc/sing-box/config.json
+/usr/local/bin/xray run -test -c /etc/xray/config.json
+
+systemctl enable --now sing-box
+systemctl enable --now xray
+systemctl status sing-box xray --no-pager
+journalctl -u sing-box -u xray --since "10 minutes ago" --no-pager</pre></div>
+        <h3>Firewall</h3>
+        <div class="code-block"><pre>ufw allow OpenSSH
+ufw allow &lt;tcp-port&gt;/tcp
+ufw allow &lt;udp-port&gt;/udp
+ufw enable
+ufw status numbered</pre></div>
+      </section>
+
+      <section class="guide-section" id="subscription">
+        <h2>7. Build the SpellVPN subscription</h2>
+        <ol>
+          <li>Create standards-compatible share links such as <code>ss://</code>, <code>vless://</code>, <code>vmess://</code>, <code>trojan://</code>, <code>hysteria2://</code>, <code>tuic://</code>, <code>socks5://</code> and authenticated <code>https://</code> proxy links.</li>
+          <li>Put exactly one link on each line. URL-encode names, paths and query values; Base64-encode the complete newline-delimited file for a common subscription endpoint.</li>
+          <li>Do not put WireGuard, OpenVPN, IKEv2 or OpenConnect client files into a URI list unless the chosen subscription format explicitly supports them. Offer a separate protected bundle.</li>
+        </ol>
+        <div class="code-block"><pre>install -d -m 0755 /var/www/vpn-sub
+base64 -w 0 share-links.txt &gt; /var/www/vpn-sub/subscription.b64
+chmod 0644 /var/www/vpn-sub/subscription.b64
+
+# Nginx location inside an HTTPS server block:
+location = /sub/&lt;long-random-token&gt; {
+    alias /var/www/vpn-sub/subscription.b64;
+    default_type text/plain;
+    add_header Cache-Control "no-store";
+}</pre></div>
+        <div class="guide-note warning"><strong>A hidden URL is not strong authentication.</strong> Treat the token as a secret, rotate it after exposure, avoid indexing, and add HTTP authentication or access controls when the threat model requires them.</div>
+        <p>In SpellVPN, open Dashboard → <strong>+</strong> → subscription URL, paste the HTTPS endpoint, import, then open Nodes and test each protocol separately.</p>
+      </section>
+
+      <section class="guide-section" id="verify">
+        <h2>8. Verify real traffic</h2>
+        <p>A listening port is not a successful proxy. Test every protocol with a matching client configuration, first through a local SOCKS test inbound and then from a different external network.</p>
+        <div class="code-block"><pre>ss -lntup
+curl --socks5-hostname 127.0.0.1:&lt;local-test-port&gt; https://api.ipify.org
+curl -fsS https://&lt;subscription-host&gt;/sub/&lt;token&gt; | base64 -d
+systemctl is-active sing-box xray nginx
+systemctl is-enabled sing-box xray nginx</pre></div>
+        <ul class="guide-checklist">
+          <li>The returned public IP is the server IP for every tested node.</li>
+          <li>TCP and UDP transports are tested from outside the VPS.</li>
+          <li>The subscription downloads over trusted HTTPS and imports without silently skipping nodes.</li>
+          <li>Reboot testing confirms service startup, firewall persistence and certificate readability.</li>
+          <li>Failure tests confirm wrong passwords and expired credentials are rejected.</li>
+        </ul>
+      </section>
+
+      <section class="guide-section" id="operations">
+        <h2>9. Operations and hardening</h2>
+        <ul class="guide-checklist">
+          <li>Use SSH keys, disable password login after verifying key access, and prohibit direct root login where practical.</li>
+          <li>Run sing-box, Xray and Nginx as separate unprivileged users with restrictive file permissions.</li>
+          <li>Enable security updates, monitor failed services, disk space, memory and certificate renewal.</li>
+          <li>Rate-limit or restrict public SOCKS5 and HTTP CONNECT listeners; never operate unauthenticated open proxies.</li>
+          <li>Rotate UUIDs, passwords, Reality keys and subscription tokens after sharing or test completion.</li>
+          <li>Keep a redacted port-and-protocol inventory, plus encrypted backups of configs and client bundles.</li>
+          <li>Upgrade one engine at a time, validate configuration before restart, and retain a tested rollback copy.</li>
+        </ul>
+        <div class="guide-note"><strong>Recommended maintenance pattern:</strong> sing-box remains the broad, stable protocol service; Xray stays a small compatibility extension. Only add a protocol when the server core, SpellVPN parser and real remote traffic test all pass.</div>
+      </section>
+    </article>
   </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Copyright 2026 Clearnova Apps. All rights reserved.</span>
+      <span><a href="../index.html#privacy">Privacy</a> · <a href="../index.html#support">Support</a></span>
+    </div>
+  </footer>
 </body>
 </html>
