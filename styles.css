@@ -1131,3 +1131,13 @@ p {
     flex-direction: column;
   }
 }
+
+.band,
+.tutorial-section,
+.guide-section,
+.screens,
+.feature-grid,
+.link-list {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 720px;
+}
