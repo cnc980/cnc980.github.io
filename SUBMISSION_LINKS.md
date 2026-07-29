@@ -127,3 +127,44 @@ SpellVPN iOS listings:
 - For ArtCut Free, make sure App Privacy answers disclose Yandex Mobile Ads with Google AdMob mediation, ATT before ad SDK initialization/ad requests, app-open/feed placements, and the ad-related data categories described in the privacy policy.
 - For ArtCut Paid, make sure App Privacy answers reflect that the paid edition does not show ads and does not initialize Yandex Mobile Ads or Google AdMob for ad serving.
 - Apple Ledger "subscriptions" are user-created finance records, not App Store subscription purchases. The current scan did not find ads, StoreKit purchase logic, membership, Pro subscription, or a paywall for Apple Ledger; App Privacy should reflect no tracking, no developer server, local storage, optional private CloudKit sync, App Group sharing for Widget/Watch, local OCR, and user-controlled import/export/deletion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## US Apple Account guide
+
+- English tutorial URL: `https://cnc980.github.io/en/tutorials/us-apple-account.html`
+- Chinese tutorial URL: `https://cnc980.github.io/zh-Hans/tutorials/us-apple-account.html`
+- Russian tutorial URL: `https://cnc980.github.io/ru/tutorials/us-apple-account.html`
+- US tax-free address generator: `https://cnc980.github.io/tools/us-tax-free-address-generator/index.html`
+- SpellVPN Ultra free download: https://apps.apple.com/app/id6790699220
+- SpellVPN Tool / Pro paid download: https://apps.apple.com/app/id6788655739
+- App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
