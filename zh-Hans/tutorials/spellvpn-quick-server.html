@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpellVPN 小白一键搭建教程 | 官方应用网站</title>
+  <meta name="description" content="从 SSH 登录开始，一键部署 VLESS Reality 和 Shadowsocks，复制生成的分享链接并导入 SpellVPN。">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" href="../../assets/spellvpn-icon.png">
+  <link rel="canonical" href="https://cnc980.github.io/zh-Hans/tutorials/spellvpn-quick-server.html">
+  <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/spellvpn-quick-server.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://cnc980.github.io/zh-Hans/tutorials/spellvpn-quick-server.html">
+  <link rel="alternate" hreflang="ru" href="https://cnc980.github.io/ru/tutorials/spellvpn-quick-server.html">
+  <link rel="alternate" hreflang="x-default" href="https://cnc980.github.io/en/tutorials/spellvpn-quick-server.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="../index.html"><span class="brand-mark">澄</span><span>澄序应用</span></a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html#apps">应用</a>
+          <a href="../index.html#tutorials">教程</a>
+          <a href="../index.html#privacy">隐私</a>
+          <a href="../index.html#support">支持</a>
+        </div>
+        <div class="language-switch" aria-label="语言"><a lang="en" href="../../en/tutorials/spellvpn-quick-server.html">EN</a><a class="active" lang="zh-Hans" href="./spellvpn-quick-server.html">中</a><a lang="ru" href="../../ru/tutorials/spellvpn-quick-server.html">RU</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero tutorial-hero">
+      <div class="app-title">
+        <img class="icon" src="../../assets/spellvpn-icon.png" alt="SpellVPN 图标">
+        <h1>小白一键搭建</h1>
+      </div>
+      <p class="eyebrow accent-green">从登录服务器到导入 SpellVPN</p>
+      <p class="lead">准备一台自己的 Debian 或 Ubuntu 云服务器，复制两条命令即可部署。成功后终端会直接给出 VLESS Reality 和 Shadowsocks 分享链接，无需域名和 TLS 证书。</p>
+      <div class="legal-actions">
+        <a class="button" href="../../downloads/spellvpn-quick-server.sh" download>下载一键脚本</a>
+        <a class="button secondary" href="./spellvpn-server.html">查看进阶教程</a>
+        <a class="button secondary" href="../apps/spellvpn.html">打开 SpellVPN 页面</a>
+      </div>
+      <div class="legal-box">
+        <strong>开始前请确认</strong>
+        <p>只在你拥有或获准管理的服务器上使用。脚本仅支持 Debian / Ubuntu、root 和 systemd；会使用 TCP 443、TCP/UDP 8388。若发现端口或已有 Xray 服务，脚本会停止，不会覆盖。</p>
+      </div>
+    </section>
+
+    <article class="server-guide">
+      <nav class="guide-toc" aria-label="目录">
+        <h2>只需 4 步</h2>
+        <ol>
+          <li><a href="#prepare">准备服务器</a></li>
+          <li><a href="#login">SSH 登录</a></li>
+          <li><a href="#install">下载并运行</a></li>
+          <li><a href="#import">导入 SpellVPN</a></li>
+        </ol>
+      </nav>
+
+      <section class="guide-section" id="prepare">
+        <h2>1. 准备服务器</h2>
+        <ul class="guide-checklist">
+          <li>购买一台带公网 IPv4 的 Debian 12/13 或 Ubuntu 22.04/24.04 云服务器。</li>
+          <li>记下服务器公网 IP、root 密码，或准备好 SSH 私钥。</li>
+          <li>在云厂商的安全组中放行 TCP 22、TCP 443、TCP/UDP 8388。</li>
+          <li>如果 SSH 不是 22 端口，请放行你实际使用的 SSH 端口。</li>
+        </ul>
+        <div class="guide-note warning"><strong>不要把密码发给别人。</strong>在自己的终端里输入密码；输入时屏幕不显示字符是正常现象。</div>
+      </section>
+
+      <section class="guide-section" id="login">
+        <h2>2. SSH 登录服务器</h2>
+        <p>Mac 打开“终端”，Windows 打开 PowerShell，把下面的 IP 换成你的服务器公网 IP：</p>
+        <div class="code-block"><pre>ssh root@你的服务器IP</pre></div>
+        <p>第一次连接输入 <code>yes</code>，然后输入 root 密码并回车。看到类似 <code>root@server:~#</code> 就是登录成功。</p>
+        <div class="guide-note"><strong>示例：</strong><code>ssh root@203.0.113.10</code>。示例 IP 不能直接使用。</div>
+      </section>
+
+      <section class="guide-section" id="install">
+        <h2>3. 下载并运行一键脚本</h2>
+        <p>登录服务器后，依次复制下面两行。先下载到服务器，再运行；不使用不可审阅的 <code>curl | bash</code> 方式。</p>
+        <div class="code-block"><pre>curl -fsSL https://cnc980.github.io/downloads/spellvpn-quick-server.sh -o spellvpn-quick-server.sh
+bash spellvpn-quick-server.sh</pre></div>
+        <p>想先查看脚本内容，可以在第二行之前运行：</p>
+        <div class="code-block"><pre>less spellvpn-quick-server.sh</pre></div>
+        <p>脚本会自动检查系统和端口、从 Xray 官方 GitHub 下载最新版并校验 SHA-256、生成独立随机凭据、配置 systemd 自启动；如果 UFW 已启用，会增加所需规则，但不会自动开启防火墙。</p>
+        <div class="guide-note warning"><strong>云安全组仍需手动放行。</strong>即使服务器内的防火墙已开放，云厂商控制台没有放行 TCP 443 和 TCP/UDP 8388，手机仍然无法连接。</div>
+      </section>
+
+      <section class="guide-section" id="import">
+        <h2>4. 导入 SpellVPN</h2>
+        <p>安装成功后，终端会显示两条以 <code>vless://</code> 和 <code>ss://</code> 开头的完整链接。</p>
+        <ol class="guide-checklist">
+          <li>完整复制其中一条链接，不要遗漏开头或结尾。</li>
+          <li>打开 SpellVPN，点“添加”或“+”。</li>
+          <li>选择“从剪贴板”或“代理链接”导入。</li>
+          <li>选择新节点并连接；再导入另一条链接分别测试。</li>
+        </ol>
+        <p>以后忘记链接，可重新 SSH 登录服务器并运行：</p>
+        <div class="code-block"><pre>cat /root/spellvpn-links.txt</pre></div>
+      </section>
+
+      <section class="guide-section" id="check">
+        <h2>连接不上时检查</h2>
+        <div class="code-block"><pre>systemctl status xray --no-pager
+journalctl -u xray --no-pager -n 50
+ss -lntup | grep -E ':443|:8388'</pre></div>
+        <ul class="guide-checklist">
+          <li>确认 SpellVPN 中的服务器地址就是云服务器公网 IP。</li>
+          <li>确认云安全组放行 TCP 443、TCP 8388 和 UDP 8388。</li>
+          <li>先在 Wi-Fi 和蜂窝网络之间切换，排除当前网络限制。</li>
+          <li>凭据保存在仅 root 可读的文件中，不要公开分享或提交到代码仓库。</li>
+        </ul>
+      </section>
+
+      <section class="guide-section">
+        <h2>这个脚本搭建了什么？</h2>
+        <div class="guide-grid">
+          <div class="guide-card"><strong>VLESS Reality · TCP 443</strong>无需域名和证书，使用独立 UUID、Reality 密钥和 Short ID。</div>
+          <div class="guide-card"><strong>Shadowsocks · TCP/UDP 8388</strong>使用 AES-256-GCM 和独立随机密码，适合做基础兼容性测试。</div>
+          <div class="guide-card"><strong>Xray + systemd</strong>服务开机自启，异常时自动重启，配置位于 <code>/etc/xray/config.json</code>。</div>
+        </div>
+        <p>需要 Hysteria2、TUIC、AnyTLS、Trojan、VMess、订阅 URL 或与现有服务共存时，请使用<a href="./spellvpn-server.html">进阶多协议教程</a>，不要反复运行本脚本覆盖配置。</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>版权所有 2026 澄序应用。保留所有权利。</span>
+      <span><a href="../index.html#privacy">隐私</a> · <a href="../index.html#support">支持</a></span>
+    </div>
+  </footer>
+</body>
+</html>
