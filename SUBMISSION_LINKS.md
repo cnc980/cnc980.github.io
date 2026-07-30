@@ -19,7 +19,7 @@ SpellVPN App Store listings:
 - SpellVPN: Ultra is free, uses Yandex Mobile Ads with Google AdMob mediation, requests ATT before ad initialization where applicable, and uses StoreKit auto-renewing subscriptions to remove ads and unlock Ultra features. The paid App Store listing at https://apps.apple.com/app/id6788655739 covers both the iOS paid edition and the Mac paid edition. The macOS build is a separate native macOS target with no advertising SDKs, analytics SDKs, StoreKit products, subscriptions, provider-lines service, or built-in VPN account.
 - VPN XX: Free uses Yandex Smart Waterfall with Yandex Mobile Ads and Google AdMob mediation. Pro is a paid download with no ads. Proxy subscription URLs managed by the app are user-provided data, not App Store subscription purchases.
 - ArtCut: Free uses Yandex Mobile Ads with Google AdMob mediation for banner, native/feed, interstitial, and app-open placements after ATT status is resolved. Paid is a paid download with no ads and does not initialize advertising SDKs. Membership or premium-template subscriptions are not treated as active until they are enabled in a submitted build.
-- Apple Ledger: No ads, StoreKit purchase logic, membership, Pro subscription, or paywall were found in the current project scan. Advanced features are currently free. Subscription items are user-created finance records for bill reminders, not App Store purchases.
+- easyTallys: No ads, StoreKit purchase logic, membership, Pro subscription, or paywall were found in the current project scan. Advanced features are currently free. Subscription items are user-created finance records for bill reminders, not App Store purchases.
 
 ## SpellVPN
 
@@ -90,7 +90,7 @@ SpellVPN App Store listings:
 - Support URL: `https://cnc980.github.io/ru/support/artcut.html`
 - Privacy Policy URL: `https://cnc980.github.io/ru/privacy/artcut.html`
 
-## Apple Ledger
+## easyTallys
 
 ### English
 
@@ -126,7 +126,7 @@ SpellVPN App Store listings:
 - For VPN XX Pro, make sure App Privacy answers reflect that the paid edition does not show ads and does not initialize Yandex Mobile Ads or Google AdMob for ad serving.
 - For ArtCut Free, make sure App Privacy answers disclose Yandex Mobile Ads with Google AdMob mediation, ATT before ad SDK initialization/ad requests, app-open/feed placements, and the ad-related data categories described in the privacy policy.
 - For ArtCut Paid, make sure App Privacy answers reflect that the paid edition does not show ads and does not initialize Yandex Mobile Ads or Google AdMob for ad serving.
-- Apple Ledger "subscriptions" are user-created finance records, not App Store subscription purchases. The current scan did not find ads, StoreKit purchase logic, membership, Pro subscription, or a paywall for Apple Ledger; App Privacy should reflect no tracking, no developer server, local storage, optional private CloudKit sync, App Group sharing for Widget/Watch, local OCR, and user-controlled import/export/deletion.
+- easyTallys "subscriptions" are user-created finance records, not App Store subscription purchases. The current scan did not find ads, StoreKit purchase logic, membership, Pro subscription, or a paywall for easyTallys; App Privacy should reflect no tracking, no developer server, local storage, optional private CloudKit sync, App Group sharing for Widget/Watch, local OCR, and user-controlled import/export/deletion.
 
 
 
@@ -158,7 +158,6 @@ SpellVPN App Store listings:
 - SpellVPN iOS paid download: https://apps.apple.com/app/id6788655739
 - SpellVPN Mac paid download: https://apps.apple.com/app/id6788655739
 - App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN
-
 
 
 
