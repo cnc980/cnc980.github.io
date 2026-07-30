@@ -12,6 +12,8 @@
   --violet: #6750a4;
   --blue: #2d6f9f;
   --shadow: 0 18px 42px rgba(29, 36, 40, 0.12);
+  --shadow-soft: 0 8px 24px rgba(29, 36, 40, 0.08);
+  --shadow-lift: 0 22px 54px rgba(29, 36, 40, 0.16);
 }
 
 * {
@@ -25,13 +27,28 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
+  background:
+    linear-gradient(180deg, #f7fbf9 0, #ffffff 360px),
+    var(--paper);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   color: inherit;
+}
+
+::selection {
+  background: rgba(15, 123, 95, 0.18);
+}
+
+a:focus-visible,
+button:focus-visible,
+video:focus-visible {
+  outline: 3px solid rgba(15, 123, 95, 0.28);
+  outline-offset: 3px;
 }
 
 img {
@@ -46,6 +63,7 @@ img {
   border-bottom: 1px solid rgba(221, 227, 224, 0.8);
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(18px);
+  box-shadow: 0 1px 0 rgba(31, 36, 40, 0.04);
 }
 
 .nav {
@@ -71,7 +89,7 @@ img {
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: #1f2428;
+  background: linear-gradient(135deg, #12221e, #0f7b5f);
   color: #fff;
   display: grid;
   place-items: center;
@@ -123,10 +141,14 @@ img {
 
 .nav-links a {
   text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: color 160ms ease, background-color 160ms ease;
 }
 
 .nav-links a:hover {
   color: var(--ink);
+  background: rgba(238, 244, 241, 0.78);
 }
 
 .hero,
@@ -137,7 +159,7 @@ img {
 }
 
 .hero {
-  padding: 78px 0 52px;
+  padding: 82px 0 58px;
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.8fr);
   align-items: center;
@@ -158,6 +180,7 @@ h2,
 h3 {
   line-height: 1.08;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 h1 {
@@ -177,6 +200,7 @@ h3 {
 
 p {
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .lead {
@@ -207,16 +231,31 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 10px 24px rgba(31, 36, 40, 0.14);
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, border-color 160ms ease;
 }
 
 .button.secondary {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.88);
   color: var(--ink);
   border-color: var(--line);
+  box-shadow: none;
 }
 
 .button:hover {
   transform: translateY(-1px);
+  box-shadow: 0 14px 32px rgba(31, 36, 40, 0.18);
+}
+
+.button.secondary:hover {
+  border-color: rgba(15, 123, 95, 0.35);
+  background: #fff;
+}
+
+.button:active,
+.app-card:active,
+.tutorial-card:active {
+  transform: translateY(0);
 }
 
 .app-store-link {
@@ -244,13 +283,26 @@ p {
 .app-store-options {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px;
   width: 100%;
 }
 
 .app-store-option {
   display: grid;
-  gap: 7px;
+  gap: 8px;
+  min-width: 172px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 1px 0 rgba(31, 36, 40, 0.04);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.app-store-option:hover {
+  transform: translateY(-1px);
+  border-color: rgba(15, 123, 95, 0.24);
+  box-shadow: var(--shadow-soft);
 }
 
 .app-store-option-label {
@@ -264,11 +316,16 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   align-items: center;
+  padding: 18px;
+  border: 1px solid rgba(221, 227, 224, 0.86);
+  border-radius: 8px;
+  background: linear-gradient(145deg, rgba(238, 244, 241, 0.92), rgba(255, 255, 255, 0.72));
+  box-shadow: var(--shadow-soft);
 }
 
 .hero-mosaic img {
   border-radius: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-soft);
   background: var(--soft);
   border: 1px solid var(--line);
 }
@@ -284,7 +341,7 @@ p {
 .section {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 58px 0;
+  padding: 64px 0;
 }
 
 .section-header {
@@ -313,20 +370,54 @@ p {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
+  box-shadow: 0 1px 0 rgba(31, 36, 40, 0.04);
 }
 
 .app-card {
-  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  padding: 18px 52px 18px 18px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   min-height: 310px;
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, background-color 160ms ease;
 }
 
 .app-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow);
+  border-color: rgba(15, 123, 95, 0.28);
+  box-shadow: var(--shadow-soft);
+}
+
+.app-card::after,
+.tutorial-card::after {
+  content: "→";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(238, 244, 241, 0.92);
+  color: var(--green);
+  font-weight: 840;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 160ms ease, transform 160ms ease, background-color 160ms ease;
+}
+
+.app-card:hover::after,
+.tutorial-card:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.app-grid .app-card:first-child {
+  border-color: rgba(15, 123, 95, 0.24);
+  background: linear-gradient(180deg, rgba(238, 244, 241, 0.75), #fff 44%);
 }
 
 .tutorial-grid {
@@ -336,20 +427,23 @@ p {
 }
 
 .tutorial-card {
+  position: relative;
+  overflow: hidden;
   min-height: 176px;
-  padding: 20px;
+  padding: 20px 52px 20px 20px;
   display: grid;
   grid-template-columns: 66px minmax(0, 1fr);
   align-items: start;
   gap: 18px;
   color: inherit;
   text-decoration: none;
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .tutorial-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow);
+  border-color: rgba(15, 123, 95, 0.28);
+  box-shadow: var(--shadow-soft);
 }
 
 .tutorial-card p {
@@ -392,16 +486,24 @@ p {
 }
 
 .tag {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(15, 123, 95, 0.16);
   border-radius: 8px;
   padding: 5px 8px;
-  color: var(--muted);
+  color: #315349;
+  background: rgba(238, 244, 241, 0.74);
   font-size: 12px;
   font-weight: 680;
 }
 
+.app-card:hover .tag {
+  border-color: rgba(15, 123, 95, 0.28);
+  background: rgba(238, 244, 241, 0.94);
+}
+
 .band {
-  background: var(--soft);
+  background:
+    linear-gradient(180deg, rgba(246, 248, 247, 0.96), rgba(238, 244, 241, 0.78)),
+    var(--soft);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -432,10 +534,15 @@ p {
   color: var(--green);
   font-weight: 720;
   text-decoration: none;
+  padding: 8px 10px;
+  border: 1px solid rgba(15, 123, 95, 0.16);
+  border-radius: 8px;
+  background: rgba(238, 244, 241, 0.62);
+  text-align: center;
 }
 
 .app-hero {
-  padding: 64px 0 42px;
+  padding: 70px 0 48px;
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(330px, 0.82fr);
   align-items: center;
@@ -465,13 +572,32 @@ p {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--soft);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-soft);
   overflow: hidden;
 }
 
 .hero-shot {
   max-width: 360px;
   margin-left: auto;
+}
+
+.video-frame {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 8px;
+  border: 1px solid rgba(31, 36, 40, 0.18);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #05070a, #14201d);
+  box-shadow: var(--shadow-lift);
+  overflow: hidden;
+}
+
+.promo-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  background: #05070a;
 }
 
 .feature-grid,
@@ -486,6 +612,20 @@ p {
 .policy-card,
 .support-card {
   padding: 22px;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.feature-grid .feature-card[data-site-update="spellvpn-macos"] {
+  grid-column: span 2;
+  background: linear-gradient(180deg, rgba(238, 244, 241, 0.72), #fff 58%);
+}
+
+.feature-card:hover,
+.policy-card:hover,
+.support-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(15, 123, 95, 0.22);
+  box-shadow: var(--shadow-soft);
 }
 
 .feature-card p,
@@ -503,6 +643,16 @@ p {
 
 .screens.two {
   grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+}
+
+.wide-shot {
+  grid-column: span 2;
+}
+
+.hero-shot img,
+.phone-shot img,
+.wide-shot img {
+  width: 100%;
 }
 
 .mock-panel {
@@ -801,6 +951,7 @@ p {
 .legal-layout p,
 .legal-layout li {
   color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 .legal-layout ul {
@@ -879,6 +1030,9 @@ p {
   .nav {
     min-height: 62px;
     gap: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 8px 0;
   }
 
   .brand span:last-child {
@@ -886,12 +1040,28 @@ p {
   }
 
   .nav-right {
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 8px;
   }
 
   .nav-links {
+    max-width: calc(100vw - 132px);
+    overflow-x: auto;
+    flex-wrap: nowrap;
     gap: 10px;
     font-size: 13px;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+    padding: 6px 8px;
   }
 
   .language-switch a {
@@ -901,10 +1071,54 @@ p {
 
   .hero {
     padding-top: 48px;
+    gap: 32px;
+  }
+
+  h1 {
+    font-size: clamp(34px, 10vw, 44px);
+  }
+
+  h2 {
+    font-size: clamp(26px, 8vw, 34px);
+  }
+
+  .lead {
+    font-size: 17px;
   }
 
   .app-hero {
     padding-top: 42px;
+    gap: 32px;
+  }
+
+  .hero-actions,
+  .app-actions,
+  .legal-actions {
+    gap: 10px;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .app-store-options {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .app-store-link {
+    width: 144px;
+  }
+
+  .hero-mosaic {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .hero-mosaic img:nth-child(1),
+  .hero-mosaic img:nth-child(2) {
+    margin: 0;
   }
 
   .app-title {
@@ -930,9 +1144,31 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .link-row a {
+    width: 100%;
+  }
+
   .tutorial-card,
   .tutorial-section {
     grid-template-columns: 1fr;
+  }
+
+  .app-card {
+    min-height: 0;
+    padding: 16px 48px 16px 16px;
+  }
+
+  .tutorial-card {
+    padding: 18px 48px 18px 18px;
+  }
+
+  .wide-shot,
+  .feature-grid .feature-card[data-site-update="spellvpn-macos"] {
+    grid-column: auto;
+  }
+
+  .video-frame {
+    padding: 5px;
   }
 
   .guide-toc ol {
@@ -945,6 +1181,15 @@ p {
 
   .footer-inner {
     flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

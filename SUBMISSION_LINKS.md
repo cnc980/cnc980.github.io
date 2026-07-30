@@ -8,15 +8,15 @@ Supported languages: English (`en`), Simplified Chinese (`zh-Hans`), Russian (`r
 
 App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN
 
-SpellVPN iOS listings:
+SpellVPN App Store listings:
 
 - SpellVPN Ultra (free): https://apps.apple.com/app/id6790699220
-- SpellVPN Tool / Pro (paid): https://apps.apple.com/app/id6788655739
-- SpellVPN for Mac: add the direct App Store link after the Mac edition is published.
+- SpellVPN iOS paid edition: https://apps.apple.com/app/id6788655739
+- SpellVPN Mac paid edition: https://apps.apple.com/app/id6788655739
 
 ## Current App Status
 
-- SpellVPN: Pro is a paid download with no ads and no in-app purchases. Ultra is free, uses Yandex Mobile Ads with Google AdMob mediation, requests ATT before ad initialization where applicable, and uses StoreKit auto-renewing subscriptions to remove ads and unlock Ultra features.
+- SpellVPN: Ultra is free, uses Yandex Mobile Ads with Google AdMob mediation, requests ATT before ad initialization where applicable, and uses StoreKit auto-renewing subscriptions to remove ads and unlock Ultra features. The paid App Store listing at https://apps.apple.com/app/id6788655739 covers both the iOS paid edition and the Mac paid edition. The macOS build is a separate native macOS target with no advertising SDKs, analytics SDKs, StoreKit products, subscriptions, provider-lines service, or built-in VPN account.
 - VPN XX: Free uses Yandex Smart Waterfall with Yandex Mobile Ads and Google AdMob mediation. Pro is a paid download with no ads. Proxy subscription URLs managed by the app are user-provided data, not App Store subscription purchases.
 - ArtCut: Free uses Yandex Mobile Ads with Google AdMob mediation for banner, native/feed, interstitial, and app-open placements after ATT status is resolved. Paid is a paid download with no ads and does not initialize advertising SDKs. Membership or premium-template subscriptions are not treated as active until they are enabled in a submitted build.
 - Apple Ledger: No ads, StoreKit purchase logic, membership, Pro subscription, or paywall were found in the current project scan. Advanced features are currently free. Subscription items are user-created finance records for bill reminders, not App Store purchases.
@@ -117,7 +117,7 @@ SpellVPN iOS listings:
 
 - Brand name: `Clearnova Apps` / `澄序应用`.
 - Support email: `balamanigill@gmail.com`.
-- SpellVPN App Store buttons link directly to the Ultra and paid Tool / Pro listings. Add the Mac listing after publication.
+- SpellVPN App Store buttons link directly to the Ultra listing and the shared paid listing used by the iOS paid edition and Mac paid edition.
 - `app-ads.txt` is included at the site root for the ad-supported free editions.
 - Use each app's matching privacy URL in App Store Connect.
 - For SpellVPN Pro, make sure App Privacy answers reflect that the paid edition does not show ads and has no in-app purchases.
@@ -155,11 +155,9 @@ SpellVPN iOS listings:
 - Russian tutorial URL: `https://cnc980.github.io/ru/tutorials/us-apple-account.html`
 - US tax-free address generator: `https://cnc980.github.io/tools/us-tax-free-address-generator/index.html`
 - SpellVPN Ultra free download: https://apps.apple.com/app/id6790699220
-- SpellVPN Tool / Pro paid download: https://apps.apple.com/app/id6788655739
+- SpellVPN iOS paid download: https://apps.apple.com/app/id6788655739
+- SpellVPN Mac paid download: https://apps.apple.com/app/id6788655739
 - App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN
-
-
-
 
 
 
