@@ -1,71 +1,4 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Тестовый сервер SpellVPN | Официальный сайт приложений</title>
-  <meta name="description" content="Развертывание много-протокольного тестового сервера SpellVPN с sing-box, Xray, systemd, TLS, подпиской и удаленной проверкой.">
-  <link rel="stylesheet" href="../../styles.css">
-  <link rel="icon" href="../../assets/spellvpn-icon.png">
-  <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/spellvpn-server.html">
-  <link rel="alternate" hreflang="zh-Hans" href="https://cnc980.github.io/zh-Hans/tutorials/spellvpn-server.html">
-  <link rel="alternate" hreflang="ru" href="https://cnc980.github.io/ru/tutorials/spellvpn-server.html">
-  <link rel="alternate" hreflang="x-default" href="https://cnc980.github.io/en/tutorials/spellvpn-server.html">
-</head>
-<body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Основная навигация">
-      <a class="brand" href="../index.html"><span class="brand-mark">CA</span><span>Clearnova Apps</span></a>
-      <div class="nav-right">
-        <div class="nav-links">
-          <a href="../index.html#apps">Приложения</a>
-          <a href="../index.html#tutorials">Руководства</a>
-          <a href="../index.html#privacy">Конфиденциальность</a>
-          <a href="../index.html#support">Поддержка</a>
-        </div>
-        <div class="language-switch" aria-label="Язык">
-          <a lang="en" href="../../en/tutorials/spellvpn-server.html">EN</a><a lang="zh-Hans" href="../../zh-Hans/tutorials/spellvpn-server.html">中</a><a class="active" lang="ru" href="./spellvpn-server.html">RU</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="legal-hero tutorial-hero">
-      <div class="app-title">
-        <img decoding="async" class="icon" src="../../assets/spellvpn-icon.png" alt="Значок SpellVPN">
-        <h1>Собственный тестовый сервер</h1>
-      </div>
-      <p class="eyebrow accent-green">SpellVPN · Server Lab</p>
-      <p class="lead">Поддерживаемая схема для проверки совместимости: sing-box обслуживает основной набор протоколов, Xray дополняет его XHTTP, mKCP, gRPC и Vision, Nginx публикует защищенную подписку, а systemd управляет запуском и восстановлением.</p>
-      <div class="legal-actions">
-        <a class="button secondary" href="../apps/spellvpn.html">SpellVPN</a>
-        <a class="button secondary" href="./spellvpn.html">Руководство</a>
-        <a class="button secondary" href="../support/spellvpn.html">Поддержка</a>
-      </div>
-      <div class="legal-box">
-        <strong>Разрешенное использование</strong>
-        <p>Используйте руководство только на серверах и сетях, которыми вы владеете или которыми вам разрешено управлять. SpellVPN не предоставляет серверы, учетные записи, трафик, сертификаты или proxy credentials.</p>
-      </div>
-    </section>
-
-    <article class="server-guide">
-      <nav class="guide-toc" aria-label="Содержание">
-        <h2>План развертывания</h2>
-        <ol>
-          <li><a href="#audit">Аудит сервера</a></li>
-          <li><a href="#plan">Архитектура и порты</a></li>
-          <li><a href="#install">Установка</a></li>
-          <li><a href="#security">TLS и безопасность</a></li>
-          <li><a href="#subscription">Подписка SpellVPN</a></li>
-          <li><a href="#verify">Проверка и эксплуатация</a></li>
-        </ol>
-      </nav>
-
-      <section class="guide-section" id="audit">
-        <h2>1. Проведите аудит до изменений</h2>
-        <p>Зафиксируйте ОС, память, маршруты, занятые порты, firewall, Nginx, сертификаты и неработающие services. Сделайте резервные копии всех файлов, которые планируется менять.</p>
-        <div class="code-block"><pre>cat /etc/os-release
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Тестовый сервер SpellVPN | Официальный сайт приложений</title><meta name="description" content="Развертывание много-протокольного тестового сервера SpellVPN с sing-box, Xray, systemd, TLS, подпиской и удаленной проверкой."><link rel="stylesheet" href="../../a1fd3dedf271e355.css"><link rel="icon" href="../../assets/8e7c3708e295051d.png"><link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/spellvpn-server.html"><link rel="alternate" hreflang="zh-Hans" href="https://cnc980.github.io/zh-Hans/tutorials/spellvpn-server.html"><link rel="alternate" hreflang="ru" href="https://cnc980.github.io/ru/tutorials/spellvpn-server.html"><link rel="alternate" hreflang="x-default" href="https://cnc980.github.io/en/tutorials/spellvpn-server.html"></head><body><header class="site-header"><nav class="nav" aria-label="Основная навигация"><a class="brand" href="../index.html"><span class="brand-mark">CA</span><span>Clearnova Apps</span></a><div class="nav-right"><div class="nav-links"><a href="../index.html#apps">Приложения</a><a href="../index.html#tutorials">Руководства</a><a href="../index.html#privacy">Конфиденциальность</a><a href="../index.html#support">Поддержка</a></div><div class="language-switch" aria-label="Язык"><a lang="en" href="../../en/tutorials/spellvpn-server.html">EN</a><a lang="zh-Hans" href="../../zh-Hans/tutorials/spellvpn-server.html">中</a><a class="active" lang="ru" href="./spellvpn-server.html">RU</a></div></div></nav></header><main><section class="legal-hero tutorial-hero"><div class="app-title"><img decoding="async" class="icon" src="../../assets/8e7c3708e295051d.png" alt="Значок SpellVPN"><h1>Собственный тестовый сервер</h1></div><p class="eyebrow accent-green">SpellVPN · Server Lab</p><p class="lead">Поддерживаемая схема для проверки совместимости: sing-box обслуживает основной набор протоколов, Xray дополняет его XHTTP, mKCP, gRPC и Vision, Nginx публикует защищенную подписку, а systemd управляет запуском и восстановлением.</p><div class="legal-actions"><a class="button secondary" href="../apps/spellvpn.html">SpellVPN</a><a class="button secondary" href="./spellvpn.html">Руководство</a><a class="button secondary" href="../support/spellvpn.html">Поддержка</a></div><div class="legal-box"><strong>Разрешенное использование</strong><p>Используйте руководство только на серверах и сетях, которыми вы владеете или которыми вам разрешено управлять. SpellVPN не предоставляет серверы, учетные записи, трафик, сертификаты или proxy credentials.</p></div></section><article class="server-guide"><nav class="guide-toc" aria-label="Содержание"><h2>План развертывания</h2><ol><li><a href="#audit">Аудит сервера</a></li><li><a href="#plan">Архитектура и порты</a></li><li><a href="#install">Установка</a></li><li><a href="#security">TLS и безопасность</a></li><li><a href="#subscription">Подписка SpellVPN</a></li><li><a href="#verify">Проверка и эксплуатация</a></li></ol></nav><section class="guide-section" id="audit"><h2>1. Проведите аудит до изменений</h2><p>Зафиксируйте ОС, память, маршруты, занятые порты, firewall, Nginx, сертификаты и неработающие services. Сделайте резервные копии всех файлов, которые планируется менять.</p><div class="code-block"><pre>cat /etc/os-release
 free -h
 ip -brief address
 ip route
@@ -73,84 +6,20 @@ ss -lntup
 systemctl --failed
 ufw status verbose
 nginx -T 2&gt;/dev/null
-certbot certificates 2&gt;/dev/null</pre></div>
-        <div class="guide-note warning"><strong>Не заменяйте рабочую службу на месте.</strong> Сначала выделите свободные порты, проверьте новую конфигурацию и только затем включайте новый service.</div>
-      </section>
-
-      <section class="guide-section" id="plan">
-        <h2>2. Разделите роли</h2>
-        <div class="guide-grid">
-          <div class="guide-card"><strong>sing-box</strong>Shadowsocks, Trojan, VLESS, VMess, Hysteria2, TUIC, AnyTLS, SOCKS5, HTTP CONNECT, ShadowTLS и Naive.</div>
-          <div class="guide-card"><strong>Xray</strong>XHTTP, mKCP, gRPC и VLESS Vision в отдельном service для безопасного обновления.</div>
-          <div class="guide-card"><strong>Nginx</strong>HTTPS endpoint для Base64-подписки с длинным случайным token.</div>
-          <div class="guide-card"><strong>systemd + UFW</strong>Автозапуск, restart policy, журналирование и точные правила TCP/UDP.</div>
-        </div>
-        <p>Каждый inbound должен иметь отдельный порт и отдельный UUID, пароль или ключ. WireGuard, OpenVPN, IKEv2 и OpenConnect распространяются отдельными client files, а не обычными URI подписки.</p>
-      </section>
-
-      <section class="guide-section" id="install">
-        <h2>3. Установите официальные сборки</h2>
-        <p>Установите sing-box из официального APT repository. Для Xray скачайте текущий stable ZIP и файл <code>.dgst</code> из XTLS/Xray-core Releases и обязательно сравните SHA-256 перед установкой.</p>
-        <div class="code-block"><pre>install -d -m 0755 /etc/apt/keyrings
+certbot certificates 2&gt;/dev/null</pre></div><div class="guide-note warning"><strong>Не заменяйте рабочую службу на месте.</strong> Сначала выделите свободные порты, проверьте новую конфигурацию и только затем включайте новый service.</div></section><section class="guide-section" id="plan"><h2>2. Разделите роли</h2><div class="guide-grid"><div class="guide-card"><strong>sing-box</strong>Shadowsocks, Trojan, VLESS, VMess, Hysteria2, TUIC, AnyTLS, SOCKS5, HTTP CONNECT, ShadowTLS и Naive.</div><div class="guide-card"><strong>Xray</strong>XHTTP, mKCP, gRPC и VLESS Vision в отдельном service для безопасного обновления.</div><div class="guide-card"><strong>Nginx</strong>HTTPS endpoint для Base64-подписки с длинным случайным token.</div><div class="guide-card"><strong>systemd + UFW</strong>Автозапуск, restart policy, журналирование и точные правила TCP/UDP.</div></div><p>Каждый inbound должен иметь отдельный порт и отдельный UUID, пароль или ключ. WireGuard, OpenVPN, IKEv2 и OpenConnect распространяются отдельными client files, а не обычными URI подписки.</p></section><section class="guide-section" id="install"><h2>3. Установите официальные сборки</h2><p>Установите sing-box из официального APT repository. Для Xray скачайте текущий stable ZIP и файл <code>.dgst</code> из XTLS/Xray-core Releases и обязательно сравните SHA-256 перед установкой.</p><div class="code-block"><pre>install -d -m 0755 /etc/apt/keyrings
 curl -fsSL https://sing-box.app/gpg.key -o /etc/apt/keyrings/sagernet.asc
 chmod a+r /etc/apt/keyrings/sagernet.asc
 
 sha256sum Xray-linux-64.zip
 sed -n '1,8p' Xray-linux-64.zip.dgst
-/usr/local/bin/xray version</pre></div>
-        <p>Официальные документы: <a href="https://sing-box.sagernet.org/installation/package-manager/" target="_blank" rel="noopener noreferrer">установка sing-box</a> и <a href="https://xtls.github.io/document/install.html" target="_blank" rel="noopener noreferrer">установка и проверка Xray</a>.</p>
-      </section>
-
-      <section class="guide-section" id="security">
-        <h2>4. TLS, Reality и права доступа</h2>
-        <ul class="guide-checklist">
-          <li>При наличии domain используйте доверенный сертификат, правильный SNI и автоматическое renewal.</li>
-          <li>Без domain используйте Reality для совместимых VLESS tests или законный IP certificate; не создавайте поддельный TLS certificate.</li>
-          <li>Запускайте sing-box, Xray и Nginx от отдельных непривилегированных пользователей.</li>
-          <li>SOCKS5 и HTTP CONNECT должны требовать authentication; не создавайте open proxy.</li>
-          <li>Сначала проверьте конфигурации командами core, затем запускайте systemd services.</li>
-        </ul>
-        <div class="code-block"><pre>sing-box check -c /etc/sing-box/config.json
+/usr/local/bin/xray version</pre></div><p>Официальные документы: <a href="https://sing-box.sagernet.org/installation/package-manager/" target="_blank" rel="noopener noreferrer">установка sing-box</a> и <a href="https://xtls.github.io/document/install.html" target="_blank" rel="noopener noreferrer">установка и проверка Xray</a>.</p></section><section class="guide-section" id="security"><h2>4. TLS, Reality и права доступа</h2><ul class="guide-checklist"><li>При наличии domain используйте доверенный сертификат, правильный SNI и автоматическое renewal.</li><li>Без domain используйте Reality для совместимых VLESS tests или законный IP certificate; не создавайте поддельный TLS certificate.</li><li>Запускайте sing-box, Xray и Nginx от отдельных непривилегированных пользователей.</li><li>SOCKS5 и HTTP CONNECT должны требовать authentication; не создавайте open proxy.</li><li>Сначала проверьте конфигурации командами core, затем запускайте systemd services.</li></ul><div class="code-block"><pre>sing-box check -c /etc/sing-box/config.json
 /usr/local/bin/xray run -test -c /etc/xray/config.json
 systemctl enable --now sing-box xray
 ufw allow OpenSSH
 ufw allow &lt;tcp-port&gt;/tcp
-ufw allow &lt;udp-port&gt;/udp</pre></div>
-      </section>
-
-      <section class="guide-section" id="subscription">
-        <h2>5. Опубликуйте подписку SpellVPN</h2>
-        <p>Сформируйте по одной проверенной ссылке на строку: <code>ss://</code>, <code>vless://</code>, <code>vmess://</code>, <code>trojan://</code>, <code>hysteria2://</code>, <code>tuic://</code>, <code>socks5://</code> или authenticated <code>https://</code>. Правильно URL-encode параметры и Base64-encode весь файл.</p>
-        <div class="code-block"><pre>install -d -m 0755 /var/www/vpn-sub
+ufw allow &lt;udp-port&gt;/udp</pre></div></section><section class="guide-section" id="subscription"><h2>5. Опубликуйте подписку SpellVPN</h2><p>Сформируйте по одной проверенной ссылке на строку: <code>ss://</code>, <code>vless://</code>, <code>vmess://</code>, <code>trojan://</code>, <code>hysteria2://</code>, <code>tuic://</code>, <code>socks5://</code> или authenticated <code>https://</code>. Правильно URL-encode параметры и Base64-encode весь файл.</p><div class="code-block"><pre>install -d -m 0755 /var/www/vpn-sub
 base64 -w 0 share-links.txt &gt; /var/www/vpn-sub/subscription.b64
-chmod 0644 /var/www/vpn-sub/subscription.b64</pre></div>
-        <p>В SpellVPN откройте Dashboard → <strong>+</strong> → subscription URL, вставьте HTTPS endpoint, импортируйте и тестируйте каждый node отдельно.</p>
-        <div class="guide-note warning"><strong>Случайный URL не равен полноценной authentication.</strong> Храните token как secret, меняйте его после утечки и при необходимости добавьте HTTP authentication или IP restrictions.</div>
-      </section>
-
-      <section class="guide-section" id="verify">
-        <h2>6. Проверяйте реальный трафик</h2>
-        <p>Открытый port не доказывает работу proxy. Для каждого протокола используйте matching client, затем повторите тест из внешней сети.</p>
-        <div class="code-block"><pre>ss -lntup
+chmod 0644 /var/www/vpn-sub/subscription.b64</pre></div><p>В SpellVPN откройте Dashboard → <strong>+</strong> → subscription URL, вставьте HTTPS endpoint, импортируйте и тестируйте каждый node отдельно.</p><div class="guide-note warning"><strong>Случайный URL не равен полноценной authentication.</strong> Храните token как secret, меняйте его после утечки и при необходимости добавьте HTTP authentication или IP restrictions.</div></section><section class="guide-section" id="verify"><h2>6. Проверяйте реальный трафик</h2><p>Открытый port не доказывает работу proxy. Для каждого протокола используйте matching client, затем повторите тест из внешней сети.</p><div class="code-block"><pre>ss -lntup
 curl --socks5-hostname 127.0.0.1:&lt;local-test-port&gt; https://api.ipify.org
 systemctl is-active sing-box xray nginx
-systemctl is-enabled sing-box xray nginx</pre></div>
-        <ul class="guide-checklist">
-          <li>Все nodes возвращают public IP сервера.</li>
-          <li>TCP и UDP transports проверены вне VPS.</li>
-          <li>Подписка импортируется без скрытого пропуска nodes.</li>
-          <li>После reboot services, firewall и certificate permissions остаются рабочими.</li>
-          <li>После тестов меняются UUID, passwords, Reality keys и subscription token.</li>
-        </ul>
-      </section>
-    </article>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>Copyright 2026 Clearnova Apps. Все права защищены.</span>
-      <span><a href="../index.html#privacy">Конфиденциальность</a> · <a href="../index.html#support">Поддержка</a></span>
-    </div>
-  </footer>
-</body>
-</html>
+systemctl is-enabled sing-box xray nginx</pre></div><ul class="guide-checklist"><li>Все nodes возвращают public IP сервера.</li><li>TCP и UDP transports проверены вне VPS.</li><li>Подписка импортируется без скрытого пропуска nodes.</li><li>После reboot services, firewall и certificate permissions остаются рабочими.</li><li>После тестов меняются UUID, passwords, Reality keys и subscription token.</li></ul></section></article></main><footer class="footer"><div class="footer-inner"><span>Copyright 2026 Clearnova Apps. Все права защищены.</span><span><a href="../index.html#privacy">Конфиденциальность</a> · <a href="../index.html#support">Поддержка</a></span></div></footer></body></html>

@@ -1,86 +1,4 @@
-<!doctype html>
-<html lang="zh-Hans">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SpellVPN 自建测试服务器 | 官方应用网站</title>
-  <meta name="description" content="使用 sing-box、Xray、systemd、TLS、订阅发布和远程验证，为 SpellVPN 搭建可维护的多协议测试服务器。">
-  <link rel="stylesheet" href="../../styles.css">
-  <link rel="icon" href="../../assets/spellvpn-icon.png">
-  <link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/spellvpn-server.html">
-  <link rel="alternate" hreflang="zh-Hans" href="https://cnc980.github.io/zh-Hans/tutorials/spellvpn-server.html">
-  <link rel="alternate" hreflang="ru" href="https://cnc980.github.io/ru/tutorials/spellvpn-server.html">
-  <link rel="alternate" hreflang="x-default" href="https://cnc980.github.io/en/tutorials/spellvpn-server.html">
-</head>
-<body>
-  <header class="site-header">
-    <nav class="nav" aria-label="主导航">
-      <a class="brand" href="../index.html"><span class="brand-mark">澄</span><span>澄序应用</span></a>
-      <div class="nav-right">
-        <div class="nav-links">
-          <a href="../index.html#apps">应用</a>
-          <a href="../index.html#tutorials">教程</a>
-          <a href="../index.html#privacy">隐私</a>
-          <a href="../index.html#support">支持</a>
-        </div>
-        <div class="language-switch" aria-label="语言">
-          <a lang="en" href="../../en/tutorials/spellvpn-server.html">EN</a><a class="active" lang="zh-Hans" href="./spellvpn-server.html">中</a><a lang="ru" href="../../ru/tutorials/spellvpn-server.html">RU</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="legal-hero tutorial-hero">
-      <div class="app-title">
-        <img decoding="async" class="icon" src="../../assets/spellvpn-icon.png" alt="SpellVPN 图标">
-        <h1>自建多协议测试服务器</h1>
-      </div>
-      <p class="eyebrow accent-green">SpellVPN · 服务器实验室</p>
-      <p class="lead">一套便于维护和回滚的部署方式：sing-box 负责大部分协议，Xray 补充 XHTTP、mKCP、gRPC 和 Vision，Nginx 发布受保护订阅，systemd 管理自启、日志与故障恢复。</p>
-      <div class="legal-actions">
-        <a class="button secondary" href="../apps/spellvpn.html">SpellVPN</a>
-        <a class="button secondary" href="./spellvpn.html">使用教程</a>
-        <a class="button" href="./spellvpn-quick-server.html">小白一键搭建</a>
-        <a class="button secondary" href="../support/spellvpn.html">支持</a>
-      </div>
-      <div class="legal-box">
-        <strong>使用范围</strong>
-        <p>仅用于你拥有或获准管理的服务器与网络。SpellVPN 是客户端，不提供服务器、账号、流量、证书或代理凭据。页面中的端口均为示例，不是公开服务参数。</p>
-      </div>
-    </section>
-
-    <article class="server-guide">
-      <nav class="guide-toc" aria-label="目录">
-        <h2>搭建流程</h2>
-        <ol>
-          <li><a href="#architecture">架构与原则</a></li>
-          <li><a href="#preflight">部署前检查</a></li>
-          <li><a href="#ports">协议与端口规划</a></li>
-          <li><a href="#install">安装核心</a></li>
-          <li><a href="#tls">TLS 与 Reality</a></li>
-          <li><a href="#configure">配置、自启和防火墙</a></li>
-          <li><a href="#subscription">生成订阅 URL</a></li>
-          <li><a href="#verify">本机与远程验证</a></li>
-          <li><a href="#hardening">运维与安全加固</a></li>
-        </ol>
-      </nav>
-
-      <section class="guide-section" id="architecture">
-        <h2>1. 架构与原则</h2>
-        <div class="guide-grid">
-          <div class="guide-card"><strong>sing-box 主服务</strong>承载 Shadowsocks、Trojan、VLESS、VMess、Hysteria2、TUIC、AnyTLS、SOCKS5、HTTP CONNECT、ShadowTLS、Naive 等协议。</div>
-          <div class="guide-card"><strong>Xray 扩展服务</strong>单独承载 XHTTP、mKCP、gRPC 和 VLESS Vision 等需要当前 Xray 传输行为的测试节点。</div>
-          <div class="guide-card"><strong>Nginx 订阅入口</strong>通过 HTTPS 提供 Base64 URI 列表和可选客户端文件包，路径使用高强度随机令牌。</div>
-          <div class="guide-card"><strong>systemd 与 UFW</strong>分别管理自启、重启策略、日志、最小权限用户和精确端口规则。</div>
-        </div>
-        <div class="guide-note warning"><strong>不要直接覆盖已有服务。</strong>先审计、备份、分配空闲端口并执行配置检查；新服务通过验证后再启用。sing-box 与 Xray 分开运行，升级和回滚更可控。</div>
-      </section>
-
-      <section class="guide-section" id="preflight">
-        <h2>2. 部署前检查</h2>
-        <p>建议使用 Debian 或 Ubuntu VPS。先记录系统、内存、路由、监听端口、防火墙、Nginx、证书和失败服务，避免破坏现有业务。</p>
-        <div class="code-block"><pre>cat /etc/os-release
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SpellVPN 自建测试服务器 | 官方应用网站</title><meta name="description" content="使用 sing-box、Xray、systemd、TLS、订阅发布和远程验证，为 SpellVPN 搭建可维护的多协议测试服务器。"><link rel="stylesheet" href="../../a1fd3dedf271e355.css"><link rel="icon" href="../../assets/8e7c3708e295051d.png"><link rel="alternate" hreflang="en" href="https://cnc980.github.io/en/tutorials/spellvpn-server.html"><link rel="alternate" hreflang="zh-Hans" href="https://cnc980.github.io/zh-Hans/tutorials/spellvpn-server.html"><link rel="alternate" hreflang="ru" href="https://cnc980.github.io/ru/tutorials/spellvpn-server.html"><link rel="alternate" hreflang="x-default" href="https://cnc980.github.io/en/tutorials/spellvpn-server.html"></head><body><header class="site-header"><nav class="nav" aria-label="主导航"><a class="brand" href="../index.html"><span class="brand-mark">澄</span><span>澄序应用</span></a><div class="nav-right"><div class="nav-links"><a href="../index.html#apps">应用</a><a href="../index.html#tutorials">教程</a><a href="../index.html#privacy">隐私</a><a href="../index.html#support">支持</a></div><div class="language-switch" aria-label="语言"><a lang="en" href="../../en/tutorials/spellvpn-server.html">EN</a><a class="active" lang="zh-Hans" href="./spellvpn-server.html">中</a><a lang="ru" href="../../ru/tutorials/spellvpn-server.html">RU</a></div></div></nav></header><main><section class="legal-hero tutorial-hero"><div class="app-title"><img decoding="async" class="icon" src="../../assets/8e7c3708e295051d.png" alt="SpellVPN 图标"><h1>自建多协议测试服务器</h1></div><p class="eyebrow accent-green">SpellVPN · 服务器实验室</p><p class="lead">一套便于维护和回滚的部署方式：sing-box 负责大部分协议，Xray 补充 XHTTP、mKCP、gRPC 和 Vision，Nginx 发布受保护订阅，systemd 管理自启、日志与故障恢复。</p><div class="legal-actions"><a class="button secondary" href="../apps/spellvpn.html">SpellVPN</a><a class="button secondary" href="./spellvpn.html">使用教程</a><a class="button" href="./spellvpn-quick-server.html">小白一键搭建</a><a class="button secondary" href="../support/spellvpn.html">支持</a></div><div class="legal-box"><strong>使用范围</strong><p>仅用于你拥有或获准管理的服务器与网络。SpellVPN 是客户端，不提供服务器、账号、流量、证书或代理凭据。页面中的端口均为示例，不是公开服务参数。</p></div></section><article class="server-guide"><nav class="guide-toc" aria-label="目录"><h2>搭建流程</h2><ol><li><a href="#architecture">架构与原则</a></li><li><a href="#preflight">部署前检查</a></li><li><a href="#ports">协议与端口规划</a></li><li><a href="#install">安装核心</a></li><li><a href="#tls">TLS 与 Reality</a></li><li><a href="#configure">配置、自启和防火墙</a></li><li><a href="#subscription">生成订阅 URL</a></li><li><a href="#verify">本机与远程验证</a></li><li><a href="#hardening">运维与安全加固</a></li></ol></nav><section class="guide-section" id="architecture"><h2>1. 架构与原则</h2><div class="guide-grid"><div class="guide-card"><strong>sing-box 主服务</strong>承载 Shadowsocks、Trojan、VLESS、VMess、Hysteria2、TUIC、AnyTLS、SOCKS5、HTTP CONNECT、ShadowTLS、Naive 等协议。</div><div class="guide-card"><strong>Xray 扩展服务</strong>单独承载 XHTTP、mKCP、gRPC 和 VLESS Vision 等需要当前 Xray 传输行为的测试节点。</div><div class="guide-card"><strong>Nginx 订阅入口</strong>通过 HTTPS 提供 Base64 URI 列表和可选客户端文件包，路径使用高强度随机令牌。</div><div class="guide-card"><strong>systemd 与 UFW</strong>分别管理自启、重启策略、日志、最小权限用户和精确端口规则。</div></div><div class="guide-note warning"><strong>不要直接覆盖已有服务。</strong>先审计、备份、分配空闲端口并执行配置检查；新服务通过验证后再启用。sing-box 与 Xray 分开运行，升级和回滚更可控。</div></section><section class="guide-section" id="preflight"><h2>2. 部署前检查</h2><p>建议使用 Debian 或 Ubuntu VPS。先记录系统、内存、路由、监听端口、防火墙、Nginx、证书和失败服务，避免破坏现有业务。</p><div class="code-block"><pre>cat /etc/os-release
 uname -a
 free -h
 ip -brief address
@@ -90,105 +8,34 @@ systemctl --failed
 systemctl list-unit-files --state=enabled
 ufw status verbose
 nginx -T 2&gt;/dev/null
-certbot certificates 2&gt;/dev/null</pre></div>
-        <ul class="guide-checklist">
-          <li>建议至少 512 MB 内存；更小机器应减少协议数量或添加交换空间。</li>
-          <li>修改防火墙前确保 SSH 端口已经放行，并保留一个已登录终端。</li>
-          <li>给 sing-box、Xray、Nginx 和证书钩子配置制作带时间戳备份。</li>
-          <li>先建立端口表，确保 TCP/UDP 套接字没有冲突。</li>
-        </ul>
-      </section>
-
-      <section class="guide-section" id="ports">
-        <h2>3. 协议与端口规划</h2>
-        <p>每个协议生成独立 UUID、密码或密钥，便于单独吊销。以下端口仅为示例。</p>
-        <div class="protocol-table-wrap">
-          <table class="protocol-table">
-            <thead><tr><th>核心</th><th>协议 / 传输</th><th>示例端口</th><th>部署说明</th></tr></thead>
-            <tbody>
-              <tr><td>sing-box</td><td>Shadowsocks</td><td>8388/TCP+UDP</td><td>选择 SpellVPN 支持的现代 AEAD 或 2022 加密方式。</td></tr>
-              <tr><td>sing-box</td><td>VLESS + Reality</td><td>8443/TCP</td><td>没有域名时可用；目标必须真实可达，不能伪造证书。</td></tr>
-              <tr><td>sing-box</td><td>Trojan / VMess + TLS</td><td>9443–9444/TCP</td><td>使用有效域名证书或合法 IP 证书。</td></tr>
-              <tr><td>sing-box</td><td>Hysteria2 / TUIC</td><td>9445–9446/UDP</td><td>基于 QUIC；必须从外部网络验证 UDP 是否可达。</td></tr>
-              <tr><td>sing-box</td><td>AnyTLS</td><td>9447/TCP</td><td>使用有效证书和独立强密码。</td></tr>
-              <tr><td>sing-box</td><td>SOCKS5 / HTTPS CONNECT</td><td>9450–9451/TCP</td><td>必须启用认证，严禁公开匿名代理。</td></tr>
-              <tr><td>Xray</td><td>VLESS / VMess + XHTTP + TLS</td><td>9471–9473/TCP</td><td>分别测试 stream-one、auto 和 VMess 兼容性。</td></tr>
-              <tr><td>Xray</td><td>VLESS / VMess + mKCP + TLS</td><td>9474–9475</td><td>以所用 Xray 版本实际监听结果为准配置防火墙。</td></tr>
-              <tr><td>Xray</td><td>VLESS + gRPC / RAW Vision + TLS</td><td>9476–9477/TCP</td><td>测试阶段每种传输独占端口，便于定位问题。</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>WireGuard、OpenVPN、IKEv2 和 OpenConnect 可作为传统 VPN 对照组，但通常使用独立客户端文件，不应强行塞入 VLESS/VMess 风格的 URI 订阅。</p>
-      </section>
-
-      <section class="guide-section" id="install">
-        <h2>4. 安装 sing-box 与 Xray</h2>
-        <h3>sing-box 官方 APT 仓库</h3>
-        <div class="code-block"><pre>install -d -m 0755 /etc/apt/keyrings
+certbot certificates 2&gt;/dev/null</pre></div><ul class="guide-checklist"><li>建议至少 512 MB 内存；更小机器应减少协议数量或添加交换空间。</li><li>修改防火墙前确保 SSH 端口已经放行，并保留一个已登录终端。</li><li>给 sing-box、Xray、Nginx 和证书钩子配置制作带时间戳备份。</li><li>先建立端口表，确保 TCP/UDP 套接字没有冲突。</li></ul></section><section class="guide-section" id="ports"><h2>3. 协议与端口规划</h2><p>每个协议生成独立 UUID、密码或密钥，便于单独吊销。以下端口仅为示例。</p><div class="protocol-table-wrap"><table class="protocol-table"><thead><tr><th>核心</th><th>协议 / 传输</th><th>示例端口</th><th>部署说明</th></tr></thead><tbody><tr><td>sing-box</td><td>Shadowsocks</td><td>8388/TCP+UDP</td><td>选择 SpellVPN 支持的现代 AEAD 或 2022 加密方式。</td></tr><tr><td>sing-box</td><td>VLESS + Reality</td><td>8443/TCP</td><td>没有域名时可用；目标必须真实可达，不能伪造证书。</td></tr><tr><td>sing-box</td><td>Trojan / VMess + TLS</td><td>9443–9444/TCP</td><td>使用有效域名证书或合法 IP 证书。</td></tr><tr><td>sing-box</td><td>Hysteria2 / TUIC</td><td>9445–9446/UDP</td><td>基于 QUIC；必须从外部网络验证 UDP 是否可达。</td></tr><tr><td>sing-box</td><td>AnyTLS</td><td>9447/TCP</td><td>使用有效证书和独立强密码。</td></tr><tr><td>sing-box</td><td>SOCKS5 / HTTPS CONNECT</td><td>9450–9451/TCP</td><td>必须启用认证，严禁公开匿名代理。</td></tr><tr><td>Xray</td><td>VLESS / VMess + XHTTP + TLS</td><td>9471–9473/TCP</td><td>分别测试 stream-one、auto 和 VMess 兼容性。</td></tr><tr><td>Xray</td><td>VLESS / VMess + mKCP + TLS</td><td>9474–9475</td><td>以所用 Xray 版本实际监听结果为准配置防火墙。</td></tr><tr><td>Xray</td><td>VLESS + gRPC / RAW Vision + TLS</td><td>9476–9477/TCP</td><td>测试阶段每种传输独占端口，便于定位问题。</td></tr></tbody></table></div><p>WireGuard、OpenVPN、IKEv2 和 OpenConnect 可作为传统 VPN 对照组，但通常使用独立客户端文件，不应强行塞入 VLESS/VMess 风格的 URI 订阅。</p></section><section class="guide-section" id="install"><h2>4. 安装 sing-box 与 Xray</h2><h3>sing-box 官方 APT 仓库</h3><div class="code-block"><pre>install -d -m 0755 /etc/apt/keyrings
 curl -fsSL https://sing-box.app/gpg.key -o /etc/apt/keyrings/sagernet.asc
 chmod a+r /etc/apt/keyrings/sagernet.asc
 
 # 按官方文档添加 deb.sagernet.org 软件源
 apt-get update
-apt-get install sing-box nginx ufw curl unzip</pre></div>
-        <h3>Xray 官方稳定版</h3>
-        <ol>
-          <li>从 XTLS/Xray-core 官方 Release 下载当前稳定版 Linux ZIP 及对应 <code>.dgst</code>。</li>
-          <li>安装前核对本地 SHA-256 与摘要文件中的 <code>SHA2-256</code>。</li>
-          <li>安装二进制和 geodata，创建不可登录的 <code>xray</code> 系统用户，配置放在 <code>/etc/xray/</code>。</li>
-        </ol>
-        <div class="code-block"><pre>sha256sum Xray-linux-64.zip
+apt-get install sing-box nginx ufw curl unzip</pre></div><h3>Xray 官方稳定版</h3><ol><li>从 XTLS/Xray-core 官方 Release 下载当前稳定版 Linux ZIP 及对应 <code>.dgst</code>。</li><li>安装前核对本地 SHA-256 与摘要文件中的 <code>SHA2-256</code>。</li><li>安装二进制和 geodata，创建不可登录的 <code>xray</code> 系统用户，配置放在 <code>/etc/xray/</code>。</li></ol><div class="code-block"><pre>sha256sum Xray-linux-64.zip
 sed -n '1,8p' Xray-linux-64.zip.dgst
 unzip Xray-linux-64.zip -d xray-release
 install -m 0755 xray-release/xray /usr/local/bin/xray
-/usr/local/bin/xray version</pre></div>
-        <p>官方参考：<a href="https://sing-box.sagernet.org/installation/package-manager/" target="_blank" rel="noopener noreferrer">sing-box 包管理器安装</a>、<a href="https://xtls.github.io/document/install.html" target="_blank" rel="noopener noreferrer">Xray 下载与校验</a>。</p>
-      </section>
-
-      <section class="guide-section" id="tls">
-        <h2>5. 正确选择 TLS 或 Reality</h2>
-        <div class="guide-grid">
-          <div class="guide-card"><strong>有域名</strong>将 DNS 指向服务器，申请可信证书，设置正确 SNI，并配置自动续期与服务重载。</div>
-          <div class="guide-card"><strong>没有域名</strong>对兼容的 VLESS 节点使用 Reality；如果证书机构和环境支持，也可申请合法 IP 地址证书。不要伪造公网 TLS 身份。</div>
-        </div>
-        <p>将证书复制到各服务专用目录并限制权限，不要给代理进程读取整个 ACME 目录的权限。Certbot deploy hook 只更新相关证书副本并重载对应服务。</p>
-      </section>
-
-      <section class="guide-section" id="configure">
-        <h2>6. 配置、systemd 与防火墙</h2>
-        <p>在服务器本地生成凭据，并将协议、端口与凭据映射保存为仅 root 可读的清单。</p>
-        <div class="code-block"><pre>/usr/local/bin/xray uuid
+/usr/local/bin/xray version</pre></div><p>官方参考：<a href="https://sing-box.sagernet.org/installation/package-manager/" target="_blank" rel="noopener noreferrer">sing-box 包管理器安装</a>、<a href="https://xtls.github.io/document/install.html" target="_blank" rel="noopener noreferrer">Xray 下载与校验</a>。</p></section><section class="guide-section" id="tls"><h2>5. 正确选择 TLS 或 Reality</h2><div class="guide-grid"><div class="guide-card"><strong>有域名</strong>将 DNS 指向服务器，申请可信证书，设置正确 SNI，并配置自动续期与服务重载。</div><div class="guide-card"><strong>没有域名</strong>对兼容的 VLESS 节点使用 Reality；如果证书机构和环境支持，也可申请合法 IP 地址证书。不要伪造公网 TLS 身份。</div></div><p>将证书复制到各服务专用目录并限制权限，不要给代理进程读取整个 ACME 目录的权限。Certbot deploy hook 只更新相关证书副本并重载对应服务。</p></section><section class="guide-section" id="configure"><h2>6. 配置、systemd 与防火墙</h2><p>在服务器本地生成凭据，并将协议、端口与凭据映射保存为仅 root 可读的清单。</p><div class="code-block"><pre>/usr/local/bin/xray uuid
 /usr/local/bin/xray x25519
 openssl rand -base64 32
 openssl rand -hex 16
 
 chmod 0640 /etc/sing-box/config.json /etc/xray/config.json
 chown root:sing-box /etc/sing-box/config.json
-chown root:xray /etc/xray/config.json</pre></div>
-        <p>每个 inbound 使用独立 tag、端口和凭据；明确配置 direct 与 block outbound；除非实验需要，阻止代理访问私网目标；日志中不要输出完整订阅 URL 和密码。</p>
-        <div class="code-block"><pre>sing-box check -c /etc/sing-box/config.json
+chown root:xray /etc/xray/config.json</pre></div><p>每个 inbound 使用独立 tag、端口和凭据；明确配置 direct 与 block outbound；除非实验需要，阻止代理访问私网目标；日志中不要输出完整订阅 URL 和密码。</p><div class="code-block"><pre>sing-box check -c /etc/sing-box/config.json
 /usr/local/bin/xray run -test -c /etc/xray/config.json
 
 systemctl enable --now sing-box
 systemctl enable --now xray
 systemctl status sing-box xray --no-pager
-journalctl -u sing-box -u xray --since "10 minutes ago" --no-pager</pre></div>
-        <h3>精确放行端口</h3>
-        <div class="code-block"><pre>ufw allow OpenSSH
+journalctl -u sing-box -u xray --since "10 minutes ago" --no-pager</pre></div><h3>精确放行端口</h3><div class="code-block"><pre>ufw allow OpenSSH
 ufw allow &lt;tcp-port&gt;/tcp
 ufw allow &lt;udp-port&gt;/udp
 ufw enable
-ufw status numbered</pre></div>
-      </section>
-
-      <section class="guide-section" id="subscription">
-        <h2>7. 生成 SpellVPN 订阅 URL</h2>
-        <ol>
-          <li>为已验证节点生成标准分享链接，例如 <code>ss://</code>、<code>vless://</code>、<code>vmess://</code>、<code>trojan://</code>、<code>hysteria2://</code>、<code>tuic://</code>、<code>socks5://</code> 和带认证的 <code>https://</code> 代理链接。</li>
-          <li>每行一个链接；名称、路径与查询参数必须正确 URL 编码；将完整换行列表进行 Base64 编码。</li>
-          <li>WireGuard、OpenVPN、IKEv2 和 OpenConnect 使用单独受保护的客户端文件包。</li>
-        </ol>
-        <div class="code-block"><pre>install -d -m 0755 /var/www/vpn-sub
+ufw status numbered</pre></div></section><section class="guide-section" id="subscription"><h2>7. 生成 SpellVPN 订阅 URL</h2><ol><li>为已验证节点生成标准分享链接，例如 <code>ss://</code>、<code>vless://</code>、<code>vmess://</code>、<code>trojan://</code>、<code>hysteria2://</code>、<code>tuic://</code>、<code>socks5://</code> 和带认证的 <code>https://</code> 代理链接。</li><li>每行一个链接；名称、路径与查询参数必须正确 URL 编码；将完整换行列表进行 Base64 编码。</li><li>WireGuard、OpenVPN、IKEv2 和 OpenConnect 使用单独受保护的客户端文件包。</li></ol><div class="code-block"><pre>install -d -m 0755 /var/www/vpn-sub
 base64 -w 0 share-links.txt &gt; /var/www/vpn-sub/subscription.b64
 chmod 0644 /var/www/vpn-sub/subscription.b64
 
@@ -197,48 +44,8 @@ location = /sub/&lt;long-random-token&gt; {
     alias /var/www/vpn-sub/subscription.b64;
     default_type text/plain;
     add_header Cache-Control "no-store";
-}</pre></div>
-        <div class="guide-note warning"><strong>随机路径不等于强认证。</strong>订阅令牌应按密钥管理，泄露后立即轮换；需要更高安全性时增加 HTTP 认证、IP 限制或其他访问控制。</div>
-        <p>在 SpellVPN 中打开：首页 → <strong>+</strong> → 订阅 URL，粘贴 HTTPS 地址并导入，然后进入“节点”逐个测试。</p>
-      </section>
-
-      <section class="guide-section" id="verify">
-        <h2>8. 本机与远程验证</h2>
-        <p>端口正在监听不代表代理可用。每种协议都要用匹配客户端建立本地 SOCKS 测试出口，再从另一条外部网络重复验证。</p>
-        <div class="code-block"><pre>ss -lntup
+}</pre></div><div class="guide-note warning"><strong>随机路径不等于强认证。</strong>订阅令牌应按密钥管理，泄露后立即轮换；需要更高安全性时增加 HTTP 认证、IP 限制或其他访问控制。</div><p>在 SpellVPN 中打开：首页 → <strong>+</strong> → 订阅 URL，粘贴 HTTPS 地址并导入，然后进入“节点”逐个测试。</p></section><section class="guide-section" id="verify"><h2>8. 本机与远程验证</h2><p>端口正在监听不代表代理可用。每种协议都要用匹配客户端建立本地 SOCKS 测试出口，再从另一条外部网络重复验证。</p><div class="code-block"><pre>ss -lntup
 curl --socks5-hostname 127.0.0.1:&lt;local-test-port&gt; https://api.ipify.org
 curl -fsS https://&lt;subscription-host&gt;/sub/&lt;token&gt; | base64 -d
 systemctl is-active sing-box xray nginx
-systemctl is-enabled sing-box xray nginx</pre></div>
-        <ul class="guide-checklist">
-          <li>每个节点返回的公网出口 IP 都是服务器 IP。</li>
-          <li>TCP 与 UDP 节点均完成 VPS 外部测试。</li>
-          <li>订阅使用可信 HTTPS，可被 SpellVPN 导入且没有静默跳过节点。</li>
-          <li>重启服务器后服务、证书权限和防火墙规则仍然有效。</li>
-          <li>错误密码、被吊销 UUID 和过期凭据会被拒绝。</li>
-        </ul>
-      </section>
-
-      <section class="guide-section" id="hardening">
-        <h2>9. 运维与安全加固</h2>
-        <ul class="guide-checklist">
-          <li>优先使用 SSH 密钥；确认密钥登录成功后关闭密码登录，并尽量禁止直接 root 登录。</li>
-          <li>sing-box、Xray、Nginx 使用独立低权限用户和最小文件权限。</li>
-          <li>启用安全更新，监控失败服务、磁盘、内存和证书续期。</li>
-          <li>SOCKS5 与 HTTP CONNECT 必须认证并限制速率，绝不运行开放代理。</li>
-          <li>分享或测试结束后轮换 UUID、密码、Reality 密钥和订阅令牌。</li>
-          <li>升级前执行配置检查，一次只升级一个核心，并保留可回滚备份。</li>
-        </ul>
-        <div class="guide-note"><strong>维护建议：</strong>让 sing-box 保持为覆盖面广的主服务，Xray 只承担必要兼容扩展。只有服务器核心、SpellVPN 解析器和真实远程流量测试全部通过，才把节点加入正式订阅。</div>
-      </section>
-    </article>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>Copyright 2026 澄序应用。保留所有权利。</span>
-      <span><a href="../index.html#privacy">隐私</a> · <a href="../index.html#support">支持</a></span>
-    </div>
-  </footer>
-</body>
-</html>
+systemctl is-enabled sing-box xray nginx</pre></div><ul class="guide-checklist"><li>每个节点返回的公网出口 IP 都是服务器 IP。</li><li>TCP 与 UDP 节点均完成 VPS 外部测试。</li><li>订阅使用可信 HTTPS，可被 SpellVPN 导入且没有静默跳过节点。</li><li>重启服务器后服务、证书权限和防火墙规则仍然有效。</li><li>错误密码、被吊销 UUID 和过期凭据会被拒绝。</li></ul></section><section class="guide-section" id="hardening"><h2>9. 运维与安全加固</h2><ul class="guide-checklist"><li>优先使用 SSH 密钥；确认密钥登录成功后关闭密码登录，并尽量禁止直接 root 登录。</li><li>sing-box、Xray、Nginx 使用独立低权限用户和最小文件权限。</li><li>启用安全更新，监控失败服务、磁盘、内存和证书续期。</li><li>SOCKS5 与 HTTP CONNECT 必须认证并限制速率，绝不运行开放代理。</li><li>分享或测试结束后轮换 UUID、密码、Reality 密钥和订阅令牌。</li><li>升级前执行配置检查，一次只升级一个核心，并保留可回滚备份。</li></ul><div class="guide-note"><strong>维护建议：</strong>让 sing-box 保持为覆盖面广的主服务，Xray 只承担必要兼容扩展。只有服务器核心、SpellVPN 解析器和真实远程流量测试全部通过，才把节点加入正式订阅。</div></section></article></main><footer class="footer"><div class="footer-inner"><span>Copyright 2026 澄序应用。保留所有权利。</span><span><a href="../index.html#privacy">隐私</a> · <a href="../index.html#support">支持</a></span></div></footer></body></html>
