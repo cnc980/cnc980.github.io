@@ -2,11 +2,24 @@
 
 Deployment domain: https://cnc980.github.io
 
-Current project scan: 2026-07-14
+Current public App Store scan: 2026-08-03
 
 Supported languages: English (`en`), Simplified Chinese (`zh-Hans`), Russian (`ru`).
 
 App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN
+
+## Public App Store Listings
+
+Six public App Store listings were found for ENERHUB TRADE PRIVATE LIMITED in the public US App Store lookup on 2026-08-03. They map to four website product pages:
+
+- VPN XX Free: https://apps.apple.com/us/app/vpn-xx/id6787351160 — version 1.0.3, released 2026-07-21
+- VPN XX PRO: https://apps.apple.com/us/app/vpn-xx-pro/id6788285855 — version 1.0.5, released 2026-07-30
+- ArtCut: https://apps.apple.com/us/app/artcut/id6788636979 — version 1.0.3, released 2026-07-20
+- ArtCut Pro: https://apps.apple.com/us/app/artcut-pro/id6790354436 — version 1.0.1, released 2026-07-21
+- SpellVPN Ultra: https://apps.apple.com/us/app/spellvpn-ultra/id6790699220 — version 1.0.2, released 2026-07-31
+- SpellVPN Tool: https://apps.apple.com/us/app/spellvpn-tool/id6788655739 — version 1.0.6, released 2026-07-31
+
+The public lookup did not find a matching easyTallys listing in the US storefront on that date, so its website page remains marked as in submission preparation.
 
 SpellVPN App Store listings:
 
@@ -158,7 +171,6 @@ SpellVPN App Store listings:
 - SpellVPN iOS paid download: https://apps.apple.com/app/id6788655739
 - SpellVPN Mac paid download: https://apps.apple.com/app/id6788655739
 - App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN
-
 
 
 
