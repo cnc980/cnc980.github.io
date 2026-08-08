@@ -2,7 +2,7 @@
 
 Deployment domain: https://cnc980.github.io
 
-Current public App Store scan: 2026-08-03
+Current public App Store scan: 2026-08-08
 
 Supported languages: English (`en`), Simplified Chinese (`zh-Hans`), Russian (`ru`).
 
@@ -10,16 +10,15 @@ App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-priv
 
 ## Public App Store Listings
 
-Six public App Store listings were found for ENERHUB TRADE PRIVATE LIMITED in the public US App Store lookup on 2026-08-03. They map to four website product pages:
+Seven public App Store listings were found for ENERHUB TRADE PRIVATE LIMITED in the public US App Store lookup on 2026-08-08. They map to four website product pages:
 
-- VPN XX Free: https://apps.apple.com/us/app/vpn-xx/id6787351160 — version 1.0.3, released 2026-07-21
-- VPN XX PRO: https://apps.apple.com/us/app/vpn-xx-pro/id6788285855 — version 1.0.5, released 2026-07-30
-- ArtCut: https://apps.apple.com/us/app/artcut/id6788636979 — version 1.0.3, released 2026-07-20
-- ArtCut Pro: https://apps.apple.com/us/app/artcut-pro/id6790354436 — version 1.0.1, released 2026-07-21
-- SpellVPN Ultra: https://apps.apple.com/us/app/spellvpn-ultra/id6790699220 — version 1.0.2, released 2026-07-31
-- SpellVPN Tool: https://apps.apple.com/us/app/spellvpn-tool/id6788655739 — version 1.0.6, released 2026-07-31
-
-The public lookup did not find a matching easyTallys listing in the US storefront on that date, so its website page remains marked as in submission preparation.
+- EasyTallys: https://apps.apple.com/us/app/easytallys/id6795085919 — version 1.0.1, released 2026-08-05
+- VPN XX Free: https://apps.apple.com/us/app/vpn-xx/id6787351160 — version 1.0.5, released 2026-08-04
+- VPN XX PRO: https://apps.apple.com/us/app/vpn-xx-pro/id6788285855 — version 1.0.6, released 2026-08-03
+- ArtCut: https://apps.apple.com/us/app/artcut/id6788636979 — version 1.0.5, released 2026-08-05
+- ArtCut Pro: https://apps.apple.com/us/app/artcut-pro/id6790354436 — version 1.0.2, released 2026-08-06
+- SpellVPN Ultra: https://apps.apple.com/us/app/spellvpn-ultra/id6790699220 — version 1.0.3, released 2026-08-06
+- SpellVPN Tool: https://apps.apple.com/us/app/spellvpn-tool/id6788655739 — version 1.0.7, released 2026-08-06
 
 SpellVPN App Store listings:
 
@@ -32,7 +31,7 @@ SpellVPN App Store listings:
 - SpellVPN: Ultra is free, uses Yandex Mobile Ads with Google AdMob mediation, requests ATT before ad initialization where applicable, and uses StoreKit auto-renewing subscriptions to remove ads and unlock Ultra features. The paid App Store listing at https://apps.apple.com/app/id6788655739 covers both the iOS paid edition and the Mac paid edition. The macOS build is a separate native macOS target with no advertising SDKs, analytics SDKs, StoreKit products, subscriptions, provider-lines service, or built-in VPN account.
 - VPN XX: Free uses Yandex Smart Waterfall with Yandex Mobile Ads and Google AdMob mediation. Pro is a paid download with no ads. Proxy subscription URLs managed by the app are user-provided data, not App Store subscription purchases.
 - ArtCut: Free uses Yandex Mobile Ads with Google AdMob mediation for banner, native/feed, interstitial, and app-open placements after ATT status is resolved. Paid is a paid download with no ads and does not initialize advertising SDKs. Membership or premium-template subscriptions are not treated as active until they are enabled in a submitted build.
-- easyTallys: No ads, StoreKit purchase logic, membership, Pro subscription, or paywall were found in the current project scan. Advanced features are currently free. Subscription items are user-created finance records for bill reminders, not App Store purchases.
+- EasyTallys: Public App Store ID `6795085919`, free download, version 1.0.1. No ads, StoreKit purchase logic, membership, Pro subscription, or paywall were found in the current project scan. Subscription items are user-created finance records for bill reminders, not App Store purchases.
 
 ## SpellVPN
 
@@ -103,7 +102,9 @@ SpellVPN App Store listings:
 - Support URL: `https://cnc980.github.io/ru/support/artcut.html`
 - Privacy Policy URL: `https://cnc980.github.io/ru/privacy/artcut.html`
 
-## easyTallys
+## EasyTallys
+
+- App Store: https://apps.apple.com/us/app/easytallys/id6795085919
 
 ### English
 
@@ -139,7 +140,7 @@ SpellVPN App Store listings:
 - For VPN XX Pro, make sure App Privacy answers reflect that the paid edition does not show ads and does not initialize Yandex Mobile Ads or Google AdMob for ad serving.
 - For ArtCut Free, make sure App Privacy answers disclose Yandex Mobile Ads with Google AdMob mediation, ATT before ad SDK initialization/ad requests, app-open/feed placements, and the ad-related data categories described in the privacy policy.
 - For ArtCut Paid, make sure App Privacy answers reflect that the paid edition does not show ads and does not initialize Yandex Mobile Ads or Google AdMob for ad serving.
-- easyTallys "subscriptions" are user-created finance records, not App Store subscription purchases. The current scan did not find ads, StoreKit purchase logic, membership, Pro subscription, or a paywall for easyTallys; App Privacy should reflect no tracking, no developer server, local storage, optional private CloudKit sync, App Group sharing for Widget/Watch, local OCR, and user-controlled import/export/deletion.
+- EasyTallys "subscriptions" are user-created finance records, not App Store subscription purchases. The current scan did not find ads, StoreKit purchase logic, membership, Pro subscription, or a paywall for EasyTallys; App Privacy should reflect no tracking, no developer server, local storage, optional private CloudKit sync, App Group sharing for Widget/Watch, local OCR, and user-controlled import/export/deletion.
 
 
 
@@ -171,19 +172,3 @@ SpellVPN App Store listings:
 - SpellVPN iOS paid download: https://apps.apple.com/app/id6788655739
 - SpellVPN Mac paid download: https://apps.apple.com/app/id6788655739
 - App Store developer page: https://apps.apple.com/us/developer/enerhub-trade-private-limited/id6783196214?l=zh-Hans-CN
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
