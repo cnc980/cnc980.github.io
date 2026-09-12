@@ -1,0 +1,31 @@
+E03 — EasyTallys: initial-route launch argument / EasyTallys：初始页面启动参数
+Prepared: 2026-09-12
+Captured (UTC): 2026-09-12T15:40:59.124Z
+Type: current source excerpt
+
+The selected initial-route override is DEBUG-only, followed by a normal dashboard default.
+所选初始页面覆盖逻辑仅在 DEBUG 条件下生效，随后为常规首页默认值。
+
+Project: AppleLedger
+File: AppleLedgerShared/Views/RootView.swift
+Selected lines: 115-129
+Redacted: NO
+Original whole-file SHA-256: f0bb697266d3b82c98dfb214e0a91e071bbbdfe8bd83e1f908864c21dca2a9b6
+Numbered excerpt SHA-256 (UTF-8, LF): b95510fab3811e7afca1a0c19bbfc8fbb7166d64eb07108fddb8721ee810c934
+
+  115 | private struct AppInitialRoute {
+  116 |     var section: AppSection
+  117 |     var libraryTab: LibraryTab
+  118 |     var quickEntryKind: TransactionKind?
+  119 | 
+  120 |     static var current: AppInitialRoute {
+  121 |         #if DEBUG
+  122 |         let arguments = ProcessInfo.processInfo.arguments
+  123 |         if let routeArgumentIndex = arguments.firstIndex(of: "-AppleLedgerInitialRoute"),
+  124 |            arguments.indices.contains(routeArgumentIndex + 1) {
+  125 |             return AppInitialRoute(rawValue: arguments[routeArgumentIndex + 1])
+  126 |         }
+  127 |         #endif
+  128 |         return AppInitialRoute(section: .dashboard, libraryTab: .ledgers, quickEntryKind: nil)
+  129 |     }
+

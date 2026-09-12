@@ -1,0 +1,31 @@
+E02 — EasyTallys: language launch overrides / EasyTallys：语言启动覆盖逻辑
+Prepared: 2026-09-12
+Captured (UTC): 2026-09-12T15:40:59.124Z
+Type: current source excerpt
+
+The selected override path is inside a DEBUG condition. This is not a full Release binary audit.
+所选覆盖逻辑位于 DEBUG 条件中，不等同于完整 Release 二进制审计。
+
+Project: AppleLedger
+File: AppleLedgerShared/Services/AppLanguage.swift
+Selected lines: 127-141
+Redacted: NO
+Original whole-file SHA-256: e55240c882da8632bce65b040fab307aa4e07fba12294ed488447ad1b0caa370
+Numbered excerpt SHA-256 (UTF-8, LF): 0c4537f83e79b2f38e9f5e966bdbe2746f9a5df5a876b79306cc19d123f70ad3
+
+  127 |     static var selected: AppLanguage {
+  128 |         #if DEBUG
+  129 |         let processInfo = ProcessInfo.processInfo
+  130 |         if let value = processInfo.environment[environmentKey], let language = AppLanguage(value) {
+  131 |             return language
+  132 |         }
+  133 |         if let index = processInfo.arguments.firstIndex(of: launchArgument),
+  134 |            processInfo.arguments.indices.contains(index + 1),
+  135 |            let language = AppLanguage(processInfo.arguments[index + 1]) {
+  136 |             return language
+  137 |         }
+  138 |         #endif
+  139 |         let rawValue = AppSettingsStore.defaults.string(forKey: storageKey) ?? AppLanguage.system.rawValue
+  140 |         return AppLanguage(rawValue: rawValue) ?? .system
+  141 |     }
+

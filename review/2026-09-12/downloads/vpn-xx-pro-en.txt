@@ -1,0 +1,19 @@
+VPN XX PRO
+App Store ID: 6788285855
+Prepared September 12, 2026. Local source snapshot; no live review-status feed.
+
+iOS 1.0.7 and Mac 1.0.1. Both are distributed PRO versions, not merely local experiments.
+
+Release history and developer statement
+Both released versions included a visible Network Source feature for importing node records from preset third-party public subscriptions. Their App Store descriptions were not updated to disclose it. We acknowledge the disclosure mismatch and inadequate control of changing third-party content. This is distinct from the free VPN XX release-history statement.
+
+What the inspected material supports
+The catalog excerpt confirms fixed public-source entries in the current source. Public URL values are explicitly redacted; no working routes or credentials are distributed in this evidence package. A local Mac listing excerpt shows the user-supplied-only wording that required correction. This draft excerpt is not an export of the exact historical App Store listing; the released-version facts were separately confirmed by the developer.
+
+Next steps / not yet verified as complete
+Before a replacement submission, we will remove preset public sources and catalog references, retain user-supplied imports, use new version/build numbers, preserve the archive, and align descriptions, screenshots, privacy, endpoints, and Review Notes. Updating this website does not remove the feature from installed iOS 1.0.7 or Mac 1.0.1. We seek a fresh review, not automatic restoration of these binaries.
+
+Supporting evidence: e05, e06, e09, e10
+
+The record combines developer-confirmed release history, current local source excerpts, local metadata drafts, and two original developer-supplied form screenshots. These are different evidence types. No exact historical upload archives, Apple upload receipts, production service authorization documents, or new App Store approvals are included. A SHA-256 digest identifies the captured bytes; it does not certify that Apple reviewed or received them. Selected excerpts are not an exhaustive code or binary audit.
+This is a public, sanitized record with identical content for all readers. It omits personal account identifiers, private correspondence, node credentials and working public subscription URLs. It is not password protected. Original materials can be provided privately to Apple through an appropriate channel if requested. Search-engine noindex is a preference, not access control.

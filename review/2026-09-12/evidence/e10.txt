@@ -1,0 +1,13 @@
+E10 — Appeal form: VPN XX PRO and character limit / 申诉表单：VPN XX PRO 与字数限制
+Prepared: 2026-09-12
+Captured (UTC): 2026-09-12T15:40:59.124Z
+Type: developer-supplied original screenshot
+
+Screenshot supplied by the developer, dated September 4, 2026. A 2,000-character instruction and a separate PRO section are visible. It does not establish a five-entry limit or prove any appeal was submitted.
+开发者提供的 2026 年 9 月 4 日原始截图，可见 2,000 字符提示及独立 PRO 区块；不能证明五项上限，也不能证明申诉已提交。
+
+Original image: e10-original.png
+Original filename: 截屏2026-09-04 17.56.18.png
+SHA-256: e971506bb5b6093464446abe722e1cec02643ae6df6a2bd020435e4c8315e4b2
+Bytes: 170573
+No edits or re-encoding were applied. / 未修改或重新编码。

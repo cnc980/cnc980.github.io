@@ -1,0 +1,19 @@
+EasyTallys
+App Store ID: 6795085919
+Prepared September 12, 2026. Local source snapshot; no live review-status feed.
+
+iOS correction: 1.0.2, build 1.0.1; other platform releases must be assessed using their own submitted builds.
+
+Release history and developer statement
+An earlier production target retained an internal screenshot/test workflow capable of inserting sample records, forcing local storage, bypassing locks, or simulating iCloud and App Group status. We acknowledge that this was inappropriate. Our prior response records describe removing this workflow and submitting the corrected iOS version before the September 2 notice. The developer reported that the corrected version was In Review on September 4 while the app was removed from the storefront.
+
+What the inspected material supports
+The source excerpts show that the remaining language and initial-route launch overrides are inside DEBUG conditions, and that the inspected storage/account checks call Apple system APIs. The local response document is a developer-authored record, not an Apple approval or upload receipt. These excerpts alone do not certify the historical uploaded binary.
+
+Next steps / not yet verified as complete
+We ask Apple to evaluate the corrected submission and identify the exact build, test conditions, and behavior if the issue is still observed. We will match the submitted archive, production entitlements, metadata, and real-device behavior before further releases. We do not claim the pending correction has been approved.
+
+Supporting evidence: e01, e02, e03, e04
+
+The record combines developer-confirmed release history, current local source excerpts, local metadata drafts, and two original developer-supplied form screenshots. These are different evidence types. No exact historical upload archives, Apple upload receipts, production service authorization documents, or new App Store approvals are included. A SHA-256 digest identifies the captured bytes; it does not certify that Apple reviewed or received them. Selected excerpts are not an exhaustive code or binary audit.
+This is a public, sanitized record with identical content for all readers. It omits personal account identifiers, private correspondence, node credentials and working public subscription URLs. It is not password protected. Original materials can be provided privately to Apple through an appropriate channel if requested. Search-engine noindex is a preference, not access control.

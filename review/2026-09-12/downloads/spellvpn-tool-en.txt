@@ -1,0 +1,19 @@
+SpellVPN Tool
+App Store ID: 6788655739
+Prepared September 12, 2026. Local source snapshot; no live review-status feed.
+
+Paid, ad-free iOS and Mac configuration client; separate from SpellVPN Ultra.
+
+Release history and developer statement
+Tool supplies no server nodes or node-service subscription. Users import configurations or subscription URLs they control or are authorized to use. It can establish a real VPN connection using imported settings; it must not be described as an offline-only viewer. Ultra's supplied-source subscription is not a Tool feature.
+
+What the inspected material supports
+The inspected non-ULTRA compile-time branch sets paid distribution, no advertising, empty subscription product fields, and empty provider endpoints. This establishes the inspected configuration distinction; it does not independently verify every shipped binary or eliminate every possible similarity concern.
+
+Next steps / not yet verified as complete
+We will audit Tool's exact archive and describe all imported-configuration network behavior. If Apple considers the shared technology and listings insufficiently distinct, we will follow a consolidation or withdrawal approach specified by App Review. Tool remains expressly included in the account appeal.
+
+Supporting evidence: e07
+
+The record combines developer-confirmed release history, current local source excerpts, local metadata drafts, and two original developer-supplied form screenshots. These are different evidence types. No exact historical upload archives, Apple upload receipts, production service authorization documents, or new App Store approvals are included. A SHA-256 digest identifies the captured bytes; it does not certify that Apple reviewed or received them. Selected excerpts are not an exhaustive code or binary audit.
+This is a public, sanitized record with identical content for all readers. It omits personal account identifiers, private correspondence, node credentials and working public subscription URLs. It is not password protected. Original materials can be provided privately to Apple through an appropriate channel if requested. Search-engine noindex is a preference, not access control.

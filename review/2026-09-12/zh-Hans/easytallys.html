@@ -1,0 +1,81 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>EasyTallys · App 审核说明与证据 · Clearnova Apps</title><meta name="description" content="完整覆盖七个 App Store 条目，分别说明版本、平台与证据范围。"><link rel="stylesheet" href="../../../43219b09637ec94a.css"><link rel="stylesheet" href="../6b3a49fc102f3e52.css"><link rel="canonical" href="https://spellv.com/review/2026-09-12/zh-Hans/easytallys.html"><link rel="alternate" hreflang="en" href="../en/easytallys.html"></head><body class="review-site"><a class="skip-link" href="#main">跳至正文</a><header class="review-header"><nav aria-label="全部七款 App"><a class="brand" href="../../../zh-Hans/index.html"><span class="brand-mark">CA</span><span>Clearnova Apps</span></a><div class="review-nav"><a href="index.html">全部七款 App</a><a lang="en" href="../en/easytallys.html">English</a></div></nav></header><main id="main"><section class="review-hero"><a href="index.html">← 返回全部七款 App</a><p class="eyebrow">开发者整理记录 · 2026 年 9 月 12 日</p><h1>EasyTallys</h1><p class="app-identifier">App Store ID: 6795085919</p><p class="lead">iOS 修正版：1.0.2，Build 1.0.1；其他平台应按各自实际提交构建核查。</p><div class="review-actions"><a class="button secondary" href="../../../zh-Hans/apps/appleledger.html#easytallys">产品说明</a><a class="button secondary" href="../downloads/easytallys-zh-Hans.txt" download>TXT</a></div></section><section class="review-section"><h2>发布历史与开发者陈述</h2><p>较早的生产 Target 曾保留内部截图／测试流程，可插入示例数据、强制本地存储、绕过锁定或模拟 iCloud 与 App Group 状态。我们承认这不恰当。此前回复记录说明已移除该流程，并在 9 月 2 日通知之前提交 iOS 修正版。开发者于 9 月 4 日确认，修正版显示“审核中”，但 App 已从商店移除。</p></section><section class="review-section"><h2>所检查材料能够支持的结论</h2><p>源码节选显示，保留的语言和初始页面启动覆盖逻辑位于 DEBUG 条件内，所检查的存储／账户状态逻辑调用 Apple 系统 API。本地回复文件是开发者编写的记录，不是苹果批准文件或上传回执；这些节选本身不能认证历史上传二进制。</p></section><section class="review-section notice"><h2>后续措施／尚未核实完成</h2><p>我们请求苹果评估修正后的提交；若仍观察到问题，请指出准确构建、测试条件和行为。后续发布前，将核对上传归档、生产权限、元数据和真机行为。我们不声称待审核修复已经获批。</p></section><section class="review-section"><h2>对应证据</h2><article class="proof-card" id="e01"><p class="eyebrow">E01</p><h3>EasyTallys：此前开发者回复及提交记录</h3><p>这些是保留的本地开发者陈述。记录中有关提交版 Release 二进制或商店元数据的断言，尚未与上传归档或苹果回执独立核对。</p><div class="review-actions"><a href="../evidence/e01.txt" download>打开证据 TXT</a></div><details><summary>所选节选</summary><p class="provenance">来源: AppleLedger/AppStoreAssets/submission/GUIDELINE_5_6_RESPONSE_EN.md · 1–17</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code>    1 | # Guideline 5.6 Resolution Center Response
+    2 | 
+    3 | Thank you for identifying this issue. We reviewed the rejected build and found that the production app target incorrectly retained an internal screenshot workflow. That workflow included launch arguments and environment variables that could inject sample records, force a local data store, bypass the privacy lock, and simulate iCloud or App Group availability. We understand that retaining this behavior in a production build was inappropriate and could appear intentionally hidden.
+    4 | 
+    5 | The new build removes that workflow completely:
+    6 | 
+    7 | - All screenshot-only data creation, deletion, and injection code has been removed.
+    8 | - All forced-local-store launch arguments and environment variables have been removed.
+    9 | - All privacy-lock and automatic-lock bypasses have been removed.
+   10 | - All simulated iCloud and App Group status results have been removed.
+   11 | - All language- or region-based app-icon switching, the English alternate icon, and the related system-switch prompt have been removed. Every user now receives the same primary &quot;好记&quot; icon.
+   12 | - Ledger, account, transaction, collaborator, and cold-wallet screens now display only data actually created and stored by the user.
+   13 | - The submitted Release binary contains no screenshot route, language override, demo-data, forced-local-store parameter, or alternate app icon.
+   14 | 
+   15 | The app does not hide or reveal features based on reviewer identity, date, region, device, build source, or server configuration. App Review and all users now execute the same Release code path. All features are accessible through the normal user interface, and the App Store description and screenshots explicitly disclose shared ledgers and the on-device cold wallet vault.
+   16 | 
+   17 | No backend account is required. iCloud and shared-ledger features can be tested on a device signed in to an Apple ID.
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>04dfa389f217c2659f02d6cf1af820d647e7fb1c4a7a0ef228bb83cfd1126120</dd><dt>带行号节选 SHA-256</dt><dd>b16507111ff0949a1c6012b2071b718c574ecc1bab03f7d6c62fab5dada50c57</dd></dl><p class="provenance">来源: AppleLedger/README.md · 143–164</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code>  143 | Hello App Review Team,
+  144 | Thank you for reviewing our app.
+  145 | As explained in our response dated August 11, we investigated the previous rejection and identified an internal screenshot-production workflow that had been mistakenly retained in the production target. We understand why the presence of that workflow could have appeared to be hidden behavior.
+  146 | We have now submitted a corrected iOS binary:
+  147 | Version 1.0.2 (Build 1.0.1)
+  148 | This build supersedes the previously rejected binary and includes the following remediation:
+  149 | - All screenshot-only sample-data creation, deletion, and injection code has been removed.
+  150 | - The Release binary contains no screenshot route, demo-data parameter, forced-local-store parameter, language override, privacy-lock bypass, or automatic-lock bypass.
+  151 | - All simulated iCloud and App Group results have been removed. The app now displays only the actual status reported by Apple system services.
+  152 | - No alternate app-icon switching is available in the Release build. Every user receives the same primary “好记” icon.
+  153 | - Ledger, account, transaction, collaborator, and cold-wallet screens display only information created and stored by the user.
+  154 | - The app does not change, hide, or reveal functionality based on reviewer identity, date, region, device, build source, network response, or server configuration.
+  155 | - App Review and all users execute the same Release code path.
+  156 | EasyTallys (“好记”) is a local-first personal and family bookkeeping app. It has no developer-hosted account or backend, no advertising, no third-party analytics, no remote feature configuration, no in-app purchases or paywall, and does not download executable code or configuration that changes its functionality.
+  157 | Ledger data is stored on the user’s device. If the user enables iCloud, ledger data is synchronized only through Apple CloudKit under the user’s own Apple ID. No developer-provided login credentials are required.
+  158 | All features are accessible through the normal user interface:
+  159 | - Bookkeeping features are available from Overview, Transactions, Accounts, Budgets, Reports, and Library.
+  160 | - CloudKit shared-ledger features are available under Library &gt; Sharing. Testing requires a device signed in to an Apple ID.
+  161 | - The on-device Keychain vault is available under Library &gt; Cold Wallets. It only stores information manually entered by the user in the current device’s ThisDeviceOnly Keychain. It does not create cryptocurrency wallets, connect to blockchain services, perform transfers or trading, or upload vault information to any server.
+  162 | These features are also disclosed in the App Store description, screenshots, and Notes for Review.
+  163 | We respectfully request that App Review evaluate Version 1.0.2 (Build 1.0.1).
+  164 | If App Review still observes behavior associated with Guideline 5.6 in this corrected build, could you please identify the specific feature, navigation path, review steps, device conditions, or provide a screenshot of the observed behavior? This information would allow us to reproduce and address the concern immediately.
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>b6e872e127759a760d75f34c142123d3215189c9f8418d289fffb924189c9318</dd><dt>带行号节选 SHA-256</dt><dd>d5e772387b59a78bad0f0fe71ccc3123f1e631c7495cd5666b731b6e6cfb4f6b</dd></dl></details></article><article class="proof-card" id="e02"><p class="eyebrow">E02</p><h3>EasyTallys：语言启动覆盖逻辑</h3><p>所选覆盖逻辑位于 DEBUG 条件中，不等同于完整 Release 二进制审计。</p><div class="review-actions"><a href="../evidence/e02.txt" download>打开证据 TXT</a></div><details><summary>所选节选</summary><p class="provenance">来源: AppleLedger/AppleLedgerShared/Services/AppLanguage.swift · 127–141</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code>  127 |     static var selected: AppLanguage {
+  128 |         #if DEBUG
+  129 |         let processInfo = ProcessInfo.processInfo
+  130 |         if let value = processInfo.environment[environmentKey], let language = AppLanguage(value) {
+  131 |             return language
+  132 |         }
+  133 |         if let index = processInfo.arguments.firstIndex(of: launchArgument),
+  134 |            processInfo.arguments.indices.contains(index + 1),
+  135 |            let language = AppLanguage(processInfo.arguments[index + 1]) {
+  136 |             return language
+  137 |         }
+  138 |         #endif
+  139 |         let rawValue = AppSettingsStore.defaults.string(forKey: storageKey) ?? AppLanguage.system.rawValue
+  140 |         return AppLanguage(rawValue: rawValue) ?? .system
+  141 |     }
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>e55240c882da8632bce65b040fab307aa4e07fba12294ed488447ad1b0caa370</dd><dt>带行号节选 SHA-256</dt><dd>0c4537f83e79b2f38e9f5e966bdbe2746f9a5df5a876b79306cc19d123f70ad3</dd></dl></details></article><article class="proof-card" id="e03"><p class="eyebrow">E03</p><h3>EasyTallys：初始页面启动参数</h3><p>所选初始页面覆盖逻辑仅在 DEBUG 条件下生效，随后为常规首页默认值。</p><div class="review-actions"><a href="../evidence/e03.txt" download>打开证据 TXT</a></div><details><summary>所选节选</summary><p class="provenance">来源: AppleLedger/AppleLedgerShared/Views/RootView.swift · 115–129</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code>  115 | private struct AppInitialRoute {
+  116 |     var section: AppSection
+  117 |     var libraryTab: LibraryTab
+  118 |     var quickEntryKind: TransactionKind?
+  119 | 
+  120 |     static var current: AppInitialRoute {
+  121 |         #if DEBUG
+  122 |         let arguments = ProcessInfo.processInfo.arguments
+  123 |         if let routeArgumentIndex = arguments.firstIndex(of: &quot;-AppleLedgerInitialRoute&quot;),
+  124 |            arguments.indices.contains(routeArgumentIndex + 1) {
+  125 |             return AppInitialRoute(rawValue: arguments[routeArgumentIndex + 1])
+  126 |         }
+  127 |         #endif
+  128 |         return AppInitialRoute(section: .dashboard, libraryTab: .ledgers, quickEntryKind: nil)
+  129 |     }
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>f0bb697266d3b82c98dfb214e0a91e071bbbdfe8bd83e1f908864c21dca2a9b6</dd><dt>带行号节选 SHA-256</dt><dd>b95510fab3811e7afca1a0c19bbfc8fbb7166d64eb07108fddb8721ee810c934</dd></dl></details></article><article class="proof-card" id="e04"><p class="eyebrow">E04</p><h3>EasyTallys：Apple 存储与账户检查</h3><p>这些路径使用 FileManager 与 CKContainer，不能证明生产权限、同步成功或历史二进制内容。</p><div class="review-actions"><a href="../evidence/e04.txt" download>打开证据 TXT</a></div><details><summary>所选节选</summary><p class="provenance">来源: AppleLedger/AppleLedgerShared/Services/AppModelContainer.swift · 341–345</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code>  341 |     private static var appGroupStoreDirectory: URL? {
+  342 |         FileManager.default
+  343 |             .containerURL(forSecurityApplicationGroupIdentifier: appGroupIdentifier)?
+  344 |             .appending(path: &quot;AppleLedger&quot;, directoryHint: .isDirectory)
+  345 |     }
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>5446c56d0591b286adb91933164f3d57ba18ebaf3eca6c6e0d127c4cdec81f26</dd><dt>带行号节选 SHA-256</dt><dd>c15b66dab90d09d02b80d9bd3205fe99abfd6dc139804dad96cfe5d1df194225</dd></dl><p class="provenance">来源: AppleLedger/AppleLedgerShared/Services/ImportExportService.swift · 436–441</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code>  436 |     static func saveLatestBackup(_ archiveData: Data, createdAt: Date = .now) async throws -&gt; ManualICloudBackupMetadata {
+  437 |         #if canImport(CloudKit)
+  438 |         let container = CKContainer(identifier: AppModelContainer.cloudKitContainerIdentifier)
+  439 |         guard try await container.accountStatus() == .available else {
+  440 |             throw ManualICloudBackupError.accountUnavailable
+  441 |         }
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>dcadccf109343eb36c509f40027ba929a99b8c54cb2329ce6c65b013d8c65eb5</dd><dt>带行号节选 SHA-256</dt><dd>6ab26ec700b69059464470a8d49d50be5a8d94545d4d8075bf74cfac87d88fa2</dd></dl></details></article></section><section class="review-section"><h2>如何理解这些证据</h2><p>本记录同时包含开发者确认的发布历史、当前本地源码节选、本地元数据草稿及两张开发者提供的原始表单截图，证据类型各不相同。未包含准确的历史上传归档、苹果上传回执、生产服务授权文件或新的商店批准记录。SHA-256 标识本次留存的文件字节，不证明苹果审核或接收了这些内容；选取节选也不等于穷尽式源码或二进制审计。</p><p>这是面向所有读者、内容一致的公开脱敏记录，省略个人账户标识、私人通信、节点凭据及可用的公开订阅 URL，没有密码保护。苹果需要时，可通过适当的私密渠道另行提供原件。noindex 仅是搜索引擎索引偏好，并非访问控制。</p><a href="index.html#evidence">全部证据条目 →</a></section></main><footer class="review-footer"><p>开发者整理材料，不由苹果出具或背书。</p><p>整理于 2026 年 9 月 12 日。本地源码快照，非实时审核状态。</p><a href="../../../zh-Hans/index.html">官网首页</a></footer></body></html>

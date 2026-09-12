@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>SpellVPN Ultra · App 审核说明与证据 · Clearnova Apps</title><meta name="description" content="完整覆盖七个 App Store 条目，分别说明版本、平台与证据范围。"><link rel="stylesheet" href="../../../43219b09637ec94a.css"><link rel="stylesheet" href="../6b3a49fc102f3e52.css"><link rel="canonical" href="https://spellv.com/review/2026-09-12/zh-Hans/spellvpn-ultra.html"><link rel="alternate" hreflang="en" href="../en/spellvpn-ultra.html"></head><body class="review-site"><a class="skip-link" href="#main">跳至正文</a><header class="review-header"><nav aria-label="全部七款 App"><a class="brand" href="../../../zh-Hans/index.html"><span class="brand-mark">CA</span><span>Clearnova Apps</span></a><div class="review-nav"><a href="index.html">全部七款 App</a><a lang="en" href="../en/spellvpn-ultra.html">English</a></div></nav></header><main id="main"><section class="review-hero"><a href="index.html">← 返回全部七款 App</a><p class="eyebrow">开发者整理记录 · 2026 年 9 月 12 日</p><h1>SpellVPN Ultra</h1><p class="app-identifier">App Store ID: 6790699220</p><p class="lead">含广告及可选 StoreKit 自动续期订阅的 iOS 版本。</p><div class="review-actions"><a class="button secondary" href="../../../zh-Hans/apps/spellvpn.html#spellvpn-ultra">产品说明</a><a class="button secondary" href="../downloads/spellvpn-ultra-zh-Hans.txt" download>TXT</a></div></section><section class="review-section"><h2>发布历史与开发者陈述</h2><p>拥有有效订阅后，Ultra 可去广告，并提供精选来源与专属线路；用户自行导入是另一个独立流程。较早说明主要强调自行导入与去广告，没有一致、完整地解释服务提供的来源和线路。我们承认这一重要披露失误，不能将其归到 Tool，也不能在本次申诉中省略。</p></section><section class="review-section"><h2>所检查材料能够支持的结论</h2><p>所检查的 Ultra 配置列出两个服务端点，来源导入路径检查会员权益。保留的本地简介节选展示了不完整措辞。这些是源码／文档快照，不是服务可用性测试、内容授权证明，也不是苹果审核过的二进制副本。</p></section><section class="review-section notice"><h2>后续措施／尚未核实完成</h2><p>我们将清楚披露每项订阅权益和生产端点，按需提供完整审核路径及测试权益，核实内容分发授权，并移除无法确认授权和持续适当性的来源。提供节点的服务会被如实列为实际功能，不再笼统称为用户自行导入的数据。</p></section><section class="review-section"><h2>对应证据</h2><article class="proof-card" id="e08"><p class="eyebrow">E08</p><h3>SpellVPN Ultra：服务端点、会员检查及旧文案</h3><p>端点是配置证据，不是服务可用性或分发授权证明；简介节选是本地草稿，不是历史商店导出。订阅权益须披露提供来源的功能，而不仅是去广告。</p><div class="review-actions"><a href="../evidence/e08.txt" download>打开证据 TXT</a></div><details><summary>所选节选</summary><p class="provenance">来源: SuperVPN-iOS/Configurations/SpellVPN-Ultra.xcconfig · 35–36</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code>   35 | SPELLVPN_PROVIDER_LINES_ENDPOINT = https:/$()/apixx.spellv.com/api/spellv
+   36 | SPELLVPN_PROVIDER_SOURCE_LIST_ENDPOINT = https:/$()/apixx.spellv.com/api/spellvNodeFlist
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>4b55f5e8c1879ed1e70dfba420f8d6a8e2300c35e265d0387f0b13071f6bf0f3</dd><dt>带行号节选 SHA-256</dt><dd>4aedc8407913ba78a6ec959ac5f2ddaad58da66fd71d3f7a507ef095bf1a4c08</dd></dl><p class="provenance">来源: SuperVPN-iOS/SuperVPNApp/SuperVPNApp.swift · 3300–3311</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code> 3300 |         repairInvalidUltraProviderEndpointOverridesIfNeeded(context: &quot;Curated Sources import&quot;)
+ 3301 |         let product = ultraProviderImportConfiguration
+ 3302 |         guard let sourceListURL = product.providerSourceListEndpointURL else {
+ 3303 |             finishUltraProviderImport(success: false)
+ 3304 |             storeKitStatusMessage = localizedUIString(&quot;No provider source-list backend is configured.&quot;)
+ 3305 |             logs.insert(LogEntry(level: .error, category: .connection, message: &quot;Ultra import endpoints unavailable: \(ultraProviderImportDiagnosticSummary(using: product))&quot;), at: 0)
+ 3306 |             return
+ 3307 |         }
+ 3308 |         guard hasMemberAccess else {
+ 3309 |             finishUltraProviderImport(success: false)
+ 3310 |             storeKitStatusMessage = localizedUIString(&quot;Ultra subscription is required for this action.&quot;)
+ 3311 |             return
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>137df2925bcb6597bda2605b19f9109727ec3015eaf1aa80f93928c5f7a3ec0e</dd><dt>带行号节选 SHA-256</dt><dd>06b433859ce49ed613dbfa90d11b39879639f4d1673c819d8eb0ebd6a476ab92</dd></dl><p class="provenance">来源: SuperVPN-iOS/AppStoreReadyPackage/02_AppStore_Metadata/ULTRA_APP_STORE_INTRO.zh-Hans_en-US.md · 59–85</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code>   59 | 
+   60 | Import your subscription URL, proxy link, QR code, or config file, then start an iOS Packet Tunnel in one tap. Ultra is free with ads, and subscriptions remove ads.
+   61 | 
+   62 | ### Short Description
+   63 | 
+   64 | SpellVPN Ultra is a VPN configuration client for iPhone and iPad. It helps you import and manage configurations you are allowed to use, including sing-box, Clash/Mihomo, Shadowsocks, VLESS, Trojan, and other common proxy formats. You can import by URL, QR code, clipboard, file, or iCloud Drive, organize nodes, and start a real iOS Packet Tunnel through Apple Network Extension.
+   65 | 
+   66 | SpellVPN Ultra is free to download and may show ads while no subscription is active. Weekly, monthly, quarterly, and yearly auto-renewable subscriptions remove ads and keep Ultra benefits active. Purchases and restores are handled by Apple ID and the App Store.
+   67 | 
+   68 | ### Long Description
+   69 | 
+   70 | SpellVPN Ultra helps you manage your own VPN configurations, subscriptions, and proxy nodes in one place. It is designed for users who already have lawful access to VPN or proxy configurations and need a clean way to import, organize, test, and connect them on iOS.
+   71 | 
+   72 | Key features:
+   73 | 
+   74 | - Import subscription URLs, proxy links, QR codes, clipboard text, and local config files
+   75 | - Support sing-box JSON, Clash/Mihomo YAML, Base64 subscriptions, and common proxy links
+   76 | - Organize node groups, search nodes, switch nodes, and run basic reachability checks
+   77 | - Start or stop an iOS Packet Tunnel with one tap
+   78 | - View connection status, logs, traffic stats, and basic network information
+   79 | - Use DNS lookup, HTTP test, TLS test, IP lookup, and other network tools
+   80 | - Back up and restore app data through iCloud Drive
+   81 | - Remove ads and keep Ultra benefits active with an Ultra subscription
+   82 | 
+   83 | Important note:
+   84 | 
+   85 | SpellVPN Ultra does not provide public built-in VPN server accounts. Users need to import configurations, subscriptions, or nodes they are allowed to use. VPN connectivity and performance depend on the imported configuration, remote server, and current network conditions.
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>910b646f2dbd80819e5aa862935c9a4fb1962c1b09d55dd57fc1ac73d99a90e2</dd><dt>带行号节选 SHA-256</dt><dd>e1dc212dfac353e70f562934186ddc31bbf39d26d9cda494a8a9a63155da5b2a</dd></dl></details></article></section><section class="review-section"><h2>如何理解这些证据</h2><p>本记录同时包含开发者确认的发布历史、当前本地源码节选、本地元数据草稿及两张开发者提供的原始表单截图，证据类型各不相同。未包含准确的历史上传归档、苹果上传回执、生产服务授权文件或新的商店批准记录。SHA-256 标识本次留存的文件字节，不证明苹果审核或接收了这些内容；选取节选也不等于穷尽式源码或二进制审计。</p><p>这是面向所有读者、内容一致的公开脱敏记录，省略个人账户标识、私人通信、节点凭据及可用的公开订阅 URL，没有密码保护。苹果需要时，可通过适当的私密渠道另行提供原件。noindex 仅是搜索引擎索引偏好，并非访问控制。</p><a href="index.html#evidence">全部证据条目 →</a></section></main><footer class="review-footer"><p>开发者整理材料，不由苹果出具或背书。</p><p>整理于 2026 年 9 月 12 日。本地源码快照，非实时审核状态。</p><a href="../../../zh-Hans/index.html">官网首页</a></footer></body></html>

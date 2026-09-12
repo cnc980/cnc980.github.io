@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://cnc980.github.io/sitemap.xml
+Sitemap: https://spellv.com/sitemap.xml

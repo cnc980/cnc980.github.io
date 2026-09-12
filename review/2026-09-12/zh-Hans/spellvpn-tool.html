@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>SpellVPN Tool · App 审核说明与证据 · Clearnova Apps</title><meta name="description" content="完整覆盖七个 App Store 条目，分别说明版本、平台与证据范围。"><link rel="stylesheet" href="../../../43219b09637ec94a.css"><link rel="stylesheet" href="../6b3a49fc102f3e52.css"><link rel="canonical" href="https://spellv.com/review/2026-09-12/zh-Hans/spellvpn-tool.html"><link rel="alternate" hreflang="en" href="../en/spellvpn-tool.html"></head><body class="review-site"><a class="skip-link" href="#main">跳至正文</a><header class="review-header"><nav aria-label="全部七款 App"><a class="brand" href="../../../zh-Hans/index.html"><span class="brand-mark">CA</span><span>Clearnova Apps</span></a><div class="review-nav"><a href="index.html">全部七款 App</a><a lang="en" href="../en/spellvpn-tool.html">English</a></div></nav></header><main id="main"><section class="review-hero"><a href="index.html">← 返回全部七款 App</a><p class="eyebrow">开发者整理记录 · 2026 年 9 月 12 日</p><h1>SpellVPN Tool</h1><p class="app-identifier">App Store ID: 6788655739</p><p class="lead">iOS 与 Mac 付费无广告配置客户端，与 SpellVPN Ultra 分开。</p><div class="review-actions"><a class="button secondary" href="../../../zh-Hans/apps/spellvpn.html#spellvpn-tool">产品说明</a><a class="button secondary" href="../downloads/spellvpn-tool-zh-Hans.txt" download>TXT</a></div></section><section class="review-section"><h2>发布历史与开发者陈述</h2><p>Tool 不提供服务器节点或节点服务订阅，用户导入自己控制或获准使用的配置、订阅 URL。它可依据导入配置建立真实 VPN 连接，不能描述为纯离线查看器。Ultra 通过订阅提供来源的功能不属于 Tool。</p></section><section class="review-section"><h2>所检查材料能够支持的结论</h2><p>所检查的非 ULTRA 编译分支设置为付费、无广告，订阅商品字段和提供方端点均为空。这证明了所检查配置的区别，但不能独立证明每个已分发二进制，也不能排除苹果对产品相似性的疑虑。</p></section><section class="review-section notice"><h2>后续措施／尚未核实完成</h2><p>我们将核查 Tool 的准确归档，并完整说明导入配置后的网络行为。如苹果认为共享技术和独立条目区分不足，我们愿按 App Review 指定方案合并或撤回。Tool 明确保留在账户整体申诉范围内。</p></section><section class="review-section"><h2>对应证据</h2><article class="proof-card" id="e07"><p class="eyebrow">E07</p><h3>SpellVPN Tool：编译时配置区别</h3><p>第一段标明 ULTRA 条件，第二段为其非 ULTRA 分支；省略的 ULTRA 设置不作为 Tool 设置展示。</p><div class="review-actions"><a href="../evidence/e07.txt" download>打开证据 TXT</a></div><details><summary>所选节选</summary><p class="provenance">来源: SuperVPN-iOS/SuperVPNApp/SuperVPNApp.swift · 782–783</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code>  782 |     static var current: AppProductConfiguration {
+  783 |         #if SPELLVPN_ULTRA
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>137df2925bcb6597bda2605b19f9109727ec3015eaf1aa80f93928c5f7a3ec0e</dd><dt>带行号节选 SHA-256</dt><dd>703c631f39a49caf1efe0cace10e30c7a81314068ad0c666fe9607f221777121</dd></dl><p class="provenance">来源: SuperVPN-iOS/SuperVPNApp/SuperVPNApp.swift · 808–833</p><p>按原始行号展示，所选源码行保持原文。</p><pre tabindex="0"><code>  808 |         #else
+  809 |         return AppProductConfiguration(
+  810 |             edition: .pro,
+  811 |             distributionModel: &quot;paid&quot;,
+  812 |             adMode: &quot;none&quot;,
+  813 |             subscriptionProductID: &quot;&quot;,
+  814 |             weeklySubscriptionProductID: &quot;&quot;,
+  815 |             monthlySubscriptionProductID: &quot;&quot;,
+  816 |             quarterlySubscriptionProductID: &quot;&quot;,
+  817 |             yearlySubscriptionProductID: &quot;&quot;,
+  818 |             superWeeklySubscriptionProductID: &quot;&quot;,
+  819 |             superMonthlySubscriptionProductID: &quot;&quot;,
+  820 |             superQuarterlySubscriptionProductID: &quot;&quot;,
+  821 |             superYearlySubscriptionProductID: &quot;&quot;,
+  822 |             providerLinesEndpoint: &quot;&quot;,
+  823 |             providerSourceListEndpoint: &quot;&quot;,
+  824 |             appGroupIdentifier: plistString(&quot;SpellVPNAppGroupIdentifier&quot;, defaultValue: SuperVPNShared.appGroupIdentifier),
+  825 |             admobApplicationID: &quot;&quot;,
+  826 |             yandexBannerAdUnitID: &quot;&quot;,
+  827 |             yandexInterstitialAdUnitID: &quot;&quot;,
+  828 |             yandexAppOpenAdUnitID: &quot;&quot;,
+  829 |             yandexNativeAdUnitID: &quot;&quot;,
+  830 |             adsShowPlaceholders: false
+  831 |         )
+  832 |         #endif
+  833 |     }
+</code></pre><dl class="hashes"><dt>原始整文件 SHA-256</dt><dd>137df2925bcb6597bda2605b19f9109727ec3015eaf1aa80f93928c5f7a3ec0e</dd><dt>带行号节选 SHA-256</dt><dd>03236ad8fcfb5312901ea972ed0f440b0eb0c21dfc5739f8ec1df3aac8435abe</dd></dl></details></article></section><section class="review-section"><h2>如何理解这些证据</h2><p>本记录同时包含开发者确认的发布历史、当前本地源码节选、本地元数据草稿及两张开发者提供的原始表单截图，证据类型各不相同。未包含准确的历史上传归档、苹果上传回执、生产服务授权文件或新的商店批准记录。SHA-256 标识本次留存的文件字节，不证明苹果审核或接收了这些内容；选取节选也不等于穷尽式源码或二进制审计。</p><p>这是面向所有读者、内容一致的公开脱敏记录，省略个人账户标识、私人通信、节点凭据及可用的公开订阅 URL，没有密码保护。苹果需要时，可通过适当的私密渠道另行提供原件。noindex 仅是搜索引擎索引偏好，并非访问控制。</p><a href="index.html#evidence">全部证据条目 →</a></section></main><footer class="review-footer"><p>开发者整理材料，不由苹果出具或背书。</p><p>整理于 2026 年 9 月 12 日。本地源码快照，非实时审核状态。</p><a href="../../../zh-Hans/index.html">官网首页</a></footer></body></html>

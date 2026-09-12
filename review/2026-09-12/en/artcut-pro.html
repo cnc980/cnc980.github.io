@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>ArtCut Pro · App review disclosures &amp; evidence · Clearnova Apps</title><meta name="description" content="Seven App Store listings. Distinct editions, platform versions, and evidence boundaries."><link rel="stylesheet" href="../../../43219b09637ec94a.css"><link rel="stylesheet" href="../6b3a49fc102f3e52.css"><link rel="canonical" href="https://spellv.com/review/2026-09-12/en/artcut-pro.html"><link rel="alternate" hreflang="zh-Hans" href="../zh-Hans/artcut-pro.html"></head><body class="review-site"><a class="skip-link" href="#main">Skip to content</a><header class="review-header"><nav aria-label="All seven apps"><a class="brand" href="../../../en/index.html"><span class="brand-mark">CA</span><span>Clearnova Apps</span></a><div class="review-nav"><a href="index.html">All seven apps</a><a lang="zh-Hans" href="../zh-Hans/artcut-pro.html">中文</a></div></nav></header><main id="main"><section class="review-hero"><a href="index.html">← Back to all seven apps</a><p class="eyebrow">Developer-prepared record · September 12, 2026</p><h1>ArtCut Pro</h1><p class="app-identifier">App Store ID: 6790354436</p><p class="lead">Paid, ad-free video editor; separate App Store ID and compile-time distribution branch.</p><div class="review-actions"><a class="button secondary" href="../../../en/apps/artcut.html#artcut-editions">Product disclosure</a><a class="button secondary" href="../downloads/artcut-pro-en.txt" download>TXT</a></div></section><section class="review-section"><h2>Release history and developer statement</h2><p>Pro shares editing features with ArtCut but is the paid, ad-free edition. This distinction does not itself resolve possible duplicate-listing concerns. ArtCut Pro is expressly included in the membership appeal whether or not it fit into the form&#39;s five selected entries.</p></section><section class="review-section"><h2>What the inspected material supports</h2><p>The inspected non-ARTCUT_FREE branch sets paid distribution and displaysAds to false. The evidence supports that code distinction, not a certification of the linked frameworks in every historic archive. No unverified release or completed consolidation is claimed.</p></section><section class="review-section notice"><h2>Next steps / not yet verified as complete</h2><p>We will verify the exact paid archive and metadata and follow any consolidation or withdrawal requirement. We ask Apple to identify any ArtCut Pro build, behavior, or representation that formed part of the membership decision so it can be addressed directly.</p></section><section class="review-section"><h2>Supporting evidence</h2><article class="proof-card" id="e11"><p class="eyebrow">E11</p><h3>ArtCut / Pro: edition and tracking-permission paths</h3><p>Compile-time differences and one permission path are shown. These do not prove framework linkage in historical archives, successful consent flows on devices, or upload of local fixes.</p><div class="review-actions"><a href="../evidence/e11.txt" download>Open evidence TXT</a></div><details><summary>Selected excerpt</summary><p class="provenance">Source: VideoEditorPro/VideoEditorPro/App/AppVariant.swift · 1–22</p><p>Numbered source excerpt; selected lines preserved.</p><pre tabindex="0"><code>    1 | import Foundation
+    2 | 
+    3 | enum AppDistribution {
+    4 |     case paid
+    5 |     case freeWithAds
+    6 | }
+    7 | 
+    8 | enum AppVariant {
+    9 |     /// The App Store listing for the paid build. Keep this as a universal
+   10 |     /// App Store URL so the storefront can localize the product name.
+   11 |     static let proAppStoreURL = URL(string: &quot;https://apps.apple.com/app/id6790354436&quot;)!
+   12 | 
+   13 | #if ARTCUT_FREE
+   14 |     static let distribution: AppDistribution = .freeWithAds
+   15 |     static let displaysAds = true
+   16 |     static let displayName = &quot;ArtCut&quot;
+   17 | #else
+   18 |     static let distribution: AppDistribution = .paid
+   19 |     static let displaysAds = false
+   20 |     static let displayName = &quot;ArtCutPro&quot;
+   21 | #endif
+   22 | }
+</code></pre><dl class="hashes"><dt>Original whole-file SHA-256</dt><dd>72e091896724be8dca7c2981a23f593c8b3e9a98dd3d4b1f361835180455cf76</dd><dt>Numbered excerpt SHA-256</dt><dd>5e59357e3959e55b04ba12ef0a8e229041ee6b9841f6a51ece760ba0c365eb38</dd></dl><p class="provenance">Source: VideoEditorPro/VideoEditorPro/Services/TrackingAuthorizationManager.swift · 34–52</p><p>Numbered source excerpt; selected lines preserved.</p><pre tabindex="0"><code>   34 |     func requestIfNeededBeforeAdRequests() async -&gt; TrackingAuthorizationState {
+   35 |         guard AppVariant.displaysAds else { return .notRequired }
+   36 | 
+   37 | #if ARTCUT_FREE &amp;&amp; canImport(AppTrackingTransparency)
+   38 |         let current = map(status: ATTrackingManager.trackingAuthorizationStatus)
+   39 |         guard current == .notDetermined else { return current }
+   40 | 
+   41 |         if let requestTask {
+   42 |             return await requestTask.value
+   43 |         }
+   44 | 
+   45 |         let task = Task { @MainActor in
+   46 |             try? await Task.sleep(nanoseconds: 650_000_000)
+   47 |             return await withCheckedContinuation { continuation in
+   48 |                 ATTrackingManager.requestTrackingAuthorization { status in
+   49 |                     continuation.resume(returning: Self.map(status: status))
+   50 |                 }
+   51 |             }
+   52 |         }
+</code></pre><dl class="hashes"><dt>Original whole-file SHA-256</dt><dd>06092d42bedd141bd32f96880f2e5acfd368d4e48a79d5b9d6f5039a3a52d982</dd><dt>Numbered excerpt SHA-256</dt><dd>9fa52ec7f8eb9066e92101a158c010f6c7b0d9d587246f96b2d30d8728141f8b</dd></dl></details></article></section><section class="review-section"><h2>How to read this evidence</h2><p>The record combines developer-confirmed release history, current local source excerpts, local metadata drafts, and two original developer-supplied form screenshots. These are different evidence types. No exact historical upload archives, Apple upload receipts, production service authorization documents, or new App Store approvals are included. A SHA-256 digest identifies the captured bytes; it does not certify that Apple reviewed or received them. Selected excerpts are not an exhaustive code or binary audit.</p><p>This is a public, sanitized record with identical content for all readers. It omits personal account identifiers, private correspondence, node credentials and working public subscription URLs. It is not password protected. Original materials can be provided privately to Apple through an appropriate channel if requested. Search-engine noindex is a preference, not access control.</p><a href="index.html#evidence">All evidence items →</a></section></main><footer class="review-footer"><p>Developer-prepared material — not issued or endorsed by Apple.</p><p>Prepared September 12, 2026. Local source snapshot; no live review-status feed.</p><a href="../../../en/index.html">Website home</a></footer></body></html>

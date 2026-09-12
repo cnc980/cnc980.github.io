@@ -1,0 +1,35 @@
+E04 — EasyTallys: Apple storage and account checks / EasyTallys：Apple 存储与账户检查
+Prepared: 2026-09-12
+Captured (UTC): 2026-09-12T15:40:59.124Z
+Type: current source excerpt
+
+These paths use FileManager and CKContainer. They do not prove production entitlements, successful synchronization, or historical binary contents.
+这些路径使用 FileManager 与 CKContainer，不能证明生产权限、同步成功或历史二进制内容。
+
+Project: AppleLedger
+File: AppleLedgerShared/Services/AppModelContainer.swift
+Selected lines: 341-345
+Redacted: NO
+Original whole-file SHA-256: 5446c56d0591b286adb91933164f3d57ba18ebaf3eca6c6e0d127c4cdec81f26
+Numbered excerpt SHA-256 (UTF-8, LF): c15b66dab90d09d02b80d9bd3205fe99abfd6dc139804dad96cfe5d1df194225
+
+  341 |     private static var appGroupStoreDirectory: URL? {
+  342 |         FileManager.default
+  343 |             .containerURL(forSecurityApplicationGroupIdentifier: appGroupIdentifier)?
+  344 |             .appending(path: "AppleLedger", directoryHint: .isDirectory)
+  345 |     }
+
+Project: AppleLedger
+File: AppleLedgerShared/Services/ImportExportService.swift
+Selected lines: 436-441
+Redacted: NO
+Original whole-file SHA-256: dcadccf109343eb36c509f40027ba929a99b8c54cb2329ce6c65b013d8c65eb5
+Numbered excerpt SHA-256 (UTF-8, LF): 6ab26ec700b69059464470a8d49d50be5a8d94545d4d8075bf74cfac87d88fa2
+
+  436 |     static func saveLatestBackup(_ archiveData: Data, createdAt: Date = .now) async throws -> ManualICloudBackupMetadata {
+  437 |         #if canImport(CloudKit)
+  438 |         let container = CKContainer(identifier: AppModelContainer.cloudKitContainerIdentifier)
+  439 |         guard try await container.accountStatus() == .available else {
+  440 |             throw ManualICloudBackupError.accountUnavailable
+  441 |         }
+
