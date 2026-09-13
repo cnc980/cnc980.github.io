@@ -1,0 +1,32 @@
+E02 — EasyTallys: переопределение языка при запуске
+Дата русского перевода: 13 сентября 2026 г.
+Время сохранения оригинала (UTC): 2026-09-12T15:40:59.124Z
+Тип материала: Выдержка из текущего исходного кода
+
+Выбранная логика переопределения находится внутри условия DEBUG. Это не полный аудит Release-бинарного файла.
+
+Переведены пояснения и сведения о происхождении материалов. Код и снимки экрана оставлены на языке оригинала; русские тексты не заменяют исходные свидетельства и не означают нового одобрения Apple.
+
+Проект: AppleLedger
+Файл: AppleLedgerShared/Services/AppLanguage.swift
+Выбранные строки: 127–141
+Выдержка с исходными номерами строк; выбранные строки сохранены без изменений.
+SHA-256 полного исходного файла: e55240c882da8632bce65b040fab307aa4e07fba12294ed488447ad1b0caa370
+SHA-256 выдержки с номерами строк: 0c4537f83e79b2f38e9f5e966bdbe2746f9a5df5a876b79306cc19d123f70ad3
+
+  127 |     static var selected: AppLanguage {
+  128 |         #if DEBUG
+  129 |         let processInfo = ProcessInfo.processInfo
+  130 |         if let value = processInfo.environment[environmentKey], let language = AppLanguage(value) {
+  131 |             return language
+  132 |         }
+  133 |         if let index = processInfo.arguments.firstIndex(of: launchArgument),
+  134 |            processInfo.arguments.indices.contains(index + 1),
+  135 |            let language = AppLanguage(processInfo.arguments[index + 1]) {
+  136 |             return language
+  137 |         }
+  138 |         #endif
+  139 |         let rawValue = AppSettingsStore.defaults.string(forKey: storageKey) ?? AppLanguage.system.rawValue
+  140 |         return AppLanguage(rawValue: rawValue) ?? .system
+  141 |     }
+

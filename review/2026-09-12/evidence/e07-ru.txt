@@ -1,0 +1,53 @@
+E07 — SpellVPN Tool: различие конфигураций на этапе компиляции
+Дата русского перевода: 13 сентября 2026 г.
+Время сохранения оригинала (UTC): 2026-09-12T15:40:59.124Z
+Тип материала: Выдержка из текущего исходного кода
+
+Первая выдержка показывает условие ULTRA; вторая — соответствующую ветвь без ULTRA. Пропущенные настройки ULTRA не представлены как настройки Tool.
+
+Переведены пояснения и сведения о происхождении материалов. Код и снимки экрана оставлены на языке оригинала; русские тексты не заменяют исходные свидетельства и не означают нового одобрения Apple.
+
+Проект: SuperVPN-iOS
+Файл: SuperVPNApp/SuperVPNApp.swift
+Выбранные строки: 782–783
+Выдержка с исходными номерами строк; выбранные строки сохранены без изменений.
+SHA-256 полного исходного файла: 137df2925bcb6597bda2605b19f9109727ec3015eaf1aa80f93928c5f7a3ec0e
+SHA-256 выдержки с номерами строк: 703c631f39a49caf1efe0cace10e30c7a81314068ad0c666fe9607f221777121
+
+  782 |     static var current: AppProductConfiguration {
+  783 |         #if SPELLVPN_ULTRA
+
+Проект: SuperVPN-iOS
+Файл: SuperVPNApp/SuperVPNApp.swift
+Выбранные строки: 808–833
+Выдержка с исходными номерами строк; выбранные строки сохранены без изменений.
+SHA-256 полного исходного файла: 137df2925bcb6597bda2605b19f9109727ec3015eaf1aa80f93928c5f7a3ec0e
+SHA-256 выдержки с номерами строк: 03236ad8fcfb5312901ea972ed0f440b0eb0c21dfc5739f8ec1df3aac8435abe
+
+  808 |         #else
+  809 |         return AppProductConfiguration(
+  810 |             edition: .pro,
+  811 |             distributionModel: "paid",
+  812 |             adMode: "none",
+  813 |             subscriptionProductID: "",
+  814 |             weeklySubscriptionProductID: "",
+  815 |             monthlySubscriptionProductID: "",
+  816 |             quarterlySubscriptionProductID: "",
+  817 |             yearlySubscriptionProductID: "",
+  818 |             superWeeklySubscriptionProductID: "",
+  819 |             superMonthlySubscriptionProductID: "",
+  820 |             superQuarterlySubscriptionProductID: "",
+  821 |             superYearlySubscriptionProductID: "",
+  822 |             providerLinesEndpoint: "",
+  823 |             providerSourceListEndpoint: "",
+  824 |             appGroupIdentifier: plistString("SpellVPNAppGroupIdentifier", defaultValue: SuperVPNShared.appGroupIdentifier),
+  825 |             admobApplicationID: "",
+  826 |             yandexBannerAdUnitID: "",
+  827 |             yandexInterstitialAdUnitID: "",
+  828 |             yandexAppOpenAdUnitID: "",
+  829 |             yandexNativeAdUnitID: "",
+  830 |             adsShowPlaceholders: false
+  831 |         )
+  832 |         #endif
+  833 |     }
+

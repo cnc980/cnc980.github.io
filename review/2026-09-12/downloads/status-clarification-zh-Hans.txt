@@ -1,0 +1,7 @@
+状态补充说明 · 2026 年 9 月 13 日
+
+收到 9 月 2 日待终止通知之前，EasyTallys 的状态是“正在审核”；其余六个条目——VPN XX、VPN XX PRO、SpellVPN Tool、SpellVPN Ultra、ArtCut 和 ArtCut Pro——均显示“可分发”。
+
+开发者现确认，七款 App 均已从公开 App Store 下架，但在 App Store Connect 仍可查看各自状态记录。商店下架不等于后台 App 记录或平台／版本状态消失；仍可看到状态也不代表已经恢复分发或会员资格。
+
+此信息由开发者于 9 月 13 日补充，不是对 App Store Connect 的独立实时核查、苹果回执，也不改变保留的 9 月 12 日源码证据。

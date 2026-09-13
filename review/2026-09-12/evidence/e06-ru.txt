@@ -1,0 +1,34 @@
+E06 — VPN XX PRO: прежний локальный текст описания для Mac
+Дата русского перевода: 13 сентября 2026 г.
+Время сохранения оригинала (UTC): 2026-09-12T15:40:59.124Z
+Тип материала: Локальный черновик метаданных
+
+Этот локальный черновик иллюстрирует формулировку об использовании только данных пользователя, которую требовалось исправить. Это не экспорт исторического описания App Store.
+
+Переведены пояснения и сведения о происхождении материалов. Код и снимки экрана оставлены на языке оригинала; русские тексты не заменяют исходные свидетельства и не означают нового одобрения Apple.
+
+Проект: VPNAccountManager
+Файл: MacAppStore/en-US.md
+Выбранные строки: 15–31
+Выдержка с исходными номерами строк; выбранные строки сохранены без изменений.
+SHA-256 полного исходного файла: 40468f539a782934115155446ef686a2bf8355e3d11bb5b817ca9cb18f3eecdf
+SHA-256 выдержки с номерами строк: 9da264c90414ba7b4ad309c144e4341f90465a38d90e216943c73f27698b2a92
+
+   15 | ## Description
+   16 | 
+   17 | VPN XX PRO is a node and subscription manager for people who already have their own subscription links and configuration data.
+   18 | 
+   19 | Key features:
+   20 | 
+   21 | • Subscription management: Add, refresh, group, and organize multiple subscription links.
+   22 | • Multi-protocol parsing: VLESS, VMess, Trojan, Shadowsocks, ShadowsocksR, SOCKS5, HTTP, WireGuard, Hysteria, Hysteria2, TUIC, Clash/Mihomo YAML, and sing-box JSON.
+   23 | • Organized node list: View nodes by subscription group, with search, filtering, and expand/collapse controls.
+   24 | • Latency testing: Measure reachability and connection latency through real TCP connections. Results are not simulated.
+   25 | • QR import: Import subscription links or node configurations from QR codes.
+   26 | • Flexible sharing: Copy links, use the system share sheet, or create QR codes in VLESS, Clash, URI, and other supported formats.
+   27 | • iCloud sync: Keep your subscriptions and nodes synchronized across your own Apple devices.
+   28 | • Data management: Clear local data, clear iCloud data, or restore data from iCloud.
+   29 | • Personalization: Choose from multiple skins and switch the app language.
+   30 | 
+   31 | VPN XX PRO only manages and parses configuration data supplied by the user. It does not provide VPN servers, create VPN tunnels, or sell network access. Node availability, speed, and content depend on the subscription service provided by the user.
+
