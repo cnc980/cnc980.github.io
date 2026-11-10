@@ -1,7 +1,0 @@
-Status clarification · September 13, 2026
-
-Before the September 2 Pending Termination Notice, EasyTallys was In Review. The other six listings — VPN XX, VPN XX PRO, SpellVPN Tool, SpellVPN Ultra, ArtCut and ArtCut Pro — were shown as Distributable.
-
-The developer now reports that all seven apps have been removed from the public App Store, while their status records remain visible in App Store Connect. Storefront removal does not mean that the app records or platform/version statuses have disappeared. A visible status is not evidence of restored distribution or membership.
-
-This clarification was supplied by the developer on September 13. It is not an independent live check of App Store Connect, an Apple receipt, or a change to the preserved September 12 source evidence.

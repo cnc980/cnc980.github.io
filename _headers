@@ -1,6 +1,0 @@
-# Static hosting cache hints for hosts that support this file.
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.html
-  Cache-Control: public, max-age=600
